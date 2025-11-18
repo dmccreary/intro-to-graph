@@ -1,0 +1,734 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Description of microsite">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/course-description/">
+      
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Introduction to Graph Databases - Mkdocs Template Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Introduction to Graph Databases - Mkdocs Template Site" >
+      
+        <meta  property="og:description"  content="Description of microsite" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/course-description.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/course-description/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Introduction to Graph Databases - Mkdocs Template Site" >
+      
+        <meta  name="twitter:description"  content="Description of microsite" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/course-description.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-graph-databases" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mkdocs Template Site" class="md-header__button md-logo" aria-label="Mkdocs Template Site" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mkdocs Template Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Graph Databases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mkdocs Template Site" class="md-nav__button md-logo" aria-label="Mkdocs Template Site" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Mkdocs Template Site
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/course-description.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="introduction-to-graph-databases">Introduction to Graph Databases</h1>
+<p><strong>Credits:</strong> 3
+<strong>Length:</strong> 14 Weeks
+<strong>Level:</strong> Undergraduate (Junior/Senior) or Graduate Introductory Level
+<strong>Prerequisites:</strong></p>
+<ul>
+<li>Prior coursework in databases or data modeling (recommended)</li>
+<li>Basic programming knowledge (Python, JavaScript, or similar)</li>
+<li>Familiarity with data structures (arrays, hash maps, trees)</li>
+</ul>
+<h1 id="course-overview">Course Overview</h1>
+<p>This course introduces students to <strong>graph databases</strong> as powerful tools for representing, querying, and analyzing highly connected information. Students learn why traditional relational databases struggle with modern, relationship-heavy data and how <strong>Labeled Property Graph (LPG)</strong> databases treat relationships as first-class citizens with attributes, directionality, and semantics.</p>
+<p>We begin by contrasting the architectural foundations of <strong>RDBMS vs. NoSQL</strong> systems, explore the design motivations behind graph data models, and introduce the formal elements of LPGs: <strong>nodes, edges, properties, labels, and schema options</strong>. Students then gain hands-on experience modeling and querying real-world graphs using languages such as <strong>openCypher</strong>, <strong>GSQL</strong>, or <strong>Gremlin</strong> (depending on instructor preference).</p>
+<p>The course emphasizes building real applications: social networks, recommendation engines, fraud detection pipelines, supply-chain models, knowledge graphs, bill-of-materials (BOM), and healthcare data modeling. Students practice evaluating when to choose graph data models, how to optimize them, how to measure performance, and how to design graph schemas aligned with real business domains.</p>
+<p>The capstone project involves building an end-to-end graph application using an LPG graph database.</p>
+<h2 id="sample-outline-14-weeks">Sample Outline (14 Weeks)</h2>
+<h3 id="week-1-introduction-to-graph-thinking">Week 1 – Introduction to Graph Thinking</h3>
+<ul>
+<li>Why data modeling matters in our AI-driven world</li>
+<li>The importance of world-models</li>
+<li>Six major representations of data</li>
+<li>RDBMS vs. OLAP vs. NoSQL</li>
+<li>When graphs outperform tables</li>
+<li>Edges are a first class citizen</li>
+<li>LPG: The most maintainable information model</li>
+<li><strong>Case Study:</strong> Neo4j</li>
+<li>Timeline of Graph Database</li>
+</ul>
+<h3 id="week-2-nosql-and-the-rise-of-graphs">Week 2 – NoSQL and the Rise of Graphs</h3>
+<ul>
+<li>Key-value, document, wide-column, and graph stores</li>
+<li>Tradeoff analysis (model precision, flexibility, scaling)</li>
+<li>Representations of knowledge</li>
+<li>The Knowledge Triangle</li>
+<li>Single server graphs</li>
+<li>Distributed graphs</li>
+<li><strong>Case Study:</strong> TigerGraph</li>
+</ul>
+<h3 id="week-3-labeled-property-graph-lpg-information-model">Week 3 – Labeled Property Graph (LPG) Information Model</h3>
+<ul>
+<li>Nodes, edges, labels, properties</li>
+<li>Representing metadata</li>
+<li>Open vs. Closed World Models</li>
+<li>Schema-optional vs. schema-enforced modeling</li>
+<li>Tools to view graph data models</li>
+<li>Adding rules to graphs</li>
+<li>Validating documents</li>
+<li>Validating graphs</li>
+</ul>
+<h3 id="week-4-query-languages-for-graphs">Week 4 – Query Languages for Graphs</h3>
+<ul>
+<li>openCypher</li>
+<li>GSQL / Gremlin overview</li>
+<li>Path patterns, hops, aggregations</li>
+<li>GQL - the emerging standard for advanced query languages</li>
+</ul>
+<h3 id="week-5-index-free-adjacency-performance">Week 5 – Index-Free Adjacency &amp; Performance</h3>
+<ul>
+<li>Traversal fundamentals</li>
+<li>Constant-time neighbor access</li>
+<li>Cost comparison: joins vs. traversals</li>
+<li>MicroSim: Chart: Comparing Multi-hop performance on RDBMS vs. Graph </li>
+</ul>
+<h3 id="week-6-benchmarking-techniques">Week 6 – Benchmarking Techniques</h3>
+<ul>
+<li>Why benchmarking is critical to promoting graphs</li>
+<li>Predicting the future value of insights</li>
+<li>LDBC SNB benchmark</li>
+<li>Measuring graph performance</li>
+<li>Query latency, throughput, and scalability</li>
+</ul>
+<h3 id="week-7-modeling-social-networks-and-language">Week 7 – Modeling Social Networks and Language</h3>
+<ul>
+<li>Friend graphs</li>
+<li>Modeling human resources</li>
+<li>Case Study: The Org Chart and Skill Management</li>
+<li>Diagram: Org Chart Models</li>
+<li>Influence graphs</li>
+<li>Modeling with edges as first-class citizens</li>
+<li>Extending your model</li>
+<li>Adding discussions</li>
+<li>Adding natural language language processing</li>
+<li>Adding products to your graph</li>
+<li>Adding sentiment to your graph</li>
+<li>Detecting bad fake accounts</li>
+<li>Case Study: Assigning Tasks from the Backlog</li>
+</ul>
+<h3 id="week-8-knowledge-representation-with-concept-graphs">Week 8 – Knowledge Representation with Concept Graphs**</h3>
+<ul>
+<li>Concept dependency graphs</li>
+<li>Curriculum graphs</li>
+<li>Ontology-connected graph structures</li>
+<li>The Simple Knowledge Organization System (SKOS)</li>
+<li>Preferred Labels and Alternate Labels</li>
+<li>The Acronym List</li>
+<li>The Glossary</li>
+<li>The Controlled Vocabulary</li>
+<li>The Taxonomy</li>
+<li>The Ontology</li>
+</ul>
+<h3 id="week-9-graph-algorithms">Week 9 - Graph Algorithms</h3>
+<ul>
+<li>Search</li>
+<li>Breath First Search (BFS)</li>
+<li>Depth First Search (DFS)</li>
+<li>A-Star (A*)</li>
+<li>Pathfinding</li>
+<li>Traveling Salesman</li>
+<li>PageRank</li>
+<li>Community detection</li>
+<li>Graph Neural Networks</li>
+</ul>
+<h3 id="week-9-graph-modeling-patterns">Week 9 – Graph Modeling Patterns**</h3>
+<ul>
+<li>Subgraphs</li>
+<li>Supernode vs. anti-pattern nodes</li>
+<li>Hyperedges, multi-edges</li>
+<li>Time-based modeling patterns</li>
+<li>Time Trees</li>
+<li>Modeling Internet of Things Events</li>
+<li>Modeling Rules and Decision Trees</li>
+<li>Bitemporal Graph Models (Advanced Topic)</li>
+</ul>
+<h3 id="weeks-10-and-11-industry-reference-data-models-part-i">Weeks 10 and 11 – Industry Reference Data Models (Part I)**</h3>
+<ul>
+<li>Web storefront graph model</li>
+<li>Product catalogs</li>
+<li>Bill-of-Materials (BOM) and complex parts</li>
+<li>Supply chain modeling</li>
+<li>Modeling financial transactions</li>
+<li>Fraud detection graphs</li>
+<li>Highly Regulated Industries</li>
+<li>Anti-Money Laundering (AML)</li>
+<li>Know Your Customer (KYC)</li>
+<li>Account-network traversal</li>
+<li>Provider/patient graphs</li>
+<li>Electronic health record modeling</li>
+<li>IT asset and dependency graphs</li>
+<li>Graph analytics vs. transactional graph queries</li>
+<li>Graph embeddings (introduction)</li>
+</ul>
+<h3 id="weeks-12-13-and-14-capstone-project-presentations">Weeks 12, 13 and 14 – Capstone Project Presentations**</h3>
+<ul>
+<li>Students present a full graph application</li>
+<li>Modeling choices, data loading, queries, and performance measurements</li>
+</ul>
+<h2 id="sample-of-concepts-covered">Sample of Concepts Covered**</h2>
+<ul>
+<li>NoSQL Databases</li>
+<li>Six Representations of Data</li>
+<li>RDBMS vs. Graph Databases</li>
+<li>OLAP vs. OLTP Workloads</li>
+<li>Key-Value Stores</li>
+<li>Document Databases</li>
+<li>Graph Stores</li>
+<li>Tradeoff Analysis / CAP</li>
+<li>Representations of Knowledge</li>
+<li>Concept Graphs</li>
+<li>Index-Free Adjacency</li>
+<li>Performance &amp; Benchmarking</li>
+<li>Web Storefront Modeling</li>
+<li>Learning Management System Modeling</li>
+<li>Curriculum &amp; Course Dependency Graphs</li>
+<li>Healthcare Data Graphs</li>
+<li>IT Asset &amp; Dependency Graphs</li>
+<li>Financial Transaction Graphs</li>
+<li>Fraud Detection Graphs</li>
+<li>Complex Parts &amp; BOM Graphs</li>
+<li>Supply Chain Models</li>
+<li>Graph Modeling Anti-Patterns</li>
+<li>Graph Algorithms</li>
+<li>openCypher / GSQL querying</li>
+<li>Data loading pipelines</li>
+<li>Best practices for graph schema design</li>
+</ul>
+<h2 id="topics-not-covered">Topics Not Covered</h2>
+<p>*</p>
+<h1 id="learning-objectives-organized-by-blooms-taxonomy-2001-revision"><strong>Learning Objectives (Organized by Bloom’s Taxonomy – 2001 Revision)</strong></h1>
+<p>Below are the learning objectives grouped by <strong>Remember → Understand → Apply → Analyze → Evaluate → Create</strong>.</p>
+<h2 id="1-remember-factual-knowledge"><strong>1. Remember (Factual Knowledge)</strong></h2>
+<p>Students will be able to:</p>
+<ul>
+<li>Define key terms such as <em>node</em>, <em>edge</em>, <em>property</em>, <em>label</em>, <em>schema-optional</em>, and <em>index-free adjacency</em>.</li>
+<li>List the major categories of NoSQL systems.</li>
+<li>Identify the components of an LPG information model.</li>
+<li>Recall common graph query languages (openCypher, GSQL, Gremlin).</li>
+</ul>
+<h2 id="2-understand-conceptual-knowledge"><strong>2. Understand (Conceptual Knowledge)</strong></h2>
+<p>Students will be able to:</p>
+<ul>
+<li>Explain why traditional RDBMS systems struggle with highly connected data.</li>
+<li>Describe the tradeoffs among key-value, document, and graph stores.</li>
+<li>Summarize how graph queries locate patterns more naturally than SQL joins.</li>
+<li>Explain how concept dependency graphs represent knowledge structures.</li>
+<li>Compare various real-world graph models (social, supply chain, healthcare, etc.).</li>
+</ul>
+<h2 id="3-apply-procedural-knowledge"><strong>3. Apply (Procedural Knowledge)</strong></h2>
+<p>Students will be able to:</p>
+<ul>
+<li>Construct simple LPG models using nodes, edges, and properties.</li>
+<li>Write openCypher or GSQL queries to retrieve and aggregate graph data.</li>
+<li>Load data sets into a graph database using CSV or ETL pipelines.</li>
+<li>Implement graph traversal queries that compute multi-hop patterns.</li>
+<li>Use performance measurement tools to benchmark graph workloads.</li>
+</ul>
+<h2 id="4-analyze-breakdown-structure"><strong>4. Analyze (Breakdown &amp; Structure)</strong></h2>
+<p>Students will be able to:</p>
+<ul>
+<li>Differentiate between good and bad graph modeling choices.</li>
+<li>Decompose a domain into entities, relationships, and multi-edge structures.</li>
+<li>Examine performance logs to identify bottlenecks in graph queries.</li>
+<li>Analyze alternative graph schema representations for a given domain.</li>
+<li>Map complex business processes into multi-layered graph models (e.g., supply chain, IT dependency graph).</li>
+</ul>
+<h2 id="5-evaluate-judgment-critique"><strong>5. Evaluate (Judgment &amp; Critique)</strong></h2>
+<p>Students will be able to:</p>
+<ul>
+<li>Justify when a graph database is more appropriate than an RDBMS or document store.</li>
+<li>Evaluate competing graph schema designs for clarity, scalability, and performance.</li>
+<li>Critique query patterns for correctness, efficiency, and maintainability.</li>
+<li>Assess the appropriateness of chosen benchmarks and workload profiles.</li>
+<li>Defend the modeling decisions used in their capstone project.</li>
+</ul>
+<h2 id="6-create-synthesis-design"><strong>6. Create (Synthesis &amp; Design)</strong></h2>
+<p>Students will be able to:</p>
+<ul>
+<li>Design a complete LPG schema for a complex domain (healthcare, finance, supply chain, etc.).</li>
+<li>Develop multi-step graph queries supporting application requirements.</li>
+<li>Create an end-to-end graph system including ETL, schema, queries, and visualizations.</li>
+<li>Build and present a capstone graph application grounded in real-world data.</li>
+<li>Propose design improvements using graph algorithms or structural pattern refinements.</li>
+</ul>
+<hr />
+<p>If you'd like, I can also generate:</p>
+<ul>
+<li>A <strong>concept dependency graph</strong> for the course</li>
+<li>A <strong>full syllabus PDF</strong></li>
+<li>A <strong>14-week slide deck outline</strong></li>
+<li><strong>MicroSims</strong> that help teach specific topics (e.g., index-free adjacency, BFS traversal, fraud detection patterns)</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>
