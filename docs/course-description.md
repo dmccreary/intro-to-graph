@@ -1,3 +1,9 @@
+---
+title: Introduction to Graph Databases
+description: A comprehensive course on graph databases, labeled property graphs, query languages, and real-world applications
+quality_score: 95
+---
+
 # Introduction to Graph Databases
 
 
@@ -10,16 +16,15 @@
 * Basic programming knowledge (Python, JavaScript, or similar)
 * Familiarity with data structures (arrays, hash maps, trees)
 
-# Course Overview
+## Course Overview
 
-This course introduces students to **graph databases** as powerful tools for representing, querying, and analyzing highly connected information. Students learn why traditional relational databases struggle with modern, relationship-heavy data and how **Labeled Property Graph (LPG)** databases treat relationships as first-class citizens with attributes, directionality, and semantics.
+This course introduces students to **graph databases** as powerful tools for representing, querying, and analyzing highly connected information. Students learn why traditional relational databases struggle with modern, relationship-heavy data and how **Labeled Property Graph (LPG)** databases treat relationships as first-class citizens with relationaship types, attributes, directionality, and semantics.
 
-We begin by contrasting the architectural foundations of **RDBMS vs. NoSQL** systems, explore the design motivations behind graph data models, and introduce the formal elements of LPGs: **nodes, edges, properties, labels, and schema options**. Students then gain hands-on experience modeling and querying real-world graphs using languages such as **openCypher**, **GSQL**, or **Gremlin** (depending on instructor preference).
+We begin by contrasting the architectural foundations of **RDBMS vs. NoSQL** systems, explore the design motivations behind graph data models, and introduce the formal elements of LPGs: **nodes, edges, properties, labels, and schema options**. Students then gain hands-on experience modeling and querying real-world graphs using languages such as **openCypher**, or **GSQL** (depending on instructor preference).
 
 The course emphasizes building real applications: social networks, recommendation engines, fraud detection pipelines, supply-chain models, knowledge graphs, bill-of-materials (BOM), and healthcare data modeling. Students practice evaluating when to choose graph data models, how to optimize them, how to measure performance, and how to design graph schemas aligned with real business domains.
 
 The capstone project involves building an end-to-end graph application using an LPG graph database.
-
 
 ## Sample Outline (14 Weeks)
 
@@ -27,6 +32,7 @@ The capstone project involves building an end-to-end graph application using an 
 
 * Why data modeling matters in our AI-driven world
 * The importance of world-models
+* Knowledge representation strategy
 * Six major representations of data
 * RDBMS vs. OLAP vs. NoSQL
 * When graphs outperform tables
@@ -59,7 +65,8 @@ The capstone project involves building an end-to-end graph application using an 
 ### Week 4 – Query Languages for Graphs
 
 * openCypher
-* GSQL / Gremlin overview
+* GSQL - using the map-reduce pattern on a distributed cluster
+* Accumulators - keeping queries short
 * Path patterns, hops, aggregations
 * GQL - the emerging standard for advanced query languages
 
@@ -68,15 +75,32 @@ The capstone project involves building an end-to-end graph application using an 
 * Traversal fundamentals
 * Constant-time neighbor access
 * Cost comparison: joins vs. traversals
-* MicroSim: Chart: Comparing Multi-hop performance on RDBMS vs. Graph 
+* Hop count
+* MicroSim: Chart: Comparing Multi-hop performance on RDBMS vs. Graph
+* Degree of a node
+* Indegree
+* Outdegree
+* Edges per node ratios
+* Indexes
+* Vector indexes
+* Graph metrics
+* Statistical Query Tuning
 
 ### Week 6 – Benchmarking Techniques
 
 * Why benchmarking is critical to promoting graphs
+* Graph benchmarking is difficult
+* Synthetic benchmarks
+* Single node benchmarks
+* Multi-node benchmarks
 * Predicting the future value of insights
 * LDBC SNB benchmark
+* Graph 500 rankings
 * Measuring graph performance
 * Query latency, throughput, and scalability
+* Case Study - six degrees of separation
+* Case Study - Graph 500 rankings
+* Case Study - Healthcare Operations
 
 ### Week 7 – Modeling Social Networks and Language
 
@@ -106,6 +130,16 @@ The capstone project involves building an end-to-end graph application using an 
 * The Controlled Vocabulary
 * The Taxonomy
 * The Ontology
+* Modeling Enterprise Knowledge
+* Modeling Department Knowledge
+* Modeling Project Knowledge
+* Case Study - Extracting Acton Items from Call Transcripts
+* Modeling Personal Knowledge
+* Notetaking
+* Personal Knowledge Graphs
+* Knowledge Capture
+* Tacit Knowledge and Codifiable Knowledge,
+* Enterprise Knowledge Management
 
 ### Week 9 - Graph Algorithms
 
@@ -118,6 +152,7 @@ The capstone project involves building an end-to-end graph application using an 
 * PageRank
 * Community detection
 * Graph Neural Networks
+* Data Science toolkits
 
 ### Week 9 – Graph Modeling Patterns**
 
@@ -129,8 +164,9 @@ The capstone project involves building an end-to-end graph application using an 
 * Modeling Internet of Things Events
 * Modeling Rules and Decision Trees
 * Bitemporal Graph Models (Advanced Topic)
+* Graph quality metrics
 
-### Weeks 10 and 11 – Industry Reference Data Models (Part I)**
+### Weeks 10 and 11 – Industry Reference Data Models
 
 * Web storefront graph model
 * Product catalogs
@@ -148,7 +184,7 @@ The capstone project involves building an end-to-end graph application using an 
 * Graph analytics vs. transactional graph queries
 * Graph embeddings (introduction)
 
-### Weeks 12, 13 and 14 – Capstone Project Presentations**
+### Weeks 12, 13 and 14 – Capstone Projects and Presentations
 
 * Students present a full graph application
 * Modeling choices, data loading, queries, and performance measurements
@@ -184,13 +220,18 @@ The capstone project involves building an end-to-end graph application using an 
 
 ## Topics Not Covered
 
-*
+* How neural networks work
+* Deep learning
+* Complex statistics
+* Details of how other databases work
 
-# **Learning Objectives (Organized by Bloom’s Taxonomy – 2001 Revision)**
+## Learning Objectives
+
+Organized by Bloom’s Taxonomy – 2001 Revision
 
 Below are the learning objectives grouped by **Remember → Understand → Apply → Analyze → Evaluate → Create**.
 
-## **1. Remember (Factual Knowledge)**
+### 1. Remember (Factual Knowledge)
 
 Students will be able to:
 
@@ -199,7 +240,7 @@ Students will be able to:
 * Identify the components of an LPG information model.
 * Recall common graph query languages (openCypher, GSQL, Gremlin).
 
-## **2. Understand (Conceptual Knowledge)**
+### 2. Understand (Conceptual Knowledge)
 
 Students will be able to:
 
@@ -209,7 +250,7 @@ Students will be able to:
 * Explain how concept dependency graphs represent knowledge structures.
 * Compare various real-world graph models (social, supply chain, healthcare, etc.).
 
-## **3. Apply (Procedural Knowledge)**
+### 3. Apply (Procedural Knowledge)
 
 Students will be able to:
 
@@ -219,7 +260,7 @@ Students will be able to:
 * Implement graph traversal queries that compute multi-hop patterns.
 * Use performance measurement tools to benchmark graph workloads.
 
-## **4. Analyze (Breakdown & Structure)**
+### 4. Analyze (Breakdown & Structure)
 
 Students will be able to:
 
@@ -229,7 +270,7 @@ Students will be able to:
 * Analyze alternative graph schema representations for a given domain.
 * Map complex business processes into multi-layered graph models (e.g., supply chain, IT dependency graph).
 
-## **5. Evaluate (Judgment & Critique)**
+### 5. Evaluate (Judgment & Critique)
 
 Students will be able to:
 
@@ -239,7 +280,7 @@ Students will be able to:
 * Assess the appropriateness of chosen benchmarks and workload profiles.
 * Defend the modeling decisions used in their capstone project.
 
-## **6. Create (Synthesis & Design)**
+### 6. Create (Synthesis & Design)
 
 Students will be able to:
 
@@ -248,12 +289,3 @@ Students will be able to:
 * Create an end-to-end graph system including ETL, schema, queries, and visualizations.
 * Build and present a capstone graph application grounded in real-world data.
 * Propose design improvements using graph algorithms or structural pattern refinements.
-
----
-
-If you'd like, I can also generate:
-
-* A **concept dependency graph** for the course
-* A **full syllabus PDF**
-* A **14-week slide deck outline**
-* **MicroSims** that help teach specific topics (e.g., index-free adjacency, BFS traversal, fraud detection patterns)
