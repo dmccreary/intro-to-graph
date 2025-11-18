@@ -1,0 +1,10 @@
+{
+  "title": "Introduction to Graph Databases",
+  "description": "A comprehensive course on graph databases, labeled property graphs, query languages (OpenCypher, GSQL, GQL), performance optimization, graph algorithms, and real-world applications across healthcare, finance, supply chain, and knowledge management domains.",
+  "creator": "Dan McCreary",
+  "date": "2025-11-18",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}

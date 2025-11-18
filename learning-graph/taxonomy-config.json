@@ -1,0 +1,67 @@
+{
+  "FOUND": {
+    "range": [1, 20],
+    "keywords": ["data modeling", "world model", "knowledge representation", "schema design", "hash map", "tree", "array", "data structure", "relational model", "normalization"],
+    "exclude": []
+  },
+  "DBSYS": {
+    "range": [4, 13],
+    "keywords": ["rdbms", "olap", "oltp", "nosql", "key-value", "document database", "wide-column", "cap theorem", "tradeoff"],
+    "exclude": ["graph database"]
+  },
+  "GRAPH": {
+    "range": [21, 45],
+    "keywords": ["labeled property graph", "node", "edge", "property", "label", "schema-optional", "schema-enforced", "index-free adjacency", "traversal", "graph query", "pattern matching", "multi-hop", "path pattern", "first-class relationship", "graph data model", "graph schema", "metadata representation", "world model", "graph validation", "rule system"],
+    "exclude": []
+  },
+  "QUERY": {
+    "range": [46, 70],
+    "keywords": ["opencypher", "gsql", "gql", "cypher syntax", "match clause", "where clause", "return clause", "create statement", "merge statement", "delete statement", "set clause", "graph pattern", "variable length path", "shortest path", "all paths", "map-reduce", "accumulator", "query optimization", "query performance", "query latency", "query throughput", "declarative", "imperative", "query plan", "statistical query tuning"],
+    "exclude": []
+  },
+  "PERF": {
+    "range": [71, 90],
+    "keywords": ["hop count", "degree", "indegree", "outdegree", "edge-to-node ratio", "index", "vector index", "full-text search", "composite index", "graph metric", "performance benchmark", "synthetic benchmark", "single-node benchmark", "multi-node benchmark", "ldbc", "graph 500", "query cost", "join operation", "traversal cost", "scalability"],
+    "exclude": []
+  },
+  "ALGO": {
+    "range": [91, 110],
+    "keywords": ["breadth-first search", "depth-first search", "a-star", "pathfinding", "traveling salesman", "pagerank", "community detection", "centrality", "betweenness", "closeness", "graph embedding", "graph neural network", "link prediction", "node classification", "graph clustering", "shortest path algorithm", "minimum spanning tree", "connected component"],
+    "exclude": []
+  },
+  "SOCIAL": {
+    "range": [111, 125],
+    "keywords": ["social network", "friend graph", "influence graph", "follower network", "activity stream", "user profile", "relationship type", "sentiment analysis", "natural language processing", "fake account detection", "human resources", "org chart", "skill management", "task assignment", "backlog management"],
+    "exclude": []
+  },
+  "KNOW": {
+    "range": [126, 145],
+    "keywords": ["concept dependency graph", "curriculum graph", "ontology", "skos", "preferred label", "alternate label", "acronym list", "glossary", "controlled vocabulary", "taxonomy", "enterprise knowledge", "department knowledge", "project knowledge", "personal knowledge graph", "note-taking", "knowledge capture", "tacit knowledge", "codifiable knowledge", "knowledge management", "action item extraction"],
+    "exclude": []
+  },
+  "PATTERN": {
+    "range": [146, 165],
+    "keywords": ["subgraph", "supernode", "anti-pattern", "hyperedge", "multi-edge", "time-based modeling", "time tree", "iot event", "decision tree", "bitemporal", "graph quality metric", "model validation", "schema evolution", "data migration", "etl pipeline", "csv import", "json import", "data loading", "bulk loading", "incremental loading"],
+    "exclude": []
+  },
+  "FIN": {
+    "range": [172, 176],
+    "keywords": ["financial transaction", "fraud detection", "anti-money laundering", "know your customer", "account network"],
+    "exclude": []
+  },
+  "HEALTH": {
+    "range": [177, 180],
+    "keywords": ["healthcare graph", "provider-patient", "electronic health record", "clinical pathway"],
+    "exclude": []
+  },
+  "SUPPLY": {
+    "range": [166, 171],
+    "keywords": ["web storefront", "product catalog", "recommendation engine", "bill of materials", "complex part", "supply chain", "it asset management", "dependency graph", "network topology", "configuration management", "impact analysis", "root cause analysis", "regulatory compliance", "data lineage", "master data management", "reference data model"],
+    "exclude": ["concept dependency graph"]
+  },
+  "ADV": {
+    "range": [191, 200],
+    "keywords": ["distributed graph database", "graph partitioning", "sharding", "replication", "consistency model", "graph visualization", "interactive query", "real-time analytics", "batch processing", "capstone project"],
+    "exclude": []
+  }
+}
