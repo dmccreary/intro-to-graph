@@ -46,9 +46,46 @@ body {
     border-radius: 3px;
 }
 
+.controls {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.control-group label {
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+}
+
+#employeeCount {
+    width: 200px;
+    cursor: pointer;
+}
+
+#countValue {
+    font-weight: bold;
+    color: #3498db;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    margin-right: 8px;
+}
+
 #mynetwork {
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 220px);
     border: 1px solid #e0e0e0;
     background-color: white;
 }

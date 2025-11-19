@@ -1,0 +1,1084 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/stories/jellyfish-and-flatworm/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>The Jellyfish and the Flatworm: A Story of Evolution - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="The Jellyfish and the Flatworm: A Story of Evolution - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/stories/jellyfish-and-flatworm/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/stories/jellyfish-and-flatworm/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="The Jellyfish and the Flatworm: A Story of Evolution - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/stories/jellyfish-and-flatworm/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-jellyfish-and-the-flatworm-a-story-of-evolution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Jellyfish and the Flatworm: A Story of Evolution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#consider-the-jellyfish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consider the Jellyfish
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consider-the-flatworm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consider The Flatworm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-jellyfish-and-the-flatworm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Jellyfish and the Flatworm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marks-barbershop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mark's Barbershop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-old-school" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Old School
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-new-school" class="md-nav__link">
+    <span class="md-ellipsis">
+      The New School
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-lms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern LMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/stories/jellyfish-and-flatworm/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="the-jellyfish-and-the-flatworm-a-story-of-evolution">The Jellyfish and the Flatworm: A Story of Evolution</h1>
+<p><img alt="" src="cover.png" /></p>
+<p>Approximately 600 million years ago, two very different evolutionary paths emerged in the animal kingdom. These divergent paths offer profound insights not just about biological evolution, but about organizational intelligence and AI strategy in our modern world.
+This story is a metaphor for how intelligence must evolve in some organizational in order to survive.</p>
+<h2 id="consider-the-jellyfish">Consider the Jellyfish</h2>
+<p><img alt="" src="01-jellyfish.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+Please generate colorful a wide-landscape drawing as though it might appear in a graphic novel.
+The image is an underwater drawing of purple and pink jellyfish floating in the open ocean.  The water is a deep blue color.  The jellyfish glow with brilliance.  There are various sizes of jellyfish floating at different depths.
+</details>
+
+<p>The jellyfish represents one of Earth's earliest evolutionary strategies for survival. These elegant creatures drift through the open ocean, a relatively simple environment with few structural barriers. They possess a decentralized nervous system that requires minimal energy to operate - a perfect adaptation for their lifestyle.</p>
+<p><img alt="" src="02-tenticles.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+Please generate a colorful a wide-landscape drawing as though it might appear in a graphic novel.
+
+The image must have a consistent style of an underwater drawing of purple and pink jellyfish floating in the open ocean.  The water is a deep blue color.  The jellyfish glow with brilliance.  There are various sizes of jellyfish floating at different depths, but you focus on one big jellyfish in the center of the image.  In this image, a bright yellow fish is caught in the tentacles of the cental jellyfish.
+</details>
+
+<p>Jellyfish don't actively hunt. Instead, they float passively through the waters, using simple rules to navigate toward food-rich areas and away from predators. Their tentacles wait for prey to drift into them - no complex decision-making required.</p>
+<p>The survival strategy of the Jellyfish is beautifully efficient. By avoiding the energy cost of a centralized brain, jellyfish can thrive in nutrient-poor environments. When a small fish becomes entangled in their tentacles, they can feed without needing to plan, strategize, or remember complex patterns.</p>
+<p>This simple, rule-based approach to intelligence was perfectly adequate for the jellyfish's environmental niche. But not all environments remained so simple.</p>
+<h2 id="consider-the-flatworm">Consider The Flatworm</h2>
+<p><img alt="" src="03-flatworm.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+Panel 3: The flatworm.
+
+Please generate a colorful a wide-landscape drawing as though it might appear in a graphic novel.  Make the style of drawing consistent with the previous drawings.
+
+In this drawing, we see a colorful flatworm crawling along the bottom of the ocean.  The environment is complex with different slopes and rocks. It full of colorful life like coral, amoeba, and seaweed and with several paths around the terrain.
+</details>
+
+<p>On the complex ocean floor, a different evolutionary strategy emerged. Flatworms were among the first animals to develop a centralized nervous system - a proto-brain that could process and integrate information from multiple sensory inputs.
+Unlike the drifting jellyfish, flatworms actively navigate through a structured environment filled with obstacles, hiding places, and varying terrain. This locomotion presented new challenges that required new solutions.</p>
+<p><img alt="" src="04-flatworm-reading-a-map.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+    Generate an image of the flatworm reading a map on the ocean floor.
+</details>
+
+<p>Flatworms needed to understand the structure of their environment and remember it. They evolved what we might consider the earliest "world models" - internal representations of their surroundings that helped them locate prey, avoid predators, and navigate complex terrain.</p>
+<p>These internal representations of their world were like maps.  And these maps provided a competitive advantage. A flatworm with a more accurate model of its environment would find more food, avoid more dangers, and ultimately produce more offspring than its less perceptive relatives.</p>
+<h2 id="the-jellyfish-and-the-flatworm">The Jellyfish and the Flatworm</h2>
+<p><img alt="" src="05-comparison.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+    Generate a side-by-side infographic style comparison of the jellyfish on the left and the flatwork on the right.
+</details>
+
+<p>The fundamental difference between these two evolutionary approaches comes down to environmental complexity and movement.</p>
+<p>Jellyfish thrive in open waters where simple rules suffice. Their simple nervous system of about 8,000 neurons is energy-efficient but limited in capability. They react to their environment but don't need to model it.</p>
+<p>In contrast, Flatworms navigating the complex topography of the ocean floor, evolved centralized processing and environmental modeling. They needed to understand the structure around them and predict how their movements would interact with that structure.
+This divergence teaches us a profound lesson about the relationship between intelligence and environment: the complexity of an organism's cognitive systems must match the complexity of the environment it navigates.</p>
+<p>Building a simple internal model of their world was just a beginning.  Ancestors of these primitive animals needed to create larger and more sophisticated brains to not only model the terrain, but to model with their competitors and enemies knew about their own capabilities.  They eventually had to create a sense of self and place that in their model of the world.</p>
+<p>Now let's see how we can leverage these metaphors to decide what types of models and intelligence your organization needs to survive in the future.</p>
+<h2 id="marks-barbershop">Mark's Barbershop</h2>
+<p><img alt="" src="06-marks-barbershop.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+Title: Mark's Barbershop
+
+Please generate a colorful a wide-landscape drawing as though it might appear in a graphic novel.  Make the style of drawing consistent with the previous drawings.
+
+In this drawing we see an interior image of Mark the barber cutting hair in a small twon barbershop.  Outside the window you see a simple scene from a small rural farming  town in the midwest.  The interior of the barbershop is simple with only the tools of a barber and an old-style cash register.  Mark is happy and he is cutting the hair of a teen-age boy in the barber's chair.  The boy is also smiling.  The drawing depicts a simple life in the style of Norman Rockwell.
+</details>
+
+<p>Consider Mark's Barbershop - a simple business in a small town. Like the jellyfish, Mark operates in a relatively simple environment. He provides one primary service (haircuts), serves a stable local clientele, and faces little competition.</p>
+<p>Mark doesn't need complex computer systems to track customer preferences, analyze market trends, or model competitive responses. His business can thrive with simple record-keeping and personal relationships. Mark's Barbershop is a "jellyfish business" - efficiently adapted to a stable, uncomplicated environment.  Adding a complex model of the world in Mark's business operations would not necessarily make his business more profitable.</p>
+<h2 id="the-old-school">The Old School</h2>
+<p><img alt="" src="07-old-school.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+Please generate a colorful a wide-landscape drawing as though it might appear in a graphic novel.  Make the style of drawing consistent with the previous drawings.
+
+In this image, create an interior image of Sue the teacher in a very old schoolhouse with a simple interior.  It is a single room schoolhouse in a rural farming village.  Their is a single chalk board at the front of the room.  Sue is giving a very boring lecture on multiplication tables.  The students are board and not paying attention to her.  There are old textbooks covered with dust.  It looks like things have not changed for the past 100 years.
+</details>
+
+<p>Traditional education often followed a similar "jellyfish model" - a static environment with predictable patterns. In the old schoolhouse, Sue teaches multiplication tables the same way they've been taught for generations. Information flows in one direction, and there's little need to adapt to individual students' needs or learning preferences.
+This approach worked in a world where educational demands remained constant over centuries. The simple model was sufficient when both the knowledge being transmitted and the methods for transmission rarely changed.  Education focused on the simple memorization of facts without a focus on applying these facts to a new context.</p>
+<h2 id="the-new-school">The New School</h2>
+<p><img alt="" src="08-new-school.png" /></p>
+<details>
+    <summary>Image Prompt</summary>
+Title: The Ultra-Modern AI School
+
+Please generate a colorful a wide-landscape drawing as though it might appear in a graphic novel.  Make the style of drawing consistent with the previous drawings.
+
+The drawing shows an colorful ultra-modern school room in a futuristic setting.  Students are engaged in various project-based learning building a variety of types of robots and AI.  The instructor is a young back woman that is helping debug the code of one of the robots with one students.  The students come from a wide variety of races and gender.  The kids are are all happy, curious and engaged.  The school has huge bright windows overlooking a modern cityscape.  Some of the kids wear rainbow-themed shirts.
+</details>
+
+<p>In contrast, modern education exists in a fundamentally different environment - one that much more closely resembles the complex terrain navigated by flatworms. The modern classroom must adapt to diverse learning styles, integrate rapidly evolving technology, and prepare students for jobs that don't yet exist.  AI continues to grow at an exponential rate and low-cost chatbots can accurately answer even the most complex student questions in seconds.  An they can do this 24 hours a day, seven days a week.  They are always patient, consistent and non-judgemental.</p>
+<p>In this complex, dynamic environment, educators need sophisticated "world models" to succeed. They must understand the interconnections between concepts, track individual student progress, and adapt teaching methods to optimize learning outcomes. The modern school is a "flatworm organization" - it requires centralized intelligence and structured knowledge to navigate its complex environment.</p>
+<h2 id="simple-model">Simple Model</h2>
+<p><img alt="" src="09-old-lms.png" /></p>
+<details>
+ <summary>Image Prompt</summary>
+ A very basic data model showing a primitive learning management system with just two tables.  One table is for courses and the other is for students.
+ The table for courses just shows instances of the courses of a school: pre-algebra, algebra, geometry, trigonometry etc.
+ The second table has three columns for student, date and grade.
+</details>
+
+<p>The simple data model in a old-school learning management system (LMS) shown here represents a "jellyfish approach" to educational management - flat tables with minimal structure. Each course exists as an isolated entity, and student information is tracked in the most basic way.  There is no ability to recommend a simulation, a story or a specific function in a coding problem.</p>
+<p>This model might be adequate for a small, unchanging educational environment, but it lacks the capability to represent complex relationships or adapt to changing conditions. Like the jellyfish's nervous system, it's efficient but limited.</p>
+<h2 id="modern-lms">Modern LMS</h2>
+<p><img alt="" src="10-modern-graph-lms.png" /></p>
+<details>
+ <summary>Image Prompt</summary>
+ Show a graph data model for a very, very complex school. Put "Student" at the center but then put many items like "Course", "Lesson Plan", "Learning Path", "Recommendation", "Student Preferences", "Concept", "Similarity", "Teacher", "Mentor" etc.
+</details>
+
+<p>The knowledge graph approach represents true "flatworm intelligence" for educational organizations. By modeling the rich interconnections between students, courses, concepts, learning pathways, recommendations and preferences, this approach creates a structural representation that mirrors the complexity of modern education.</p>
+<p>This model can answer sophisticated questions: What concepts does this student struggle with? Which learning paths lead to the best outcomes for different learning styles? How do various concepts connect to one another?  How can figures, diagrams, animations and simulations be used to explain complex concepts?  What stories and metaphors might be helpful?</p>
+<p>Just as the flatworm's centralized nervous system allowed it to thrive in complex environments, knowledge graph enabled learning management systems help learning organizations to navigate complexity with precision and adaptability.</p>
+<p>The lesson for modern organizations is clear: simple, rule-based systems (like those used by jellyfish) work well in simple, stable, and uniform environments. But in complex, structured environments that require strategic navigation, we need sophisticated world models that can represent all the complex relationships, structure, and interdependencies we see in a modern project-based learning classroom driven by students curiosity, not the dogma of rote memorization.</p>
+<p>As artificial intelligence evolves, the most powerful systems will combine the pattern-recognition capabilities of large language models with the structured world-modeling of knowledge graphs and the reference frames that human brains use to understand their environment.</p>
+<p>Organizations that recognize which type of intelligence their environment demands - jellyfish or flatworm - will make better strategic decisions about their AI investments and capabilities.</p>
+<h2 id="references">References</h2>
+<details>
+Please generate 10 real references about jellyfish nervous systems and to how flatworms evolved central nervous systems.   Create references that would be readable by a 12th grader. Return the references in the following formats:
+
+[Link Label](Link URL) - date - publication - notes on why the reading might be interesting
+</details>
+
+<ul>
+<li><a href="https://journals.biologists.com/jeb/article/214/8/1215/10743/Do-jellyfish-have-central-nervous-systems">Do jellyfish have central nervous systems?</a> - 2011 - Journal of Experimental Biology - Explores how jellyfish have more organized nervous systems than commonly believed, with some species showing centralized neural structures despite their reputation for having only diffuse nerve nets.</li>
+<li><a href="https://elifesciences.org/articles/50084">From single neurons to behavior in the jellyfish Aurelia aurita</a> - 2019 - eLife Sciences - Presents groundbreaking research on how jellyfish nervous systems provide insights into the origins of neural networks, with detailed modeling of how their simple nervous systems control complex swimming behaviors.</li>
+<li><a href="https://www.pbs.org/wnet/nature/blog/no-brain-for-jellyfish-no-problem/">No Brain? For Jellyfish, No Problem</a> - 2021 - PBS Nature - Fascinating explanation of how jellyfish operate with two separate nervous systems and can coordinate complex behaviors without a centralized brain.</li>
+<li><a href="https://www.scielo.br/j/gmb/a/N8tGWK6CdRdWQ4sxXYfYXwt/?lang=en">Evolution of flatworm central nervous systems: Insights from polyclads</a> - 2015 - Genetics and Molecular Biology - Examines how flatworm nervous systems diversified extensively, representing a key evolutionary step toward centralized processing in more complex animals.</li>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-0348-9219-3_3">The flatworm nervous system: Pattern and phylogeny</a> - 1995 - Experientia Supplementum - Comprehensive overview of the structural diversity in flatworm nervous systems and their evolutionary significance as early bilateral animals.</li>
+<li><a href="https://courses.lumenlearning.com/wm-biology2/chapter/diversity-of-nervous-systems/">Diversity of Nervous Systems</a> - Lumen Learning - Clear educational resource that explains how flatworms developed the first recognizable brain structures in animal evolution, positioned at a crucial transition point between nerve nets and centralized nervous systems.</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/4084864/">The brain of the planarian as the ancestor of the human brain</a> - 1985 - Canadian Journal of Neurological Sciences - Presents evidence that the bilobed planarian brain shows remarkable similarities to vertebrate brains, suggesting its role as an evolutionary precursor to our own.</li>
+<li><a href="https://www.caltech.edu/about/news/how-to-read-a-jellyfishs-mind">How to Read a Jellyfish's Mind</a> - Caltech - Fascinating recent research that uses modern genetic tools to understand how jellyfish coordinate behaviors with their decentralized nerve nets, providing insights into the early evolution of nervous systems.</li>
+<li><a href="https://oceanconservancy.org/blog/2023/08/03/do-jellyfish-have-brains/">Do Jellyfish Have Brains?</a> - 2023 - Ocean Conservancy - Accessible explanation of how jellyfish function with specialized nerve structures called rhopalia instead of a centralized brain, making them excellent models for understanding neural evolution.</li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S004081660200037X">The nervous and muscular systems in the free-living flatworm Castrella truncata</a> - 2002 - ScienceDirect - First immunocytochemical study of rhabdocoel flatworms, revealing the organization of their orthogon (ladder-like) nervous system and its evolutionary significance.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

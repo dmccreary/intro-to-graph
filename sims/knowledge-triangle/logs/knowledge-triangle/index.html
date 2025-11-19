@@ -1,0 +1,1529 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/logs/knowledge-triangle/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Knowledge Triangle MicroSim - Development Session Log - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Knowledge Triangle MicroSim - Development Session Log - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/sims/knowledge-triangle/logs/knowledge-triangle.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/logs/knowledge-triangle/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Knowledge Triangle MicroSim - Development Session Log - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/sims/knowledge-triangle/logs/knowledge-triangle.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#knowledge-triangle-microsim-development-session-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Knowledge Triangle MicroSim - Development Session Log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-initial-file-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Initial File Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-triangle-geometry-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Triangle Geometry Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-layer-drawing-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Layer Drawing Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-hover-detection-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 4: Hover Detection System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Journey
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Journey">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-1-inverted-triangle-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug #1: Inverted Triangle Orientation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-2-invalid-stroke-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug #2: Invalid stroke() Call
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-3-tooltips-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug #3: Tooltips Not Appearing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tooltip-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooltip Styling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#educational-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Content
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimizations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lessons Learned
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lessons Learned">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p5js-coordinate-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      p5.js Coordinate System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p5js-function-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      p5.js Function Signatures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-interactive-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Interactive Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsim-architecture-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim Architecture Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-manifest" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Manifest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#educational-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Impact
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/sims/knowledge-triangle/logs/knowledge-triangle.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="knowledge-triangle-microsim-development-session-log">Knowledge Triangle MicroSim - Development Session Log</h1>
+<p><strong>Date:</strong> 2025-11-19
+<strong>MicroSim:</strong> Knowledge Triangle
+<strong>Location:</strong> <code>/docs/sims/knowledge-triangle/</code>
+<strong>Status:</strong> ✅ Complete and Production-Ready</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Successfully created an interactive p5.js MicroSim visualizing the three layers of data transformation in graph databases: Data Layer (raw binary), Information Layer (isolated facts), and Knowledge Layer (connected graph). The development process involved creating the visualization, debugging triangle orientation issues, and resolving p5.js rendering errors to achieve working hover tooltips.</p>
+<h2 id="initial-requirements">Initial Requirements</h2>
+<p>From <code>requirements.md</code>:</p>
+<h3 id="concept">Concept</h3>
+<p>Create a triangle diagram with three horizontal layers representing the data hierarchy:</p>
+<ol>
+<li><strong>Data Layer (Bottom)</strong>: Black background with green binary (1s and 0s)</li>
+<li><strong>Information Layer (Middle)</strong>: Colored circles labeled "Fact"</li>
+<li><strong>Knowledge Layer (Top)</strong>: Connected graph nodes with edges</li>
+</ol>
+<h3 id="interactive-feature">Interactive Feature</h3>
+<ul>
+<li>Hover tooltips explaining each layer's characteristics</li>
+<li>Educational descriptions of the transformation from data → information → knowledge</li>
+</ul>
+<h3 id="visual-design">Visual Design</h3>
+<ul>
+<li>Triangle shape (narrow at top, wide at bottom)</li>
+<li>Distinct visual styling for each layer</li>
+<li>Layer labels within each section</li>
+</ul>
+<h2 id="implementation-process">Implementation Process</h2>
+<h3 id="phase-1-initial-file-creation">Phase 1: Initial File Creation</h3>
+<p><strong>Files Generated:</strong></p>
+<ol>
+<li><code>knowledge-triangle.js</code> - Main p5.js simulation</li>
+<li><code>main.html</code> - HTML wrapper with p5.js CDN</li>
+<li><code>index.md</code> - Documentation with iframe embed</li>
+<li><code>metadata.json</code> - Dublin Core educational metadata</li>
+</ol>
+<p><strong>Architecture Decisions:</strong></p>
+<ul>
+<li>Canvas dimensions: 600×550 (500px drawing + 50px control area)</li>
+<li>Triangle positioning: 60px from top, with 80px reserved for title</li>
+<li>Three equal height layers (each 1/3 of triangle height)</li>
+<li>Width calculation function <code>getTriangleWidthAtY(y)</code> for responsive triangle geometry</li>
+</ul>
+<h3 id="phase-2-triangle-geometry-implementation">Phase 2: Triangle Geometry Implementation</h3>
+<p><strong>Initial Width Calculation (INCORRECT):</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getTriangleWidthAtY</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">relativeY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">triangleTop</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">relativeY</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">triangleHeight</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">triangleBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">ratio</span><span class="p">);</span><span class="w">  </span><span class="c1">// ❌ INVERTED!</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Problem:</strong> This formula made the triangle <strong>wide at top, narrow at bottom</strong> - the opposite of intended.</p>
+<p><strong>Root Cause:</strong> In p5.js, y=0 is at the TOP of the canvas and y increases DOWNWARD. The formula <code>(1 - ratio)</code> inverted the width calculation.</p>
+<p><strong>Corrected Formula:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getTriangleWidthAtY</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Triangle is narrow at top (small y) and wide at bottom (large y)</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">relativeY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">triangleTop</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">relativeY</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">triangleHeight</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">triangleBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">ratio</span><span class="p">;</span><span class="w">  </span><span class="c1">// ✅ CORRECT</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Validation:</strong>
+- At <code>knowledgeLayerTop</code> (y=60): ratio = 0, width = 0 (narrow apex) ✓
+- At <code>triangleBottom</code>: ratio = 1, width = triangleBase (wide base) ✓</p>
+<h3 id="phase-3-layer-drawing-implementation">Phase 3: Layer Drawing Implementation</h3>
+<p><strong>Data Layer (Bottom):</strong>
+- Background: Black filled trapezoid
+- Content: 150 random "1" and "0" characters in bright green (#00FF00)
+- Label: White "Data Layer" text centered</p>
+<p><strong>Information Layer (Middle):</strong>
+- Background: Light blue (#E8F4F8) trapezoid
+- Content: 12 colored circles (radius 12px) with "Fact" labels
+- Colors: Pastel palette ['#FFB6C1', '#87CEEB', '#98FB98', '#DDA0DD', '#F0E68C', '#FFE4B5']
+- Label: Black "Information Layer" text</p>
+<p><strong>Knowledge Layer (Top):</strong>
+- Background: Light blue (#F0F8FF) triangle
+- Content: 8 nodes with 1-3 connections each, colored edges
+- Node colors: ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F']
+- Label: Black "Knowledge Layer" text with manual positioning offset (+55px)</p>
+<h3 id="phase-4-hover-detection-system">Phase 4: Hover Detection System</h3>
+<p><strong>Architecture:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Global hover state</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">hoveredLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39;data&#39;, &#39;info&#39;, &#39;knowledge&#39;, or null</span>
+
+<span class="c1">// Detection functions for each layer</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isPointInDataLayer</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isPointInInfoLayer</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isPointInKnowledgeLayer</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span>
+
+<span class="c1">// Main hover check (called every frame)</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">checkHover</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Hit Detection Logic:</strong></p>
+<p>Each layer has exclusive y-coordinate ranges:
+- Knowledge: <code>knowledgeLayerTop</code> to <code>infoLayerTop</code>
+- Information: <code>infoLayerTop</code> to <code>dataLayerTop</code>
+- Data: <code>dataLayerTop</code> to <code>triangleBottom</code></p>
+<p>For x-coordinate validation:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">widthAtY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getTriangleWidthAtY</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">leftEdge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">centerX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">widthAtY</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">rightEdge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">centerX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">widthAtY</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">leftEdge</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">rightEdge</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="debugging-journey">Debugging Journey</h2>
+<h3 id="bug-1-inverted-triangle-orientation">Bug #1: Inverted Triangle Orientation</h3>
+<p><strong>Symptom:</strong> Triangle appeared upside-down with wide top and narrow bottom.</p>
+<p><strong>Diagnosis:</strong>
+- User reported: "some of the triangles are inverted"
+- Reminded that y=0 is at top in p5.js</p>
+<p><strong>Solution:</strong> Changed <code>getTriangleWidthAtY()</code> formula from <code>triangleBase * (1 - ratio)</code> to <code>triangleBase * ratio</code></p>
+<p><strong>Verification:</strong> Visual inspection showed correct pyramid shape with apex at top.</p>
+<h3 id="bug-2-invalid-stroke-call">Bug #2: Invalid stroke() Call</h3>
+<p><strong>Symptom:</strong> Error in p5.js editor:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[line 76] &quot;[object Arguments]is not a valid color representation&quot;
+occurred inside the p5js library when stroke was called
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Diagnosis:</strong>
+- Called <code>stroke()</code> with no arguments after <code>noStroke()</code>
+- In p5.js, <code>stroke()</code> requires at least one color parameter
+- Cannot call <code>stroke()</code> to "reset" - must specify a color</p>
+<p><strong>Solution:</strong> Removed the invalid <code>stroke()</code> call with no arguments:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Before:</span>
+<span class="nx">noStroke</span><span class="p">();</span>
+<span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Knowledge Triangle&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<span class="nx">stroke</span><span class="p">();</span><span class="w">  </span><span class="c1">// ❌ Invalid - cannot call stroke() without arguments!</span>
+<span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+
+<span class="c1">// After:</span>
+<span class="nx">noStroke</span><span class="p">();</span>
+<span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Knowledge Triangle&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ Just omit stroke()</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="bug-3-tooltips-not-appearing">Bug #3: Tooltips Not Appearing</h3>
+<p><strong>Symptom:</strong> No tooltips visible on hover, no clicking response.</p>
+<p><strong>Diagnosis Process:</strong></p>
+<p><strong>Step 1:</strong> Added debug indicator at bottom of canvas
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Hover: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">hoveredLayer</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;none&#39;</span><span class="p">),</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Step 2:</strong> Simplified tooltip to bright yellow box for visibility
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">);</span>
+<span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+<span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
+<span class="nx">rect</span><span class="p">(</span><span class="nx">boxX</span><span class="p">,</span><span class="w"> </span><span class="nx">boxY</span><span class="p">,</span><span class="w"> </span><span class="nx">boxWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">boxHeight</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Step 3:</strong> Added console logging to track hover state changes
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hoveredLayer</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">prevHoveredLayer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hover changed from&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">prevHoveredLayer</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">hoveredLayer</span><span class="p">,</span>
+<span class="w">              </span><span class="s1">&#39;at position&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">mouseX</span><span class="p">,</span><span class="w"> </span><span class="nx">mouseY</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Step 4:</strong> Added logging to confirm drawInfoBox() execution
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Drawing infobox for layer:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">hoveredLayer</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Success:</strong> Console logs showed:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Hover changed from null to knowledge at position 292 155
+Drawing infobox for layer: knowledge
+Hover changed from knowledge to info at position 278 217
+Drawing infobox for layer: info
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Root Cause:</strong> The bug was the earlier p5.js <code>stroke()</code> error (Bug #2) preventing the entire sketch from running. Once that was fixed, hover detection worked perfectly.</p>
+<h2 id="final-implementation">Final Implementation</h2>
+<h3 id="tooltip-styling">Tooltip Styling</h3>
+<p><strong>Professional Design Elements:</strong></p>
+<ol>
+<li>
+<p><strong>Shadow effect</strong> for depth:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span><span class="w">  </span><span class="c1">// Semi-transparent black</span>
+<span class="nx">rect</span><span class="p">(</span><span class="nx">boxX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">boxY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">boxWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">boxHeight</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Title bar</strong> with blue background:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fill</span><span class="p">(</span><span class="mf">70</span><span class="p">,</span><span class="w"> </span><span class="mf">130</span><span class="p">,</span><span class="w"> </span><span class="mf">180</span><span class="p">);</span><span class="w">  </span><span class="c1">// Steel blue</span>
+<span class="nx">rect</span><span class="p">(</span><span class="nx">boxX</span><span class="p">,</span><span class="w"> </span><span class="nx">boxY</span><span class="p">,</span><span class="w"> </span><span class="nx">boxWidth</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Rounded top corners</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>White text</strong> on title bar, <strong>dark gray</strong> on body</p>
+</li>
+<li>
+<p><strong>Smart positioning</strong> to keep tooltip on-screen:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">boxX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">boxWidth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">boxX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mouseX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">boxWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span><span class="w">  </span><span class="c1">// Flip to left of mouse</span>
+<span class="p">}</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">boxY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">boxHeight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">boxY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mouseY</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">boxHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span><span class="w">  </span><span class="c1">// Flip above mouse</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Word wrapping</strong> for clean text display</p>
+</li>
+</ol>
+<h3 id="educational-content">Educational Content</h3>
+<p><strong>Data Layer Tooltip:</strong></p>
+<blockquote>
+<p>Contains raw binary data in the form of 1s and 0s. It is the information you might see by creating a raw dump of the data on a hard drive. Finding meaning out of the data layer takes a lot of work.</p>
+</blockquote>
+<p><strong>Information Layer Tooltip:</strong></p>
+<blockquote>
+<p>Contains isolated facts extracted from the raw data. These facts are each disconnected from other facts.</p>
+</blockquote>
+<p><strong>Knowledge Layer Tooltip:</strong></p>
+<blockquote>
+<p>Contains connected facts. It is a graph where facts are all connected together. Each fact must connect to other facts to be valuable. Insight occurs by traversing the network of facts.</p>
+</blockquote>
+<h2 id="performance-optimizations">Performance Optimizations</h2>
+<ol>
+<li><strong>Efficient hover detection:</strong> Check y-range first (cheap), then x-range (requires width calculation)</li>
+<li><strong>Conditional rendering:</strong> Only draw tooltip when <code>hoveredLayer !== null</code></li>
+<li><strong>Data generation on setup:</strong> Create random elements once, not every frame</li>
+<li><strong>Responsive regeneration:</strong> Only regenerate on <code>windowResized()</code>, not every frame</li>
+</ol>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="p5js-coordinate-system">p5.js Coordinate System</h3>
+<ul>
+<li><strong>Always remember:</strong> y=0 is at TOP, y increases DOWNWARD</li>
+<li>Ratios for "top to bottom" progression should increase from 0 to 1 with increasing y</li>
+<li>Test triangle orientation visually before implementing complex features</li>
+</ul>
+<h3 id="p5js-function-signatures">p5.js Function Signatures</h3>
+<ul>
+<li><code>describe()</code> takes 1-2 parameters, second is optional display mode</li>
+<li><code>stroke()</code> requires at least one color parameter - cannot call without args</li>
+<li>Use <code>noStroke()</code> and <code>noFill()</code> to disable, don't try to "reset" them</li>
+</ul>
+<h3 id="debugging-interactive-graphics">Debugging Interactive Graphics</h3>
+<ol>
+<li><strong>Start simple:</strong> Yellow box with red border is unmissable</li>
+<li><strong>Add logging:</strong> Track state changes with console.log</li>
+<li><strong>Incremental validation:</strong> Fix errors one at a time, test each fix</li>
+<li><strong>Visual indicators:</strong> Show debug info in the canvas itself (like "Hover: ...")</li>
+</ol>
+<h3 id="microsim-architecture-patterns">MicroSim Architecture Patterns</h3>
+<ul>
+<li>Separate drawing functions for each visual element</li>
+<li>Central state management (<code>hoveredLayer</code> global variable)</li>
+<li>Frame-by-frame update in <code>draw()</code>, setup in <code>setup()</code></li>
+<li>Responsive design with <code>windowResized()</code> handler</li>
+</ul>
+<h2 id="testing-checklist">Testing Checklist</h2>
+<p>✅ Triangle displays with correct orientation (apex at top)
+✅ Three distinct layers with appropriate visual styling
+✅ Hover detection works for all three layers
+✅ Tooltips appear with correct content for each layer
+✅ Tooltips stay on screen (smart positioning)
+✅ No console errors in browser
+✅ Works in p5.js editor (paste JavaScript directly)
+✅ Responsive to window resizing
+✅ Title positioned correctly in knowledge layer
+✅ Layer labels visible and centered</p>
+<h2 id="file-manifest">File Manifest</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/sims/knowledge-triangle/
+├── knowledge-triangle.js    (465 lines) - Main p5.js simulation
+├── main.html                (22 lines)  - HTML wrapper with CDN
+├── index.md                 (280 lines) - Documentation with lesson plan
+├── metadata.json            (75 lines)  - Dublin Core metadata
+└── logs/
+    └── knowledge-triangle.md           - This session log
+</code></pre></div></td></tr></table></div>
+<h2 id="integration">Integration</h2>
+<p><strong>MkDocs Navigation:</strong> Added to <code>mkdocs.yml</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MicroSims</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Knowledge Triangle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sims/knowledge-triangle/index.md</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Live URL:</strong> https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/</p>
+<p><strong>Embed Code:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/main.html&quot;</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">&quot;502px&quot;</span>
+        <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span>
+        <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="metrics">Metrics</h2>
+<ul>
+<li><strong>Development Time:</strong> ~2 hours (including debugging)</li>
+<li><strong>Lines of Code:</strong> 465 (JavaScript only)</li>
+<li><strong>Bugs Fixed:</strong> 3 issues (triangle orientation, stroke call, tooltip debugging)</li>
+<li><strong>Files Created:</strong> 5 (JS, HTML, MD, JSON, LOG)</li>
+<li><strong>Dependencies:</strong> p5.js 1.11.10 via CDN</li>
+</ul>
+<h2 id="future-enhancements-optional">Future Enhancements (Optional)</h2>
+<ol>
+<li><strong>Animation:</strong> Slowly animate the connections in the knowledge layer</li>
+<li><strong>Click interaction:</strong> Click a layer to "lock" the tooltip open</li>
+<li><strong>Comparison mode:</strong> Side-by-side view of RDBMS table vs. graph representation</li>
+<li><strong>Data flow animation:</strong> Visualize data moving up through the layers</li>
+<li><strong>Customization controls:</strong> Sliders to adjust number of facts/nodes</li>
+<li><strong>Export feature:</strong> Save current triangle state as PNG image</li>
+<li><strong>Mobile optimization:</strong> Touch-friendly tooltip activation</li>
+</ol>
+<h2 id="educational-impact">Educational Impact</h2>
+<p>This MicroSim successfully illustrates the fundamental principle that distinguishes graph databases from traditional data storage:</p>
+<ul>
+<li><strong>Traditional databases</strong> operate at the <strong>Information Layer</strong>: structured facts in tables, but relationships are secondary</li>
+<li><strong>Graph databases</strong> elevate data to the <strong>Knowledge Layer</strong>: relationships are first-class, enabling traversal and insight</li>
+</ul>
+<p>The visual metaphor of a triangle (volume decreases, value increases) reinforces that while raw data is abundant, actionable knowledge requires connection and context.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Knowledge Triangle MicroSim is production-ready and successfully demonstrates the three-layer data transformation hierarchy. All bugs have been resolved, hover tooltips work reliably, and the visualization effectively communicates the core educational concept: <strong>knowledge emerges from connected information, not isolated facts</strong>.</p>
+<p>The debugging process reinforced important p5.js fundamentals and demonstrated the value of incremental testing with visual feedback. The final implementation follows MicroSim best practices with responsive design, clean code structure, and comprehensive documentation.</p>
+<hr />
+<p><strong>Status:</strong> ✅ Complete
+<strong>Last Updated:</strong> 2025-11-19
+<strong>Ready for Production:</strong> Yes
+<strong>Next Action:</strong> Deploy with <code>mkdocs gh-deploy</code></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
