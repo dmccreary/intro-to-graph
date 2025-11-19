@@ -1,6 +1,16 @@
- run the chapter-content-generator on chapter 6 at
-  @docs/chapters/05-social-network-modeling  Assume a senior-high school student reading
-  level.
+Run the chapter-content-generator on chapter 6 at @docs/chapters/06-graph-algorithms/index.md
+ Assume a senior-high school student reading level.
+Make the tone lighthearted and engaging.
+Ask the reader, can a single graph algorithm written in a page of code be worth $350 million dollars?
+Read along and you will find that graph algorithms are a key aspect of graph databases that differentiate graph databases from other databases.   Graph algorithms also break many rules about where business rules should be stored.
+Once you study graph algorithms you will have a deeper appreciation of how precise models of the world that contain structure are very different from storing your data in a table.
+ 
+ 
+ 
+ 
+ run the chapter-content-generator on chapter 7 at
+  @docs/chapters/07-social-network-modeling  
+  Assume a senior-high school student reading level.
   Make the tone lighthearted and engaging.
   Tell the reader that although they may not think they have a social network problem, we find
   aspect of social networks everywhere.  Products have reviews, reviews have ratings, reviewers have varying credibility based on reputation, even your code checkins on GitHub have can have reputation based on the number of times a checkin caused new bugs.  The things you learn in this chapter apply any time people with reputations write comments on any system.
