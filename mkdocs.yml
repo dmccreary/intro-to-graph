@@ -9,6 +9,8 @@ edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
+  - About: about.md
+  - Course Description: course-description.md
   - Chapters:
     - Overview: chapters/index.md
     - Chapter 1 - Introduction to Graph Thinking: chapters/01-intro-graph-thinking-data-modeling/index.md
@@ -40,7 +42,12 @@ nav:
 
   - Stories:
     - List of Stories: stories/index.md
-    - The Neighborhood Walk: stories/the-neighborhood-walk/index.md
+    - The Neighborhood Walk: stories/neighborhood-walk/index.md
+
+  - Prompts:
+    - prompts/index.md
+    - prompts/chapter-06-content.md
+    - prompts/the-neighborhood-walk.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
