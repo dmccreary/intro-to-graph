@@ -1,0 +1,88 @@
+{
+  "dublinCore": {
+    "title": "Knowledge Triangle",
+    "creator": "Dan McCreary",
+    "subject": ["Graph Databases", "Information Science", "Knowledge Representation", "Data Hierarchy"],
+    "description": "An interactive visualization demonstrating the three layers of data transformation: Data Layer (raw binary), Information Layer (isolated facts), and Knowledge Layer (connected graph). Hover over each layer to learn about its characteristics.",
+    "date": "2025-11-19",
+    "type": "Interactive Simulation",
+    "format": "text/html",
+    "language": "en",
+    "rights": "CC BY-NC-SA 4.0"
+  },
+  "educational": {
+    "gradeLevel": "Undergraduate, Graduate",
+    "subjectArea": "Computer Science, Information Science",
+    "topic": "Graph Database Fundamentals, Knowledge Representation, Data Transformation",
+    "learningObjectives": [
+      "Understand the progression from raw data to actionable knowledge",
+      "Identify the characteristics that distinguish data, information, and knowledge",
+      "Explain why connected information (knowledge graphs) provides more value than isolated facts",
+      "Relate the knowledge triangle concept to graph database architectures"
+    ],
+    "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+    "duration": "30-40 minutes",
+    "prerequisites": ["Basic understanding of databases", "Familiarity with data structures", "Introduction to graph concepts"]
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": "600×550",
+    "responsive": "Width-responsive",
+    "dependencies": ["p5.js CDN"],
+    "accessibility": ["ARIA labels", "Semantic HTML", "Hover tooltips", "High-contrast visuals"]
+  },
+  "userInterface": {
+    "controls": [],
+    "interactivity": [
+      {
+        "type": "hover",
+        "description": "Hover over any of the three triangle layers to display an informational tooltip explaining that layer's characteristics"
+      }
+    ],
+    "visualElements": [
+      {
+        "layer": "Data Layer",
+        "appearance": "Black background with bright green 1s and 0s (terminal style)",
+        "purpose": "Represents raw binary data"
+      },
+      {
+        "layer": "Information Layer",
+        "appearance": "Colored circles labeled 'Fact'",
+        "purpose": "Represents isolated facts extracted from data"
+      },
+      {
+        "layer": "Knowledge Layer",
+        "appearance": "Connected graph with nodes and edges in various colors",
+        "purpose": "Represents connected facts forming a knowledge graph"
+      }
+    ]
+  },
+  "simulationModel": {
+    "modelType": "Conceptual Visualization",
+    "concept": "Data-Information-Knowledge Hierarchy",
+    "variables": ["Layer position", "Mouse hover state"],
+    "assumptions": [
+      "Data volume decreases as semantic value increases moving up the triangle",
+      "Knowledge emerges from connections between information, not from isolated facts",
+      "Graph structure is the natural representation of the knowledge layer"
+    ],
+    "pedagogicalPurpose": "Help students understand why graph databases are valuable by visualizing how connected information (knowledge graphs) differs fundamentally from raw data and isolated facts"
+  },
+  "deployment": {
+    "iframeHeight": "552px",
+    "iframeScrolling": "no",
+    "fullscreenSupported": true,
+    "embedCode": "<iframe src=\"https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/main.html\" height=\"552px\" width=\"100%\" scrolling=\"no\"></iframe>"
+  },
+  "relatedConcepts": [
+    "Labeled Property Graph",
+    "Graph Data Model",
+    "Knowledge Graphs",
+    "Semantic Networks",
+    "DIKW Pyramid (Data-Information-Knowledge-Wisdom)",
+    "Index-Free Adjacency",
+    "Relationship-First Design"
+  ],
+  "tags": ["knowledge-triangle", "data-hierarchy", "knowledge-graph", "information-architecture", "graph-fundamentals", "conceptual-model"]
+}

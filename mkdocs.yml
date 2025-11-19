@@ -52,6 +52,7 @@ nav:
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
+    - Knowledge Triangle: sims/knowledge-triangle/index.md
     - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
     - Multi-Hop Comparison: sims/multi-hop-comparison/index.md
     - Organizational Chart: sims/org-chart/index.md
