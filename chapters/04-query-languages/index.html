@@ -15,22 +15,22 @@
         <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/chapters/04-query-languages/">
       
       
-        <link rel="prev" href="../03-labeled-property-graph-model/">
+        <link rel="prev" href="../03-labeled-property-graph-model/quiz/">
       
       
-        <link rel="next" href="../05-performance-metrics-benchmarking/">
+        <link rel="next" href="quiz/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Chapter 4 - Query Languages - Introduction to Graph Databases</title>
+        <title>Content - Introduction to Graph Databases</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -63,7 +63,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Chapter 4 - Query Languages - Introduction to Graph Databases" >
+        <meta  property="og:title"  content="Content - Introduction to Graph Databases" >
       
         <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Chapter 4 - Query Languages - Introduction to Graph Databases" >
+        <meta  name="twitter:title"  content="Content - Introduction to Graph Databases" >
       
         <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 4 - Query Languages
+              Content
             
           </span>
         </div>
@@ -151,11 +151,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -187,13 +189,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -238,7 +241,7 @@
       <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -258,8 +261,10 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -278,8 +283,10 @@
       <a href="../../about/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     About
+    
   </span>
   
 
@@ -298,8 +305,10 @@
       <a href="../../course-description/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Course Description
+    
   </span>
   
 
@@ -324,53 +333,30 @@
         
       
         
-          
+      
         
       
         
-          
+      
         
       
         
-          
+      
         
       
         
-          
+      
         
       
         
-          
+      
         
       
         
-          
-        
       
         
-          
-        
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
+    
     
     
     
@@ -383,13 +369,14 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Chapters
+    
   </span>
   
 
@@ -417,16 +404,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../01-intro-graph-thinking-data-modeling/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../01-intro-graph-thinking-data-modeling/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 1 - Introduction to Graph Thinking
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -438,16 +456,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../02-database-systems-nosql/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../02-database-systems-nosql/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 2 - Database Systems and NoSQL
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -459,16 +508,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../03-labeled-property-graph-model/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../03-labeled-property-graph-model/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 3 - Labeled Property Graph Model
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -482,465 +562,55 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Chapter 4 - Query Languages
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Chapter 4 - Query Languages
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
       
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concepts Covered
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-elephant-in-the-room-or-should-we-say-the-ai-in-the-cloud" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Elephant in the Room (Or Should We Say, the AI in the Cloud?)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#query-languages-the-big-three-and-the-future" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Languages: The Big Three (and the Future)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Query Languages: The Big Three (and the Future)">
-      <ul class="md-nav__list">
         
-          <li class="md-nav__item">
-  <a href="#opencypher-the-peoples-champion" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenCypher: The People's Champion
-    </span>
-  </a>
-  
-</li>
+          
         
-          <li class="md-nav__item">
-  <a href="#gsql-the-distributed-powerhouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      GSQL: The Distributed Powerhouse
-    </span>
-  </a>
-  
-</li>
+      
         
-          <li class="md-nav__item">
-  <a href="#gql-the-emerging-standard" class="md-nav__link">
-    <span class="md-ellipsis">
-      GQL: The Emerging Standard
-    </span>
-  </a>
-  
-</li>
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
         
-          <li class="md-nav__item">
-  <a href="#which-one-should-you-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Which One Should You Learn?
-    </span>
-  </a>
-  
-</li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cypher-syntax-the-ascii-art-of-graph-queries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cypher Syntax: The ASCII Art of Graph Queries
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cypher Syntax: The ASCII Art of Graph Queries">
-      <ul class="md-nav__list">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
         
-          <li class="md-nav__item">
-  <a href="#the-core-philosophy-drawing-graphs-with-text" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Core Philosophy: Drawing Graphs with Text
-    </span>
-  </a>
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes-the-parentheses-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nodes: The Parentheses Pattern
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relationships-the-bracket-and-arrow-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relationships: The Bracket and Arrow Pattern
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-five-essential-clauses" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Five Essential Clauses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#match-clause-finding-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      MATCH Clause: Finding Patterns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-clause-filtering-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      WHERE Clause: Filtering Results
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#return-clause-shaping-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      RETURN Clause: Shaping Output
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-statement-adding-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      CREATE Statement: Adding Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-statement-create-or-match" class="md-nav__link">
-    <span class="md-ellipsis">
-      MERGE Statement: Create or Match
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-clause-updating-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      SET Clause: Updating Properties
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-statement-removing-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      DELETE Statement: Removing Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graph-patterns-the-power-of-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graph Patterns: The Power of Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variable-length-paths-following-the-rabbit-hole" class="md-nav__link">
-    <span class="md-ellipsis">
-      Variable-Length Paths: Following the Rabbit Hole
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shortest-path-finding-the-quickest-route" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shortest Path: Finding the Quickest Route
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#all-paths-when-you-need-every-route" class="md-nav__link">
-    <span class="md-ellipsis">
-      All Paths: When You Need Every Route
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#declarative-vs-imperative-queries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declarative vs. Imperative Queries
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gsql-and-the-map-reduce-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      GSQL and the Map-Reduce Pattern
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GSQL and the Map-Reduce Pattern">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-gsql-exists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why GSQL Exists
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accumulators-gsqls-secret-weapon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accumulators: GSQL's Secret Weapon
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#query-optimization-making-queries-fast" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization: Making Queries Fast
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Query Optimization: Making Queries Fast">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-query-planners-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      How Query Planners Work
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-optimizations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Optimizations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-performance-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Performance Metrics
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shortest-path-algorithms-under-the-hood" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shortest Path Algorithms: Under the Hood
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shortest Path Algorithms: Under the Hood">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#breadth-first-search-bfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breadth-First Search (BFS)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dijkstras-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dijkstra's Algorithm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      A* Algorithm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-you-care" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why You Care
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#query-plans-reading-the-execution-blueprint" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Plans: Reading the Execution Blueprint
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bringing-it-all-together-a-realistic-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bringing It All Together: A Realistic Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-bottom-line-why-learning-this-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Bottom Line: Why Learning This Matters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
+  <span class="md-ellipsis">
+    Chapter 4 - Query Languages
+    
+  </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 4 - Query Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
               
@@ -950,15 +620,77 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-performance-metrics-benchmarking/" class="md-nav__link">
+      <a href="quiz/" class="md-nav__link">
         
+  
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../05-performance-metrics-benchmarking/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 5 - Performance and Benchmarking
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -970,16 +702,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../06-graph-algorithms/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../06-graph-algorithms/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 6 - Graph Algorithms
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -991,16 +754,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../07-social-network-modeling/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../07-social-network-modeling/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 7 - Social Network Modeling
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1012,16 +806,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../08-knowledge-representation-management/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../08-knowledge-representation-management/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 8 - Knowledge Representation
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1033,16 +858,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../09-modeling-patterns-data-loading/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../09-modeling-patterns-data-loading/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 9 - Modeling Patterns
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1054,16 +910,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../10-commerce-supply-chain-it/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../10-commerce-supply-chain-it/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 10 - Commerce and Supply Chain
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1075,16 +962,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../11-financial-healthcare-regulatory/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../11-financial-healthcare-regulatory/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 11 - Financial and Healthcare
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1096,16 +1014,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../12-advanced-topics-distributed-systems/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../12-advanced-topics-distributed-systems/" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
     Chapter 12 - Advanced Topics
+    
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1132,17 +1081,14 @@
         
       
         
-          
+      
         
       
         
-          
-        
       
         
-          
-        
       
+    
     
     
     
@@ -1154,13 +1100,16 @@
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../sims/graph-viewer/" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
     MicroSims
+    
   </span>
   
 
@@ -1206,6 +1155,15 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -1217,13 +1175,16 @@
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../learning-graph/" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
     Learning Graph
+    
   </span>
   
 
@@ -1244,6 +1205,28 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
       
@@ -1252,9 +1235,8 @@
         
       
         
-          
-        
       
+    
     
     
     
@@ -1266,13 +1248,16 @@
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../stories/" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
     Stories
+    
   </span>
   
 
@@ -1307,6 +1292,7 @@
     
     
     
+    
       
         
         
@@ -1317,11 +1303,14 @@
         
   
   
+  
     <a href="../../prompts/" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
     Prompts
+    
   </span>
   
 
@@ -1346,8 +1335,10 @@
       <a href="../../glossary/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Glossary
+    
   </span>
   
 
@@ -1366,8 +1357,10 @@
       <a href="../../how-we-built-this-site/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     How We Built This Site
+    
   </span>
   
 
@@ -1386,8 +1379,10 @@
       <a href="../../references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     References
+    
   </span>
   
 
@@ -1406,8 +1401,10 @@
       <a href="../../feedback/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Feedback
+    
   </span>
   
 
@@ -1426,8 +1423,10 @@
       <a href="../../license/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     License
+    
   </span>
   
 
@@ -1446,8 +1445,10 @@
       <a href="../../contact/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Contact
+    
   </span>
   
 
@@ -1904,6 +1905,7 @@
                 
                   
 
+
   
     <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/chapters/04-query-languages/index.md" title="Edit this page" class="md-content__button md-icon">
       
@@ -2037,12 +2039,12 @@ ORDER BY friend.age DESC
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">()</span><span class="w">                           </span><span class="c1">// Anonymous node (any node)</span>
-<span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w">                          </span><span class="c1">// Node bound to variable &#39;n&#39;</span>
-<span class="p">(:</span><span class="n">Person</span><span class="p">)</span><span class="w">                    </span><span class="c1">// Node with label &#39;Person&#39;</span>
-<span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Person</span><span class="p">)</span><span class="w">                   </span><span class="c1">// Person node bound to variable &#39;p&#39;</span>
-<span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span><span class="w">  </span><span class="c1">// Person named Alice</span>
-<span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Person</span><span class="p">:</span><span class="n">Employee</span><span class="p">)</span><span class="w">          </span><span class="c1">// Node with multiple labels</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">()                           // Anonymous node (any node)</span>
+<span class="c1">(n)                          // Node bound to variable &#39;n&#39;</span>
+<span class="c1">(:Person)                    // Node with label &#39;Person&#39;</span>
+<span class="c1">(p:Person)                   // Person node bound to variable &#39;p&#39;</span>
+<span class="c1">(alice:Person {name: &quot;Alice&quot;})  // Person named Alice</span>
+<span class="c1">(p:Person:Employee)          // Node with multiple labels</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Breaking down the anatomy:</strong>
 - <code>(variable:Label {property: value})</code>
@@ -2057,13 +2059,13 @@ ORDER BY friend.age DESC
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-&gt;</span><span class="w">              </span><span class="c1">// Directed relationship, specific type</span>
-<span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-</span><span class="w">               </span><span class="c1">// Undirected (matches either direction)</span>
-<span class="o">&lt;-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-</span><span class="w">              </span><span class="c1">// Relationship pointing left</span>
-<span class="o">-[</span><span class="n">r</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-&gt;</span><span class="w">             </span><span class="c1">// Relationship bound to variable &#39;r&#39;</span>
-<span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="w"> </span><span class="p">{</span><span class="n">since</span><span class="p">:</span><span class="w"> </span><span class="m">2020</span><span class="p">}</span><span class="o">]-&gt;</span><span class="w">  </span><span class="c1">// Relationship with properties</span>
-<span class="o">-[</span><span class="p">*</span><span class="m">1</span><span class="p">..</span><span class="m">3</span><span class="o">]-&gt;</span><span class="w">                   </span><span class="c1">// Variable-length path (1 to 3 hops)</span>
-<span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="p">|</span><span class="n">COLLEAGUE</span><span class="o">]-&gt;</span><span class="w">    </span><span class="c1">// Multiple relationship types (OR)</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-[:FRIEND_OF]-&gt;              // Directed relationship, specific type</span>
+<span class="c1">-[:FRIEND_OF]-               // Undirected (matches either direction)</span>
+<span class="c1">&lt;-[:FRIEND_OF]-              // Relationship pointing left</span>
+<span class="c1">-[r:FRIEND_OF]-&gt;             // Relationship bound to variable &#39;r&#39;</span>
+<span class="c1">-[:FRIEND_OF {since: 2020}]-&gt;  // Relationship with properties</span>
+<span class="c1">-[*1..3]-&gt;                   // Variable-length path (1 to 3 hops)</span>
+<span class="c1">-[:FRIEND_OF|COLLEAGUE]-&gt;    // Multiple relationship types (OR)</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Direction matters (usually):</strong>
 - <code>(alice)-[:PURCHASED]-&gt;(product)</code> - Alice purchased product ✅
@@ -2136,7 +2138,7 @@ ORDER BY friend.age DESC
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Find Alice&#39;s friends, and their companies if they have them</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">friend</span><span class="p">)</span>
 <span class="k">OPTIONAL</span><span class="w"> </span><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">friend</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">WORKS_AT</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">company</span><span class="p">)</span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">friend</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">company</span><span class="p">.</span><span class="n">name</span><span class="p">;</span><span class="w">  </span><span class="c1">// company.name might be null</span>
+<span class="c1">RETURN friend.name, company.name;  // company.name might be null</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>The abstract concept:</strong> MATCH is declarative pattern matching. You describe the shape you want, and the query engine finds all instances of that shape in your graph.</p>
 <p><strong>The practical reality:</strong> When you tell an AI "find Alice's friends," it writes a MATCH clause. When the query takes too long, you'll look at the MATCH clause to see if it's searching too broadly.</p>
@@ -2321,7 +2323,7 @@ ORDER BY friend.age DESC
 <span class="k">RETURN</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span>
 <span class="k">SKIP</span><span class="w"> </span><span class="m">20</span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w">  </span><span class="c1">// Results 21-30</span>
+<span class="c1">LIMIT 10;  // Results 21-30</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>DISTINCT results:</strong>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2480,7 +2482,7 @@ ORDER BY friend.age DESC
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Add a label to a node</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span>
 <span class="k">SET</span><span class="w"> </span><span class="n">alice</span><span class="p">:</span><span class="n">Employee</span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">alice</span><span class="p">;</span><span class="w">  </span><span class="c1">// Now alice has labels Person AND Employee</span>
+<span class="c1">RETURN alice;  // Now alice has labels Person AND Employee</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Copying properties:</strong>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2539,11 +2541,11 @@ ORDER BY friend.age DESC
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Delete a node (must delete its relationships first!)</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span>
-<span class="k">DELETE</span><span class="w"> </span><span class="n">alice</span><span class="p">;</span><span class="w">  </span><span class="c1">// ERROR if Alice has any relationships</span>
+<span class="c1">DELETE alice;  // ERROR if Alice has any relationships</span>
 
 <span class="c1">// Delete node and all its relationships</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span>
-<span class="n">DETACH</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="n">alice</span><span class="p">;</span><span class="w">  </span><span class="c1">// Deletes Alice and all connected relationships</span>
+<span class="c1">DETACH DELETE alice;  // Deletes Alice and all connected relationships</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Conditional deletion:</strong>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2559,7 +2561,7 @@ ORDER BY friend.age DESC
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Delete everything in the database</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="n">DETACH</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// ⚠️ This removes EVERYTHING</span>
+<span class="c1">DETACH DELETE n;  // ⚠️ This removes EVERYTHING</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Why DETACH DELETE exists:</strong> In graph databases, you can't have relationships pointing to non-existent nodes. If you try to DELETE a node that has relationships, the database will throw an error. DETACH DELETE removes the relationships first, then the node.</p>
 <p><strong>When the AI might get this wrong:</strong> If the AI tries to DELETE a node without DETACH, the query will fail. Now you'll know to add DETACH. (See? Understanding syntax helps even when AI writes code!)</p>
@@ -2609,7 +2611,7 @@ ORDER BY friend.age DESC
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Find fraud rings: groups where everyone knows everyone (cliques)</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">Person</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">TRANSFERRED_MONEY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">b</span><span class="p">:</span><span class="n">Person</span><span class="p">)</span>
 <span class="w">     </span><span class="o">-[</span><span class="p">:</span><span class="n">TRANSFERRED_MONEY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">Person</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">TRANSFERRED_MONEY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">&lt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">&lt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">&lt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w">  </span><span class="c1">// Ensure they&#39;re distinct</span>
+<span class="c1">WHERE a &lt;&gt; b AND b &lt;&gt; c AND c &lt;&gt; a  // Ensure they&#39;re distinct</span>
 <span class="k">RETURN</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Anti-patterns (patterns that should NOT exist):</strong>
@@ -2629,11 +2631,11 @@ ORDER BY friend.age DESC
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-[</span><span class="p">*</span><span class="o">]-&gt;</span><span class="w">           </span><span class="c1">// Any number of hops (use carefully—can be slow!)</span>
-<span class="o">-[</span><span class="p">*</span><span class="m">1</span><span class="p">..</span><span class="m">3</span><span class="o">]-&gt;</span><span class="w">       </span><span class="c1">// 1 to 3 hops</span>
-<span class="o">-[</span><span class="p">*..</span><span class="m">5</span><span class="o">]-&gt;</span><span class="w">        </span><span class="c1">// Up to 5 hops</span>
-<span class="o">-[</span><span class="p">*</span><span class="m">2</span><span class="p">..</span><span class="o">]-&gt;</span><span class="w">        </span><span class="c1">// At least 2 hops</span>
-<span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="p">*</span><span class="m">1</span><span class="p">..</span><span class="m">3</span><span class="o">]-&gt;</span><span class="w">  </span><span class="c1">// 1-3 hops of FRIEND_OF relationships</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-[*]-&gt;           // Any number of hops (use carefully—can be slow!)</span>
+<span class="c1">-[*1..3]-&gt;       // 1 to 3 hops</span>
+<span class="c1">-[*..5]-&gt;        // Up to 5 hops</span>
+<span class="c1">-[*2..]-&gt;        // At least 2 hops</span>
+<span class="c1">-[:FRIEND_OF*1..3]-&gt;  // 1-3 hops of FRIEND_OF relationships</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Real examples:</strong>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2661,7 +2663,7 @@ ORDER BY friend.age DESC
 <span class="c1">// Find product recommendations: friends of friends who bought similar products</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="p">*</span><span class="m">2</span><span class="o">]-</span><span class="p">(</span><span class="n">fof</span><span class="p">)</span>
 <span class="w">     </span><span class="o">-[</span><span class="p">:</span><span class="n">PURCHASED</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">PURCHASED</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">product</span><span class="p">)</span><span class="w">  </span><span class="c1">// Alice hasn&#39;t bought it yet</span>
+<span class="c1">WHERE NOT (alice)-[:PURCHASED]-&gt;(product)  // Alice hasn&#39;t bought it yet</span>
 <span class="k">RETURN</span><span class="w"> </span><span class="n">product</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="n">fof</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">friend_count</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">friend_count</span><span class="w"> </span><span class="k">DESC</span>
 <span class="k">LIMIT</span><span class="w"> </span><span class="m">10</span><span class="p">;</span>
@@ -2733,9 +2735,9 @@ ORDER BY friend.age DESC
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Find all collaboration paths through projects</span>
 <span class="k">MATCH</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">alice</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span>
 <span class="w">             </span><span class="o">-[</span><span class="p">:</span><span class="n">WORKED_ON</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Project</span><span class="p">)</span><span class="o">&lt;-[</span><span class="p">:</span><span class="n">WORKED_ON</span><span class="p">*..</span><span class="m">3</span><span class="o">]-</span><span class="p">(</span><span class="n">bob</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">})</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">length</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1">// At least 2 hops</span>
+<span class="c1">WHERE length(paths) &gt; 1  // At least 2 hops</span>
 <span class="k">RETURN</span><span class="w"> </span><span class="n">paths</span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w">  </span><span class="c1">// Prevent returning millions of paths</span>
+<span class="c1">LIMIT 100;  // Prevent returning millions of paths</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Why you'd want all paths:</strong>
 - <strong>Redundancy analysis:</strong> How many ways can information flow?
@@ -3143,17 +3145,17 @@ ORDER BY friend.age DESC
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">me</span><span class="p">:</span><span class="n">Person</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">friend</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">suggestion</span><span class="p">)</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">me</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">FRIEND_OF</span><span class="o">]-</span><span class="p">(</span><span class="n">suggestion</span><span class="p">)</span><span class="w">  </span><span class="c1">// Not already friends</span>
-<span class="w">  </span><span class="n">AND</span><span class="w"> </span><span class="n">suggestion</span><span class="w"> </span><span class="p">&lt;&gt;</span><span class="w"> </span><span class="n">me</span><span class="w">                     </span><span class="c1">// Not myself</span>
+<span class="c1">WHERE NOT (me)-[:FRIEND_OF]-(suggestion)  // Not already friends</span>
+<span class="w">  </span><span class="n">AND</span><span class="w"> </span><span class="n">suggestion</span><span class="w"> </span><span class="p">&lt;&gt;</span><span class="w"> </span><span class="n">me</span><span class="w">                     </span><span class="err">//</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">myself</span>
 <span class="k">WITH</span><span class="w"> </span><span class="n">suggestion</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">friend</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mutualFriends</span><span class="p">,</span><span class="w"> </span><span class="n">suggestion</span><span class="p">.</span><span class="n">city</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">city</span><span class="p">,</span><span class="w"> </span><span class="n">me</span><span class="p">.</span><span class="n">city</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">myCity</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
-<span class="w">  </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">myCity</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">ELSE</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w">  </span><span class="c1">// Same city first</span>
-<span class="w">  </span><span class="n">mutualFriends</span><span class="w"> </span><span class="k">DESC</span><span class="w">                                </span><span class="c1">// Then by mutual friends</span>
+<span class="w">  </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">myCity</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">ELSE</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="n">Same</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="n">first</span>
+<span class="w">  </span><span class="n">mutualFriends</span><span class="w"> </span><span class="k">DESC</span><span class="w">                                </span><span class="err">//</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">mutual</span><span class="w"> </span><span class="n">friends</span>
 <span class="k">RETURN</span>
 <span class="w">  </span><span class="n">suggestion</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
 <span class="w">  </span><span class="n">suggestion</span><span class="p">.</span><span class="n">city</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">city</span><span class="p">,</span>
 <span class="w">  </span><span class="n">mutualFriends</span><span class="p">,</span>
-<span class="w">  </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">myCity</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s">&#39;Same city!&#39;</span><span class="w"> </span><span class="n">ELSE</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">note</span>
+<span class="w">  </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">myCity</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Same</span><span class="w"> </span><span class="n">city</span><span class="err">!&#39;</span><span class="w"> </span><span class="n">ELSE</span><span class="w"> </span><span class="err">&#39;&#39;</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">note</span>
 <span class="k">LIMIT</span><span class="w"> </span><span class="m">10</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>Breaking it down:</strong>
@@ -3271,7 +3273,7 @@ ORDER BY friend.age DESC
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../03-labeled-property-graph-model/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 3 - Labeled Property Graph Model">
+          <a href="../03-labeled-property-graph-model/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quiz">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3281,20 +3283,20 @@ ORDER BY friend.age DESC
                 Previous
               </span>
               <div class="md-ellipsis">
-                Chapter 3 - Labeled Property Graph Model
+                Quiz
               </div>
             </div>
           </a>
         
         
           
-          <a href="../05-performance-metrics-benchmarking/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 5 - Performance and Benchmarking">
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Chapter 5 - Performance and Benchmarking
+                Quiz
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3328,10 +3330,12 @@ ORDER BY friend.age DESC
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       

@@ -1,0 +1,2009 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/chapters/11-financial-healthcare-regulatory/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../12-advanced-topics-distributed-systems/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Quiz - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Quiz - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/chapters/11-financial-healthcare-regulatory/quiz.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/chapters/11-financial-healthcare-regulatory/quiz/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Quiz - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/chapters/11-financial-healthcare-regulatory/quiz.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-financial-healthcare-and-regulatory-applications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../01-intro-graph-thinking-data-modeling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction to Graph Thinking
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../02-database-systems-nosql/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Database Systems and NoSQL
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../03-labeled-property-graph-model/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3 - Labeled Property Graph Model
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../04-query-languages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4 - Query Languages
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../05-performance-metrics-benchmarking/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5 - Performance and Benchmarking
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../06-graph-algorithms/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6 - Graph Algorithms
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../07-social-network-modeling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7 - Social Network Modeling
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../08-knowledge-representation-management/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 8 - Knowledge Representation
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../09-modeling-patterns-data-loading/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 9 - Modeling Patterns
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../10-commerce-supply-chain-it/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 10 - Commerce and Supply Chain
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chapter 11 - Financial and Healthcare
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 11 - Financial and Healthcare
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-are-financial-institutions-among-the-largest-consumers-of-graph-database-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Why are financial institutions among the largest consumers of graph database technology?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-pattern-does-anti-money-laundering-aml-detection-look-for-in-transaction-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What pattern does anti-money laundering (AML) detection look for in transaction graphs?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-is-synthetic-identity-fraud-and-how-do-graphs-detect-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. What is synthetic identity fraud and how do graphs detect it?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-does-kyc-know-your-customer-compliance-require-and-why-do-graphs-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What does KYC (Know Your Customer) compliance require and why do graphs help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-do-provider-patient-graphs-improve-healthcare-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How do provider-patient graphs improve healthcare delivery?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-are-clinical-pathways-and-how-do-they-enable-value-based-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What are clinical pathways and how do they enable value-based care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-given-a-requirement-to-detect-a-money-laundering-ring-moving-2m-through-8-shell-companies-which-graph-approach-would-you-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Given a requirement to detect a money laundering ring moving $2M through 8 shell companies, which graph approach would you use?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-is-data-lineage-and-why-is-it-critical-for-regulatory-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What is data lineage and why is it critical for regulatory compliance?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-how-does-master-data-management-mdm-use-graphs-for-entity-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. How does master data management (MDM) use graphs for entity resolution?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-why-is-healthcare-described-as-having-graph-like-data-despite-low-current-adoption-of-graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Why is healthcare described as having graph-like data despite low current adoption of graph databases?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../12-advanced-topics-distributed-systems/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapter 12 - Advanced Topics
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../stories/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../prompts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-are-financial-institutions-among-the-largest-consumers-of-graph-database-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Why are financial institutions among the largest consumers of graph database technology?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-pattern-does-anti-money-laundering-aml-detection-look-for-in-transaction-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What pattern does anti-money laundering (AML) detection look for in transaction graphs?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-is-synthetic-identity-fraud-and-how-do-graphs-detect-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. What is synthetic identity fraud and how do graphs detect it?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-does-kyc-know-your-customer-compliance-require-and-why-do-graphs-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What does KYC (Know Your Customer) compliance require and why do graphs help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-do-provider-patient-graphs-improve-healthcare-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How do provider-patient graphs improve healthcare delivery?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-are-clinical-pathways-and-how-do-they-enable-value-based-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What are clinical pathways and how do they enable value-based care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-given-a-requirement-to-detect-a-money-laundering-ring-moving-2m-through-8-shell-companies-which-graph-approach-would-you-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Given a requirement to detect a money laundering ring moving $2M through 8 shell companies, which graph approach would you use?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-is-data-lineage-and-why-is-it-critical-for-regulatory-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What is data lineage and why is it critical for regulatory compliance?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-how-does-master-data-management-mdm-use-graphs-for-entity-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. How does master data management (MDM) use graphs for entity resolution?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-why-is-healthcare-described-as-having-graph-like-data-despite-low-current-adoption-of-graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Why is healthcare described as having graph-like data despite low current adoption of graph databases?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/chapters/11-financial-healthcare-regulatory/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-financial-healthcare-and-regulatory-applications">Quiz: Financial, Healthcare, and Regulatory Applications</h1>
+<p>Test your understanding of graph database applications in highly regulated industries including fraud detection, anti-money laundering, healthcare modeling, clinical pathways, regulatory compliance, and data governance.</p>
+<hr />
+<h4 id="1-why-are-financial-institutions-among-the-largest-consumers-of-graph-database-technology">1. Why are financial institutions among the largest consumers of graph database technology?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Graphs are cheaper</li>
+<li>Graph databases excel at real-time fraud detection, AML compliance, and risk analysis by analyzing transaction network patterns in milliseconds</li>
+<li>Banks like new technology</li>
+<li>Graphs are only for social networks</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Financial institutions use graph databases for mission-critical fraud detection and anti-money laundering because graphs can analyze complex transaction networks in real-time (milliseconds). When you swipe your credit card, graph algorithms examine your behavioral patterns, network connections, merchant risk, and historical fraud patterns across tens of thousands of rules in ~250ms to decide if the transaction is legitimate. This real-time network analysis at scale is what makes graphs indispensable for financial applications.</p>
+<p><strong>Concept Tested:</strong> Financial Transactions, Fraud Detection</p>
+<p><strong>See:</strong> <a href="../#financial-applications-following-the-money">Financial Applications</a></p>
+</details>
+<hr />
+<h4 id="2-what-pattern-does-anti-money-laundering-aml-detection-look-for-in-transaction-graphs">2. What pattern does anti-money laundering (AML) detection look for in transaction graphs?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Large single transactions only</li>
+<li>Complex patterns like circular money flows, layering chains, smurfing (multiple small deposits), and fan-out/fan-in structures</li>
+<li>Random transactions</li>
+<li>AML doesn't use patterns</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. AML systems use graph pattern detection to identify money laundering indicators: circular flows (money returning to origin through intermediaries), layering chains (money moving through multiple accounts to obscure origin), smurfing/structuring (many small deposits just below reporting thresholds converging to one account), and fan-out/fan-in patterns (rapid distribution or collection of funds). These network patterns are nearly impossible to detect in relational databases but become graph traversal queries in graph databases.</p>
+<p><strong>Concept Tested:</strong> Anti-Money Laundering</p>
+<p><strong>See:</strong> <a href="../#anti-money-laundering-finding-hidden-patterns">Anti-Money Laundering</a></p>
+</details>
+<hr />
+<h4 id="3-what-is-synthetic-identity-fraud-and-how-do-graphs-detect-it">3. What is synthetic identity fraud and how do graphs detect it?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Using fake IDs at stores</li>
+<li>Creating fake identities by combining real SSNs with fabricated information, detected by finding suspicious connections like shared addresses/devices with known fraudsters</li>
+<li>Identity theft of existing people</li>
+<li>Graphs cannot detect synthetic identities</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Synthetic identity fraud involves creating fake people by mixing real SSNs (often from children or elderly) with fake names and addresses. Traditional fraud systems check each application in isolation and miss these. Graph-based systems detect synthetic identities by analyzing the network: this "new customer" shares an address with a known fraudster, uses the same device as 10 other suspicious accounts, and the SSN belongs to an 8-year-old but the application claims age 42. These connection patterns reveal the fraud.</p>
+<p><strong>Concept Tested:</strong> Account Networks, Fraud Detection</p>
+<p><strong>See:</strong> <a href="../#fraud-detection-250-milliseconds-to-decide">Fraud Detection</a></p>
+</details>
+<hr />
+<h4 id="4-what-does-kyc-know-your-customer-compliance-require-and-why-do-graphs-help">4. What does KYC (Know Your Customer) compliance require and why do graphs help?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Knowing customer birthdays</li>
+<li>Verifying customer identities and tracing relationships to beneficial owners, politically exposed persons, and sanctioned entities through network traversals</li>
+<li>Storing customer names</li>
+<li>KYC doesn't apply to graphs</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. KYC regulations require financial institutions to verify customer identities, assess risk levels, and understand beneficial ownership structures (who ultimately controls an account or company). Graphs excel at this because risk depends on relationships: this customer is a beneficial owner of 5 shell companies, related to a politically exposed person (PEP), has an address in a high-risk jurisdiction, and shares a phone number with a sanctioned entity. Graph traversals make these multi-hop relationship analyses efficient and comprehensive.</p>
+<p><strong>Concept Tested:</strong> Know Your Customer</p>
+<p><strong>See:</strong> <a href="../#know-your-customer-identity-and-due-diligence">Know Your Customer</a></p>
+</details>
+<hr />
+<h4 id="5-how-do-provider-patient-graphs-improve-healthcare-delivery">5. How do provider-patient graphs improve healthcare delivery?</h4>
+<div class="upper-alpha">
+<ol>
+<li>By replacing doctors</li>
+<li>By modeling relationships between providers, patients, diagnoses, and treatments to enable coordinated care analysis and fraud detection</li>
+<li>Graphs don't apply to healthcare</li>
+<li>By scheduling appointments only</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Provider-patient graphs model the healthcare ecosystem: patients treated by multiple providers, providers with specialties, diagnoses requiring specific treatments, medications interacting with each other. This enables care coordination analysis (are this patient's cardiologist and endocrinologist communicating?), fraud detection (this provider sees patients 15 times per month—excessive billing?), and quality improvement (which provider practice patterns correlate with better outcomes?). The graph structure reveals patterns invisible in isolated EHR records.</p>
+<p><strong>Concept Tested:</strong> Provider-Patient Graphs, Healthcare Graphs</p>
+<p><strong>See:</strong> <a href="../#provider-patient-graphs-understanding-care-networks">Provider-Patient Graphs</a></p>
+</details>
+<hr />
+<h4 id="6-what-are-clinical-pathways-and-how-do-they-enable-value-based-care">6. What are clinical pathways and how do they enable value-based care?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Hospital hallways</li>
+<li>Standardized evidence-based care sequences modeled as graphs, enabling outcome analysis to identify which treatment paths achieve best results at lowest cost</li>
+<li>Billing codes</li>
+<li>Patient transportation routes</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Clinical pathways are standardized care sequences for specific conditions, represented as graphs: diagnosis leads to tests, test results lead to treatment decisions, treatments lead to outcomes. By modeling actual patient journeys through these pathways and tracking outcomes, healthcare systems can identify which paths produce the best results at the lowest cost—the core of value-based care. For example, comparing different diabetes management pathways to find which achieves best HbA1c control with fewest complications and lowest cost.</p>
+<p><strong>Concept Tested:</strong> Clinical Pathways</p>
+<p><strong>See:</strong> <a href="../#clinical-pathways-mapping-the-journey">Clinical Pathways</a></p>
+</details>
+<hr />
+<h4 id="7-given-a-requirement-to-detect-a-money-laundering-ring-moving-2m-through-8-shell-companies-which-graph-approach-would-you-use">7. Given a requirement to detect a money laundering ring moving $2M through 8 shell companies, which graph approach would you use?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Simple text search</li>
+<li>Graph traversal to find cycles, layering chains, and fan-out patterns connecting accounts to the same beneficial owners, combined with volume analysis</li>
+<li>Random sampling</li>
+<li>Manual review only</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Detecting money laundering rings requires combining multiple graph analyses: cycle detection (money returning to source), community detection (identifying clusters of accounts controlled by same entities), fan-out/fan-in pattern matching (rapid distribution/collection), and beneficial ownership traversal (all shell companies trace to same ultimate owner). Graph queries can find these patterns across millions of transactions, flagging the suspicious network for investigation. Volume thresholds alone miss the network structure that proves criminal intent.</p>
+<p><strong>Concept Tested:</strong> Anti-Money Laundering, Fraud Detection</p>
+<p><strong>See:</strong> <a href="../#anti-money-laundering-finding-hidden-patterns">AML Patterns</a></p>
+</details>
+<hr />
+<h4 id="8-what-is-data-lineage-and-why-is-it-critical-for-regulatory-compliance">8. What is data lineage and why is it critical for regulatory compliance?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Database age</li>
+<li>Tracking data's complete journey from source through transformations to consumption, providing auditability and proving data accuracy for regulators</li>
+<li>Deleting old data</li>
+<li>Data storage location only</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Data lineage traces the complete lifecycle of data: where it originated, how it was transformed, where it was used, and who accessed it. This is critical for regulatory compliance because regulators (SOX, GDPR, HIPAA) require proving data accuracy, proper handling, and authorized access. Graph-based lineage models data flow as edges: Source → Extract → Transform → Load → Aggregate → Report → User. When a regulatory report is questioned, lineage graphs provide instant traceable proof of data provenance and transformations.</p>
+<p><strong>Concept Tested:</strong> Data Lineage</p>
+<p><strong>See:</strong> <a href="../#data-lineage-tracking-datas-journey">Data Lineage</a></p>
+</details>
+<hr />
+<h4 id="9-how-does-master-data-management-mdm-use-graphs-for-entity-resolution">9. How does master data management (MDM) use graphs for entity resolution?</h4>
+<div class="upper-alpha">
+<ol>
+<li>MDM doesn't use graphs</li>
+<li>By finding records that share similar attributes or connections (same address, phone, device) and consolidating them into golden records</li>
+<li>By randomly merging records</li>
+<li>By deleting duplicate data</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Master Data Management creates authoritative "golden records" by identifying that different records represent the same entity. Graphs excel at entity resolution because they analyze relationships and similarities: "John Smith" at 123 Main, "J. Smith" at 123 Main St, and "Jon Smith" with phone 555-1234 at that address are probably the same person. Graph algorithms compute similarity scores, cluster probable matches, and create master records with source records linked for traceability. This relationship-based matching is far more accurate than simple name matching.</p>
+<p><strong>Concept Tested:</strong> Master Data Management</p>
+<p><strong>See:</strong> <a href="../#master-data-management-one-source-of-truth">Master Data Management</a></p>
+</details>
+<hr />
+<h4 id="10-why-is-healthcare-described-as-having-graph-like-data-despite-low-current-adoption-of-graph-databases">10. Why is healthcare described as having graph-like data despite low current adoption of graph databases?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Healthcare data isn't graph-like</li>
+<li>Clinical data involves complex relationships between patients, diagnoses, medications, procedures, providers, and outcomes that graphs naturally model</li>
+<li>Healthcare only uses documents</li>
+<li>Graphs don't work for medical data</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Healthcare data is inherently graph-structured: a patient has multiple diagnoses, each diagnosis suggests possible treatments, medications interact with each other, procedures are performed by providers with specific specialties, outcomes depend on the combination of all these factors. Yet most healthcare systems use document-centric EHRs and fragmented relational databases. The opportunity for graphs in healthcare is enormous—enabling medication interaction checking, clinical decision support, outcome prediction, and value-based care optimization—but adoption lags behind finance.</p>
+<p><strong>Concept Tested:</strong> Healthcare Graphs, Electronic Health Records</p>
+<p><strong>See:</strong> <a href="../#healthcare-applications-connecting-care">Healthcare Applications</a></p>
+</details>
+<hr />
+<p><strong>Quiz Complete!</strong></p>
+<p><strong>Questions:</strong> 10
+<strong>Cognitive Levels:</strong> Remember (2), Understand (4), Apply (2), Analyze (2)
+<strong>Concepts Covered:</strong> Financial Transactions, Fraud Detection, Anti-Money Laundering, Know Your Customer, Account Networks, Healthcare Graphs, Provider-Patient Graphs, Electronic Health Records, Clinical Pathways, Regulatory Compliance, Data Lineage, Master Data Management</p>
+<p><strong>Next Steps:</strong>
+- Review <a href="../">Chapter Content</a> for financial and healthcare applications
+- Practice designing compliance and healthcare graphs
+- Continue to <a href="../../12-advanced-topics-distributed-systems/">Chapter 12: Advanced Topics and Distributed Systems</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../12-advanced-topics-distributed-systems/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

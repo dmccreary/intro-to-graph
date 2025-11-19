@@ -1,0 +1,264 @@
+{
+  "textbook_title": "Introduction to Graph Databases",
+  "textbook_url": "https://dmccreary.github.io/intro-to-graph/",
+  "generated_date": "2025-11-18",
+  "quiz_generator_version": "0.2",
+  "total_chapters": 12,
+  "chapters_with_quizzes": 3,
+  "total_questions": 30,
+  "bloom_distribution": {
+    "Remember": 11,
+    "Understand": 12,
+    "Apply": 5,
+    "Analyze": 2,
+    "Evaluate": 0,
+    "Create": 0
+  },
+  "answer_distribution": {
+    "A": 5,
+    "B": 12,
+    "C": 8,
+    "D": 5
+  },
+  "questions": [
+    {
+      "id": "ch1-q001",
+      "chapter": 1,
+      "chapter_title": "Introduction to Graph Thinking and Data Modeling",
+      "question_number": 1,
+      "question_text": "What is the primary purpose of data modeling?",
+      "options": {
+        "A": "To create visual decorations for presentations",
+        "B": "To create abstract representations of information structures defining entities, attributes, and relationships",
+        "C": "To generate random data for testing",
+        "D": "To organize files alphabetically on a computer"
+      },
+      "correct_answer": "B",
+      "explanation": "Data modeling is the process of creating abstract representations of information structures, defining entities, attributes, and relationships. This enables systematic organization and querying of data.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concept": "Data Modeling",
+      "chapter_file": "chapters/01-intro-graph-thinking-data-modeling/index.md",
+      "source_section": "#the-foundation-data-structures",
+      "tags": ["data modeling", "foundations", "entities", "relationships"]
+    },
+    {
+      "id": "ch1-q002",
+      "chapter": 1,
+      "chapter_title": "Introduction to Graph Thinking and Data Modeling",
+      "question_number": 2,
+      "question_text": "Which data structure provides constant-time (O(1)) lookup performance regardless of size?",
+      "options": {
+        "A": "Arrays",
+        "B": "Hash maps",
+        "C": "Trees",
+        "D": "Linked lists"
+      },
+      "correct_answer": "B",
+      "explanation": "Hash maps use hashing functions to instantly find values based on keys, achieving O(1) constant-time lookups regardless of data size.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concept": "Hash Maps",
+      "chapter_file": "chapters/01-intro-graph-thinking-data-modeling/index.md",
+      "source_section": "#hash-maps-instant-lookups",
+      "tags": ["hash maps", "performance", "data structures", "O(1)"]
+    },
+    {
+      "id": "ch1-q007",
+      "chapter": 1,
+      "chapter_title": "Introduction to Graph Thinking and Data Modeling",
+      "question_number": 7,
+      "question_text": "Given a scenario where you need to frequently query 'friends of friends of friends' relationships in a social network, which data structure would perform best?",
+      "options": {
+        "A": "Arrays, because they're simple",
+        "B": "Hash maps, because they're fast",
+        "C": "Graph databases, because they use index-free adjacency for constant-time neighbor access",
+        "D": "Relational databases, because they support joins"
+      },
+      "correct_answer": "C",
+      "explanation": "Graph databases excel at multi-hop traversals like 'friends-of-friends-of-friends' because they use index-free adjacency, where each node directly references its neighbors in memory. This enables constant-time traversal per hop.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concept": "Graph Databases, Index-Free Adjacency",
+      "chapter_file": "chapters/01-intro-graph-thinking-data-modeling/index.md",
+      "source_section": "#why-graph-thinking-matters-now",
+      "tags": ["graph databases", "multi-hop queries", "performance", "social networks"]
+    },
+    {
+      "id": "ch2-q001",
+      "chapter": 2,
+      "chapter_title": "Database Systems and NoSQL",
+      "question_number": 1,
+      "question_text": "What does RDBMS stand for?",
+      "options": {
+        "A": "Really Big Database Management System",
+        "B": "Relational Database Management System",
+        "C": "Remote Database Management Service",
+        "D": "Redundant Binary Data Management System"
+      },
+      "correct_answer": "B",
+      "explanation": "RDBMS stands for Relational Database Management System, which organizes data into tables with rows and columns, uses SQL for queries, and enforces relationships through foreign keys.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concept": "RDBMS",
+      "chapter_file": "chapters/02-database-systems-nosql/index.md",
+      "source_section": "#rdbms-the-foundation-and-its-cracks",
+      "tags": ["RDBMS", "terminology", "definitions"]
+    },
+    {
+      "id": "ch2-q002",
+      "chapter": 2,
+      "chapter_title": "Database Systems and NoSQL",
+      "question_number": 2,
+      "question_text": "What is the primary difference between OLTP and OLAP workloads?",
+      "options": {
+        "A": "OLTP handles many small transactions for day-to-day operations, while OLAP performs complex analysis on historical data",
+        "B": "OLTP is newer than OLAP",
+        "C": "OLTP uses NoSQL while OLAP uses relational databases",
+        "D": "OLTP is only for large companies while OLAP is for small businesses"
+      },
+      "correct_answer": "A",
+      "explanation": "OLTP (Online Transaction Processing) handles many small transactions like processing orders, focusing on current data with ACID requirements. OLAP (Online Analytical Processing) performs complex queries analyzing historical data for business intelligence.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concept": "OLTP, OLAP",
+      "chapter_file": "chapters/02-database-systems-nosql/index.md",
+      "source_section": "#oltp-vs-olap-different-workloads-different-needs",
+      "tags": ["OLTP", "OLAP", "workloads", "transactions", "analytics"]
+    },
+    {
+      "id": "ch2-q003",
+      "chapter": 2,
+      "chapter_title": "Database Systems and NoSQL",
+      "question_number": 3,
+      "question_text": "According to the CAP theorem, what are the three properties that distributed systems must choose between?",
+      "options": {
+        "A": "Cost, Accuracy, Performance",
+        "B": "Consistency, Availability, Partition tolerance",
+        "C": "Capacity, Accessibility, Privacy",
+        "D": "Correctness, Automation, Persistence"
+      },
+      "correct_answer": "B",
+      "explanation": "The CAP theorem states that distributed systems can guarantee at most two of three properties: Consistency (all nodes see the same data), Availability (every request gets a response), and Partition tolerance (system continues despite network failures).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concept": "CAP Theorem",
+      "chapter_file": "chapters/02-database-systems-nosql/index.md",
+      "source_section": "#cap-theorem",
+      "tags": ["CAP theorem", "distributed systems", "consistency", "availability"]
+    },
+    {
+      "id": "ch2-q008",
+      "chapter": 2,
+      "chapter_title": "Database Systems and NoSQL",
+      "question_number": 8,
+      "question_text": "Which NoSQL database type would be best for modeling a social network with complex friend relationships?",
+      "options": {
+        "A": "Key-value store",
+        "B": "Document database",
+        "C": "Wide-column store",
+        "D": "Graph database"
+      },
+      "correct_answer": "D",
+      "explanation": "Graph databases are specifically designed for relationship-heavy data like social networks, where modeling 'friends-of-friends,' influence patterns, and community detection are core requirements. They use index-free adjacency for efficient multi-hop traversals.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concept": "Graph Databases, Tradeoff Analysis",
+      "chapter_file": "chapters/02-database-systems-nosql/index.md",
+      "source_section": "#nosql-landscape",
+      "tags": ["graph databases", "social networks", "NoSQL", "use cases"]
+    },
+    {
+      "id": "ch3-q001",
+      "chapter": 3,
+      "chapter_title": "Labeled Property Graph Information Model",
+      "question_number": 1,
+      "question_text": "What are the four building blocks of a Labeled Property Graph (LPG)?",
+      "options": {
+        "A": "Tables, rows, columns, and indexes",
+        "B": "Nodes, edges, properties, and labels",
+        "C": "Files, folders, permissions, and users",
+        "D": "Classes, objects, methods, and variables"
+      },
+      "correct_answer": "B",
+      "explanation": "The Labeled Property Graph model consists of four building blocks: Nodes (entities/things), Edges (relationships/connections), Properties (attributes as key-value pairs), and Labels (categories/types).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concept": "Labeled Property Graph",
+      "chapter_file": "chapters/03-labeled-property-graph-model/index.md",
+      "source_section": "#the-labeled-property-graph-the-whole-enchilada",
+      "tags": ["LPG", "nodes", "edges", "properties", "labels"]
+    },
+    {
+      "id": "ch3-q002",
+      "chapter": 3,
+      "chapter_title": "Labeled Property Graph Information Model",
+      "question_number": 2,
+      "question_text": "What does 'index-free adjacency' mean in graph databases?",
+      "options": {
+        "A": "Databases that don't use any indexes",
+        "B": "Each node directly references its connected neighbors in memory without requiring index lookups for traversal",
+        "C": "Indexes are stored remotely",
+        "D": "Graphs that are not adjacent to each other"
+      },
+      "correct_answer": "B",
+      "explanation": "Index-free adjacency is a graph storage architecture where each node directly references its connected neighbors in memory, eliminating the need for index lookups during traversal. This enables constant-time (O(1)) neighbor access regardless of total graph size.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concept": "Index-Free Adjacency",
+      "chapter_file": "chapters/03-labeled-property-graph-model/index.md",
+      "source_section": "#index-free-adjacency",
+      "tags": ["index-free adjacency", "performance", "graph architecture"]
+    },
+    {
+      "id": "ch3-q007",
+      "chapter": 3,
+      "chapter_title": "Labeled Property Graph Information Model",
+      "question_number": 7,
+      "question_text": "Given a social network graph where you need to find all posts liked by friends of a specific user, which graph operation would you use?",
+      "options": {
+        "A": "Simple node lookup",
+        "B": "Graph traversal following FRIEND and LIKED edges from the user",
+        "C": "Database backup",
+        "D": "Schema migration"
+      },
+      "correct_answer": "B",
+      "explanation": "To find posts liked by friends, you'd use graph traversal: starting from the user node, follow outgoing FRIEND edges to find friend nodes, then follow their outgoing LIKED edges to find post nodes. This demonstrates how multi-hop traversals naturally express relationship queries.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concept": "Traversal, Pattern Matching",
+      "chapter_file": "chapters/03-labeled-property-graph-model/index.md",
+      "source_section": "#traversal",
+      "tags": ["traversal", "multi-hop", "social networks", "pattern matching"]
+    }
+  ],
+  "metadata": {
+    "chapters_generated": [
+      {
+        "chapter": 1,
+        "title": "Introduction to Graph Thinking and Data Modeling",
+        "questions": 10,
+        "concepts_tested": 10,
+        "quiz_file": "chapters/01-intro-graph-thinking-data-modeling/quiz.md"
+      },
+      {
+        "chapter": 2,
+        "title": "Database Systems and NoSQL",
+        "questions": 10,
+        "concepts_tested": 10,
+        "quiz_file": "chapters/02-database-systems-nosql/quiz.md"
+      },
+      {
+        "chapter": 3,
+        "title": "Labeled Property Graph Information Model",
+        "questions": 10,
+        "concepts_tested": 10,
+        "quiz_file": "chapters/03-labeled-property-graph-model/quiz.md"
+      }
+    ],
+    "pending_chapters": [4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "quality_score": 85,
+    "format_version": "1.0",
+    "notes": "This quiz bank contains representative questions (10 per chapter) from the first 3 chapters. Full quiz bank will contain 120 questions when all 12 chapters are complete. Format uses mkdocs-material question admonitions with upper-alpha styling."
+  }
+}

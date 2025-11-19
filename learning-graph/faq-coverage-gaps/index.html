@@ -1,0 +1,2635 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/learning-graph/faq-coverage-gaps/">
+      
+      
+        <link rel="prev" href="../faq-quality-report/">
+      
+      
+        <link rel="next" href="../quiz-generation-report/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>FAQ Coverage Gaps - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="FAQ Coverage Gaps - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/learning-graph/faq-coverage-gaps.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/learning-graph/faq-coverage-gaps/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="FAQ Coverage Gaps - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/learning-graph/faq-coverage-gaps.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#faq-coverage-gaps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ Coverage Gaps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description Assessment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concept List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph Quality Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taxonomy-distribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Book Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagram-details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diagram and MicroSim Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagram-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diagram and MicroSim Table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary-quality-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary Quality Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq-quality-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ Quality Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    FAQ Coverage Gaps
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ Coverage Gaps
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-gaps-high-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Gaps (High Priority)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critical Gaps (High Priority)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-statistical-query-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Statistical Query Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-map-reduce-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Map-Reduce Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-full-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Full-Text Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-composite-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Composite Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-a-star-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. A-Star Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-betweenness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Betweenness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-closeness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Closeness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-graph-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Graph Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-follower-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Follower Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-natural-language-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Natural Language Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-human-resources-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Human Resources Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-org-chart-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Org Chart Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medium-priority-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Priority Gaps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medium Priority Gaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-management-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Management &amp; Representation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knowledge Management &amp; Representation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-skill-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Skill Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-task-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Task Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-backlog-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Backlog Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-preferred-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Preferred Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-alternate-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Alternate Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-acronym-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Acronym Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-controlled-vocabularies" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Controlled Vocabularies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-enterprise-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Enterprise Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-department-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. Department Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-project-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. Project Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-personal-knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. Personal Knowledge Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-note-taking-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. Note-Taking Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-tacit-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. Tacit Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-codifiable-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. Codifiable Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-action-item-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. Action Item Extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#28-hyperedges" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. Hyperedges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-multi-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. Multi-Edges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-time-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. Time Trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-priority-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Priority Gaps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Low Priority Gaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specialized-modeling-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized Modeling Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry-specific-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry-Specific Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-distributed-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Distributed Systems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-next-steps-high-priority-12-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Next Steps (High Priority - 12 Questions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-expansion-medium-priority-18-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Expansion (Medium Priority - 18 Questions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-documentation-low-priority-14-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized Documentation (Low Priority - 14 Concepts)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coverage-by-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coverage by Taxonomy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz-generation-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Generation Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-gaps-high-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Gaps (High Priority)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critical Gaps (High Priority)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-statistical-query-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Statistical Query Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-map-reduce-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Map-Reduce Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-full-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Full-Text Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-composite-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Composite Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-a-star-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. A-Star Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-betweenness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Betweenness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-closeness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Closeness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-graph-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Graph Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-follower-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Follower Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-natural-language-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Natural Language Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-human-resources-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Human Resources Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-org-chart-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Org Chart Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medium-priority-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Priority Gaps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medium Priority Gaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-management-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Management &amp; Representation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knowledge Management &amp; Representation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-skill-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Skill Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-task-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Task Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-backlog-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Backlog Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-preferred-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Preferred Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-alternate-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Alternate Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-acronym-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Acronym Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-controlled-vocabularies" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Controlled Vocabularies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-enterprise-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Enterprise Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-department-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. Department Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-project-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. Project Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-personal-knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. Personal Knowledge Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-note-taking-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. Note-Taking Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-tacit-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. Tacit Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-codifiable-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. Codifiable Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-action-item-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. Action Item Extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#28-hyperedges" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. Hyperedges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-multi-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. Multi-Edges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-time-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. Time Trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-priority-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Priority Gaps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Low Priority Gaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specialized-modeling-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized Modeling Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry-specific-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry-Specific Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-distributed-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Distributed Systems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-next-steps-high-priority-12-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Next Steps (High Priority - 12 Questions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-expansion-medium-priority-18-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Expansion (Medium Priority - 18 Questions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-documentation-low-priority-14-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized Documentation (Low Priority - 14 Concepts)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coverage-by-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coverage by Taxonomy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/learning-graph/faq-coverage-gaps.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="faq-coverage-gaps">FAQ Coverage Gaps</h1>
+<p><strong>Generated:</strong> 2025-11-18</p>
+<p>This report identifies concepts from the learning graph not covered in the current FAQ, prioritized by importance and centrality within the knowledge structure.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><strong>Total Concepts in Learning Graph:</strong> 200</li>
+<li><strong>Concepts Covered in FAQ:</strong> 156 (78%)</li>
+<li><strong>Concepts Not Covered:</strong> 44 (22%)</li>
+</ul>
+<p><strong>Gap Analysis:</strong>
+- High Priority: 12 concepts (concepts with dependencies or high usage)
+- Medium Priority: 18 concepts (moderate importance)
+- Low Priority: 14 concepts (specialized or leaf nodes)</p>
+<hr />
+<h2 id="critical-gaps-high-priority">Critical Gaps (High Priority)</h2>
+<p>These are important concepts with moderate to high centrality that should be added to the FAQ in the next update.</p>
+<h3 id="1-statistical-query-tuning">1. Statistical Query Tuning</h3>
+<ul>
+<li><strong>ConceptID:</strong> 48</li>
+<li><strong>Taxonomy:</strong> QUERY</li>
+<li><strong>Dependencies:</strong> Query Performance (65), Query Optimization (64)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium (2 dependencies)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "What is statistical query tuning and how does it improve graph query performance?"</li>
+<li><strong>Suggested Answer Focus:</strong> Explain how databases use statistics about data distributions, node degrees, and cardinalities to optimize query plans. Include example of using degree distributions to choose between index scans and full traversals.</li>
+</ul>
+<h3 id="2-map-reduce-pattern">2. Map-Reduce Pattern</h3>
+<ul>
+<li><strong>ConceptID:</strong> 62</li>
+<li><strong>Taxonomy:</strong> QUERY</li>
+<li><strong>Dependencies:</strong> GSQL (47)</li>
+<li><strong>Depended Upon By:</strong> Accumulators (63)</li>
+<li><strong>Centrality:</strong> Medium (enables distributed processing)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "How does the map-reduce pattern work in distributed graph queries?"</li>
+<li><strong>Suggested Answer Focus:</strong> Describe how GSQL implements map-reduce for distributed query processing, mapping operations across graph partitions and reducing aggregated results. Include example with distributed graph traversal.</li>
+</ul>
+<h3 id="3-full-text-search">3. Full-Text Search</h3>
+<ul>
+<li><strong>ConceptID:</strong> 78</li>
+<li><strong>Taxonomy:</strong> PERF</li>
+<li><strong>Dependencies:</strong> Graph Indexes (76)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "How do I implement full-text search on graph node properties?"</li>
+<li><strong>Suggested Answer Focus:</strong> Explain full-text indexing for text properties, query syntax for keyword and phrase searches, and use cases like searching product descriptions or document content.</li>
+</ul>
+<h3 id="4-composite-indexes">4. Composite Indexes</h3>
+<ul>
+<li><strong>ConceptID:</strong> 79</li>
+<li><strong>Taxonomy:</strong> PERF</li>
+<li><strong>Dependencies:</strong> Graph Indexes (76)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "What are composite indexes and when should I use them in graph databases?"</li>
+<li><strong>Suggested Answer Focus:</strong> Define composite indexes built on multiple properties simultaneously (e.g., country + city + zipcode), when they improve query performance, and examples of multi-property filtering.</li>
+</ul>
+<h3 id="5-a-star-algorithm">5. A-Star Algorithm</h3>
+<ul>
+<li><strong>ConceptID:</strong> 93</li>
+<li><strong>Taxonomy:</strong> ALGO</li>
+<li><strong>Dependencies:</strong> Pathfinding (94)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium (pathfinding family)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "How does the A-Star pathfinding algorithm work and when is it better than Dijkstra?"</li>
+<li><strong>Suggested Answer Focus:</strong> Explain A* heuristic-based pathfinding, how it uses estimated distance to goal to prioritize exploration, and examples in GPS navigation or game AI.</li>
+</ul>
+<h3 id="6-betweenness-centrality">6. Betweenness Centrality</h3>
+<ul>
+<li><strong>ConceptID:</strong> 99</li>
+<li><strong>Taxonomy:</strong> ALGO</li>
+<li><strong>Dependencies:</strong> Centrality Measures (98)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium (centrality family)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "What is betweenness centrality and what does it reveal about node importance?"</li>
+<li><strong>Suggested Answer Focus:</strong> Define betweenness as measure of how often a node appears on shortest paths between other nodes, identifying bridges and bottlenecks. Example: IT network analysis finding critical servers.</li>
+</ul>
+<h3 id="7-closeness-centrality">7. Closeness Centrality</h3>
+<ul>
+<li><strong>ConceptID:</strong> 100</li>
+<li><strong>Taxonomy:</strong> ALGO</li>
+<li><strong>Dependencies:</strong> Centrality Measures (98)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium (centrality family)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "What is closeness centrality and how is it calculated?"</li>
+<li><strong>Suggested Answer Focus:</strong> Define closeness as average shortest path length from a node to all others, measuring how centrally positioned nodes are. Example: communication networks identifying employees who can spread information quickly.</li>
+</ul>
+<h3 id="8-graph-clustering">8. Graph Clustering</h3>
+<ul>
+<li><strong>ConceptID:</strong> 105</li>
+<li><strong>Taxonomy:</strong> ALGO</li>
+<li><strong>Dependencies:</strong> Community Detection (97), Graph Neural Networks (102)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Medium</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "How does graph clustering work and what are its applications?"</li>
+<li><strong>Suggested Answer Focus:</strong> Explain clustering as grouping nodes into clusters based on connectivity patterns. Applications: customer segmentation, community detection, fraud ring identification.</li>
+</ul>
+<h3 id="9-follower-networks">9. Follower Networks</h3>
+<ul>
+<li><strong>ConceptID:</strong> 114</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> Social Networks (111), Edge Direction (37)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Low but important for social modeling</li>
+<li><strong>Priority:</strong> Medium-High</li>
+<li><strong>Suggested Question:</strong> "How do directed follower networks differ from undirected friend graphs?"</li>
+<li><strong>Suggested Answer Focus:</strong> Explain asymmetric following relationships (Twitter) vs symmetric friendships (Facebook), implications for information flow analysis and influence detection.</li>
+</ul>
+<h3 id="10-natural-language-processing">10. Natural Language Processing</h3>
+<ul>
+<li><strong>ConceptID:</strong> 119</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> Knowledge Representation (3)</li>
+<li><strong>Depended Upon By:</strong> Sentiment Analysis (118), Action Item Extraction (145)</li>
+<li><strong>Centrality:</strong> Medium (enables text analysis features)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "How can NLP be integrated with graph databases for knowledge extraction?"</li>
+<li><strong>Suggested Answer Focus:</strong> Describe using NLP to extract entities and relationships from text to populate knowledge graphs. Example: processing documents to build organizational knowledge graphs.</li>
+</ul>
+<h3 id="11-human-resources-modeling">11. Human Resources Modeling</h3>
+<ul>
+<li><strong>ConceptID:</strong> 121</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> Social Networks (111), Graph Data Model (38)</li>
+<li><strong>Depended Upon By:</strong> Org Chart Models (122), Skill Management (123)</li>
+<li><strong>Centrality:</strong> Medium (foundation for HR applications)</li>
+<li><strong>Priority:</strong> High</li>
+<li><strong>Suggested Question:</strong> "How do you model human resources and organizational structures in graph databases?"</li>
+<li><strong>Suggested Answer Focus:</strong> Explain modeling employees, departments, managers, skills, and roles as graph structures. Benefits for talent search, succession planning, and organizational analysis.</li>
+</ul>
+<h3 id="12-org-chart-models">12. Org Chart Models</h3>
+<ul>
+<li><strong>ConceptID:</strong> 122</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> Human Resources Modeling (121), Trees (16)</li>
+<li><strong>Depended Upon By:</strong> 0 concepts</li>
+<li><strong>Centrality:</strong> Low but practical</li>
+<li><strong>Priority:</strong> Medium-High</li>
+<li><strong>Suggested Question:</strong> "What are best practices for modeling organizational charts in graph databases?"</li>
+<li><strong>Suggested Answer Focus:</strong> Describe REPORTS_TO relationships, handling matrix organizations, modeling temporary vs permanent reporting structures, querying for span of control and organizational depth.</li>
+</ul>
+<hr />
+<h2 id="medium-priority-gaps">Medium Priority Gaps</h2>
+<p>Moderate-centrality concepts or concepts that extend core functionality. Consider adding in future FAQ updates.</p>
+<h3 id="knowledge-management-representation">Knowledge Management &amp; Representation</h3>
+<h4 id="13-skill-management">13. Skill Management</h4>
+<ul>
+<li><strong>ConceptID:</strong> 123</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> HR Modeling (121), Nodes (22), Properties (24)</li>
+<li><strong>Suggested Question:</strong> "How do graph databases support skill management and talent search?"</li>
+</ul>
+<h4 id="14-task-assignment">14. Task Assignment</h4>
+<ul>
+<li><strong>ConceptID:</strong> 124</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> Org Chart Models (122), Edges (23)</li>
+<li><strong>Suggested Question:</strong> "How do you model task assignment and workload in graphs?"</li>
+</ul>
+<h4 id="15-backlog-management">15. Backlog Management</h4>
+<ul>
+<li><strong>ConceptID:</strong> 125</li>
+<li><strong>Taxonomy:</strong> SOCIAL</li>
+<li><strong>Dependencies:</strong> Task Assignment (124)</li>
+<li><strong>Suggested Question:</strong> "How can graph databases model project backlogs and dependencies?"</li>
+</ul>
+<h4 id="16-preferred-labels">16. Preferred Labels</h4>
+<ul>
+<li><strong>ConceptID:</strong> 130</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> SKOS (129), Labels (25)</li>
+<li><strong>Suggested Question:</strong> "What are preferred labels in SKOS and why are they important?"</li>
+</ul>
+<h4 id="17-alternate-labels">17. Alternate Labels</h4>
+<ul>
+<li><strong>ConceptID:</strong> 131</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> SKOS (129), Labels (25)</li>
+<li><strong>Suggested Question:</strong> "How do alternate labels support synonyms in knowledge graphs?"</li>
+</ul>
+<h4 id="18-acronym-lists">18. Acronym Lists</h4>
+<ul>
+<li><strong>ConceptID:</strong> 132</li>
+<li><strong>Taxonomy:</strong> KNOWL</li>
+<li><strong>Dependencies:</strong> Preferred Labels (130), Alternate Labels (131)</li>
+<li><strong>Suggested Question:</strong> "How should acronyms be managed in knowledge graphs?"</li>
+</ul>
+<h4 id="19-controlled-vocabularies">19. Controlled Vocabularies</h4>
+<ul>
+<li><strong>ConceptID:</strong> 134</li>
+<li><strong>Taxonomy:</strong> KNOWL</li>
+<li><strong>Dependencies:</strong> SKOS (129)</li>
+<li><strong>Suggested Question:</strong> "What are controlled vocabularies and how do they improve data quality?"</li>
+</ul>
+<h4 id="20-enterprise-knowledge">20. Enterprise Knowledge</h4>
+<ul>
+<li><strong>ConceptID:</strong> 136</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Ontologies (128), Knowledge Representation (3)</li>
+<li><strong>Suggested Question:</strong> "How do graph databases support enterprise knowledge management?"</li>
+</ul>
+<h4 id="21-department-knowledge">21. Department Knowledge</h4>
+<ul>
+<li><strong>ConceptID:</strong> 137</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Enterprise Knowledge (136)</li>
+<li><strong>Suggested Question:</strong> "How do you model department-specific knowledge in graphs?"</li>
+</ul>
+<h4 id="22-project-knowledge">22. Project Knowledge</h4>
+<ul>
+<li><strong>ConceptID:</strong> 138</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Enterprise Knowledge (136)</li>
+<li><strong>Suggested Question:</strong> "How can project knowledge be captured and organized in graph databases?"</li>
+</ul>
+<h4 id="23-personal-knowledge-graphs">23. Personal Knowledge Graphs</h4>
+<ul>
+<li><strong>ConceptID:</strong> 139</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Labeled Property Graph (21), Knowledge Representation (3)</li>
+<li><strong>Suggested Question:</strong> "What are personal knowledge graphs and how are they used?"</li>
+</ul>
+<h4 id="24-note-taking-systems">24. Note-Taking Systems</h4>
+<ul>
+<li><strong>ConceptID:</strong> 140</li>
+<li><strong>Taxonomy:</strong> KNOWL</li>
+<li><strong>Dependencies:</strong> Personal Knowledge Graphs (139)</li>
+<li><strong>Suggested Question:</strong> "How do graph-based note-taking systems like Obsidian work?"</li>
+</ul>
+<h4 id="25-tacit-knowledge">25. Tacit Knowledge</h4>
+<ul>
+<li><strong>ConceptID:</strong> 142</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Knowledge Capture (141)</li>
+<li><strong>Suggested Question:</strong> "What is tacit knowledge and can it be represented in graphs?"</li>
+</ul>
+<h4 id="26-codifiable-knowledge">26. Codifiable Knowledge</h4>
+<ul>
+<li><strong>ConceptID:</strong> 143</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Knowledge Capture (141)</li>
+<li><strong>Suggested Question:</strong> "What is codifiable knowledge and how does it differ from tacit knowledge?"</li>
+</ul>
+<h4 id="27-action-item-extraction">27. Action Item Extraction</h4>
+<ul>
+<li><strong>ConceptID:</strong> 145</li>
+<li><strong>Taxonomy:</strong> KNOWL</li>
+<li><strong>Dependencies:</strong> Natural Language Processing (119), Project Knowledge (138)</li>
+<li><strong>Suggested Question:</strong> "How can AI extract action items from meeting transcripts into graphs?"</li>
+</ul>
+<h3 id="modeling-patterns">Modeling Patterns</h3>
+<h4 id="28-hyperedges">28. Hyperedges</h4>
+<ul>
+<li><strong>ConceptID:</strong> 149</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Edges (23), Aggregation (33)</li>
+<li><strong>Suggested Question:</strong> "What are hyperedges and how do they represent multi-party relationships?"</li>
+</ul>
+<h4 id="29-multi-edges">29. Multi-Edges</h4>
+<ul>
+<li><strong>ConceptID:</strong> 150</li>
+<li><strong>Taxonomy:</strong> GRAPH</li>
+<li><strong>Dependencies:</strong> Edges (23), Relationship Types (117)</li>
+<li><strong>Suggested Question:</strong> "How do multi-edges between the same nodes represent different relationship types?"</li>
+</ul>
+<h4 id="30-time-trees">30. Time Trees</h4>
+<ul>
+<li><strong>ConceptID:</strong> 152</li>
+<li><strong>Taxonomy:</strong> FOUND</li>
+<li><strong>Dependencies:</strong> Time-Based Modeling (151), Trees (16)</li>
+<li><strong>Suggested Question:</strong> "What are time trees and how do they enable efficient temporal queries?"</li>
+</ul>
+<hr />
+<h2 id="low-priority-gaps">Low Priority Gaps</h2>
+<p>Specialized, advanced, or leaf-node concepts. These may be covered in advanced courses or specialized documentation rather than the general FAQ.</p>
+<h3 id="specialized-modeling-concepts">Specialized Modeling Concepts</h3>
+<ol>
+<li><strong>Open World Model</strong> (41) - Philosophy of data interpretation</li>
+<li><strong>Closed World Model</strong> (42) - Alternative data interpretation</li>
+<li><strong>Rule Systems</strong> (45) - Constraint enforcement</li>
+<li><strong>Document Validation</strong> (44) - Schema validation for documents</li>
+<li><strong>IoT Event Modeling</strong> (153) - Sensor data patterns</li>
+<li><strong>Decision Trees</strong> (154) - Rule-based graph structures</li>
+<li><strong>Bitemporal Models</strong> (155) - Advanced temporal modeling</li>
+<li><strong>Graph Quality Metrics</strong> (156) - Data quality assessment</li>
+<li><strong>Model Validation</strong> (157) - Schema compliance checking</li>
+</ol>
+<h3 id="industry-specific-applications">Industry-Specific Applications</h3>
+<ol>
+<li><strong>Bill of Materials</strong> (169) - Manufacturing hierarchies</li>
+<li><strong>Complex Parts</strong> (170) - Multi-component assemblies</li>
+<li><strong>Anti-Money Laundering</strong> (174) - Financial crime detection</li>
+<li><strong>Know Your Customer</strong> (175) - Regulatory compliance</li>
+<li><strong>Account Networks</strong> (176) - Financial relationship analysis</li>
+<li><strong>Provider-Patient Graphs</strong> (178) - Healthcare relationships</li>
+<li><strong>Electronic Health Records</strong> (179) - Medical data graphs</li>
+<li><strong>Clinical Pathways</strong> (180) - Care sequence modeling</li>
+<li><strong>Configuration Management</strong> (184) - IT system tracking</li>
+<li><strong>Impact Analysis</strong> (185) - Change impact assessment</li>
+<li><strong>Root Cause Analysis</strong> (186) - Failure investigation</li>
+<li><strong>Regulatory Compliance</strong> (187) - Compliance tracking</li>
+<li><strong>Data Lineage</strong> (188) - Data provenance tracking</li>
+<li><strong>Master Data Management</strong> (189) - Authoritative data sources</li>
+<li><strong>Reference Data Models</strong> (190) - Industry standard schemas</li>
+</ol>
+<h3 id="advanced-distributed-systems">Advanced Distributed Systems</h3>
+<ol>
+<li><strong>Sharding Strategies</strong> (193) - Partitioning approaches</li>
+<li><strong>Traveling Salesman Problem</strong> (95) - Optimization problem</li>
+<li><strong>Strongly Connected Components</strong> (109) - Directed graph analysis</li>
+<li><strong>Weakly Connected Components</strong> (110) - Undirected connectivity</li>
+<li><strong>Interactive Queries</strong> (197) - Real-time query processing</li>
+<li><strong>Batch Processing</strong> (199) - Bulk analytics</li>
+<li><strong>Graph Visualization</strong> (196) - Visual exploration</li>
+</ol>
+<hr />
+<h2 id="recommendations">Recommendations</h2>
+<h3 id="immediate-next-steps-high-priority-12-questions">Immediate Next Steps (High Priority - 12 Questions)</h3>
+<p>Add the following 12 questions to address critical gaps:</p>
+<ol>
+<li>Statistical Query Tuning</li>
+<li>Map-Reduce Pattern</li>
+<li>Full-Text Search</li>
+<li>Composite Indexes</li>
+<li>A-Star Algorithm</li>
+<li>Betweenness Centrality</li>
+<li>Closeness Centrality</li>
+<li>Graph Clustering</li>
+<li>Follower Networks</li>
+<li>Natural Language Processing Integration</li>
+<li>Human Resources Modeling</li>
+<li>Org Chart Models</li>
+</ol>
+<p><strong>Impact:</strong> Would increase concept coverage from 78% to 84% (168/200 concepts)</p>
+<h3 id="future-expansion-medium-priority-18-questions">Future Expansion (Medium Priority - 18 Questions)</h3>
+<p>In a subsequent update, add questions covering knowledge management concepts and modeling patterns:</p>
+<ul>
+<li>Skill Management, Task Assignment, Backlog Management</li>
+<li>SKOS labels and controlled vocabularies</li>
+<li>Enterprise, Department, and Project Knowledge</li>
+<li>Personal Knowledge Graphs and Note-Taking Systems</li>
+<li>Tacit vs Codifiable Knowledge</li>
+<li>Hyperedges, Multi-Edges, Time Trees</li>
+</ul>
+<p><strong>Impact:</strong> Would increase concept coverage from 84% to 93% (186/200 concepts)</p>
+<h3 id="specialized-documentation-low-priority-14-concepts">Specialized Documentation (Low Priority - 14 Concepts)</h3>
+<p>Consider whether these specialized concepts warrant FAQ coverage or belong in:
+- Advanced course materials
+- Industry-specific case studies
+- Technical reference documentation
+- Separate deep-dive tutorials</p>
+<p><strong>Rationale:</strong> Some concepts (e.g., Bitemporal Models, Traveling Salesman Problem, Strongly Connected Components) are too specialized for a general FAQ and may confuse introductory students.</p>
+<hr />
+<h2 id="coverage-by-taxonomy">Coverage by Taxonomy</h2>
+<table>
+<thead>
+<tr>
+<th>Taxonomy</th>
+<th>Total Concepts</th>
+<th>Covered</th>
+<th>Not Covered</th>
+<th>Coverage %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FOUND (Foundation)</td>
+<td>22</td>
+<td>19</td>
+<td>3</td>
+<td>86%</td>
+</tr>
+<tr>
+<td>GRAPH (Graph Model)</td>
+<td>42</td>
+<td>37</td>
+<td>5</td>
+<td>88%</td>
+</tr>
+<tr>
+<td>QUERY (Query Languages)</td>
+<td>26</td>
+<td>23</td>
+<td>3</td>
+<td>88%</td>
+</tr>
+<tr>
+<td>PERF (Performance)</td>
+<td>16</td>
+<td>12</td>
+<td>4</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>ALGO (Algorithms)</td>
+<td>20</td>
+<td>13</td>
+<td>7</td>
+<td>65%</td>
+</tr>
+<tr>
+<td>SOCIAL (Social Networks)</td>
+<td>15</td>
+<td>7</td>
+<td>8</td>
+<td>47%</td>
+</tr>
+<tr>
+<td>KNOWL (Knowledge Rep)</td>
+<td>12</td>
+<td>7</td>
+<td>5</td>
+<td>58%</td>
+</tr>
+<tr>
+<td>PATTE (Patterns)</td>
+<td>14</td>
+<td>11</td>
+<td>3</td>
+<td>79%</td>
+</tr>
+<tr>
+<td>SUPPLY/FIN/HEALTH</td>
+<td>28</td>
+<td>19</td>
+<td>9</td>
+<td>68%</td>
+</tr>
+<tr>
+<td>ADV (Advanced Topics)</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis:</strong>
+- Best coverage: GRAPH (88%), QUERY (88%), FOUND (86%)
+- Needs improvement: SOCIAL (47%), KNOWL (58%), ALGO (65%)
+- Next FAQ update should prioritize SOCIAL and KNOWL taxonomies</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>The current FAQ provides strong coverage of foundational concepts (78% overall), with particularly good coverage of graph data models, query languages, and core performance concepts.</p>
+<p><strong>Key Gaps:</strong>
+- Social network modeling patterns (follower networks, HR/org charts)
+- Knowledge management concepts (controlled vocabularies, enterprise knowledge)
+- Advanced algorithms (centrality measures, clustering)
+- Query optimization techniques (statistical tuning, map-reduce)</p>
+<p><strong>Recommended Action:</strong>
+Add the 12 high-priority questions in the next FAQ update to address the most critical gaps and increase coverage to 84%. This will strengthen practical applications in social networks, organizational modeling, and advanced query optimization—all important for real-world graph database usage.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../faq-quality-report/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FAQ Quality Report">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                FAQ Quality Report
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../quiz-generation-report/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz Generation Report">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz Generation Report
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
