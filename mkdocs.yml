@@ -38,6 +38,9 @@ nav:
     - Multi-Hop Comparison: sims/multi-hop-comparison/index.md
     - RDBMS vs Graph Performance: sims/rdbms-vs-graph-performance/index.md
 
+  - Stories:
+    - List of Stories: stories/index.md
+    - The Neighborhood Walk: stories/the-neighborhood-walk/index.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
