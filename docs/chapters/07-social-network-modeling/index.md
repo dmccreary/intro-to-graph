@@ -73,6 +73,8 @@ Here's what a typical user profile node might contain:
 | Privacy Settings | profile_visibility, messaging_allowed | Control user experience |
 | Behavioral Metrics | posts_count, avg_response_time, activity_level | Understand user engagement |
 
+#### Diagram: User Profile Graph Model Visualization
+
 <details>
     <summary>User Profile Graph Model Visualization</summary>
     Type: graph-model
@@ -179,6 +181,8 @@ Here are some common friend graph queries and why they matter:
 - **Mutual friends**: `MATCH (user1)-[:FRIENDS_WITH]-(mutual)-[:FRIENDS_WITH]-(user2)` - Social proof for new connections
 - **Friend groups**: `MATCH (user)-[:FRIENDS_WITH]-(friend)-[:FRIENDS_WITH]-(friendOfFriend)` - Discovering communities
 
+#### Diagram: Friend Recommendation MicroSim
+
 <details>
     <summary>Friend Recommendation MicroSim</summary>
     Type: microsim
@@ -269,6 +273,8 @@ Directed graphs enable questions that have no meaning in undirected graphs:
 - **Follow ratio**: Following count / Follower count (a metric some use to judge account quality)
 - **Reach**: How many people could potentially see my post? (followers + their followers + ...)
 
+#### Diagram: Follower Network Visualization Diagram
+
 <details>
     <summary>Follower Network Visualization Diagram</summary>
     Type: diagram
@@ -340,6 +346,8 @@ The activity stream pattern appears everywhere:
 What makes activity streams interesting in graph databases is how they connect to other entities. A post isn't just created by a user—it might mention other users, belong to a topic, include location data, link to external content, and receive reactions from other users. Each of these is a different relationship type in the graph.
 
 Here's a query pattern you'll use constantly: "Show me recent posts from people I follow, about topics I care about, sorted by relevance." In a relational database, this requires joining user tables, follower tables, post tables, topic tables, and user interest tables—five or more joins. In a graph database, it's a simple pattern match that follows edges from you to people you follow to their recent posts that connect to your interest topics.
+
+#### Diagram: Activity Stream Timeline Visualization
 
 <details>
     <summary>Activity Stream Timeline Visualization</summary>
@@ -460,6 +468,8 @@ Relationship types can also have properties that add even more nuance:
 | COMMENTED_ON | comment_text, timestamp, sentiment_score | Understand nature of engagement |
 | MEMBER_OF | joined_date, membership_level, participation_score | Identify active vs. inactive members |
 | TRUSTS | trust_level (1-10), endorsement_count | Model reputation networks |
+
+#### Diagram: Multi-Relationship Network Graph Model
 
 <details>
     <summary>Multi-Relationship Network Graph Model</summary>
@@ -605,6 +615,8 @@ Influence graphs appear in unexpected places:
 - **Review platforms**: Reviews from verified, high-reputation reviewers carry more weight
 - **Answer forums**: Stack Overflow karma reflects your influence in the developer community
 
+#### Diagram: Influence Propagation MicroSim
+
 <details>
     <summary>Influence Propagation MicroSim</summary>
     Type: microsim
@@ -739,6 +751,8 @@ Here's how sentiment analysis integrates with graph databases:
 4. **Aggregation queries**: Calculate average sentiment for products, topics, users
 5. **Trend detection**: Track sentiment changes over time ("product rating dropping")
 6. **Network effects**: Positive content from influencers spreads more than negative content
+
+#### Diagram: Sentiment Analysis Flow Workflow Diagram
 
 <details>
     <summary>Sentiment Analysis Flow Workflow Diagram</summary>
@@ -887,6 +901,8 @@ Modern social networks use NLP constantly:
 | Reddit | Subreddit recommendation | Analyzes post content to suggest related communities |
 | Instagram | Location tags and hashtags | Creates POSTED_FROM and TAGGED relationships |
 
+#### Diagram: NLP Entity Extraction and Graph Building Diagram
+
 <details>
     <summary>NLP Entity Extraction and Graph Building Diagram</summary>
     Type: diagram
@@ -1006,6 +1022,8 @@ Graph databases excel at detecting these patterns because they can efficiently a
 **Content similarity**: Posting identical or near-identical content as other accounts. Strong signal of coordination.
 
 **Amplification network detection**: Graph analysis can find clusters of accounts that always like/share each other's content—a sign of coordinated inauthentic behavior.
+
+#### Diagram: Fake Account Detection Pattern MicroSim
 
 <details>
     <summary>Fake Account Detection Pattern MicroSim</summary>
@@ -1180,6 +1198,8 @@ Here's what an org chart graph model includes:
 - MENTORS: Informal development relationships
 - HAS_ROLE: Current role assignment
 - PREVIOUSLY_HELD: Historical roles (career progression)
+
+#### Diagram: Multi-Dimensional Org Chart Graph Model
 
 <details>
     <summary>Multi-Dimensional Org Chart Graph Model</summary>
@@ -1383,6 +1403,8 @@ The assignment process is a graph matching problem:
 3. Consider preferences (who wants to work on backend projects?)
 4. Consider relationships (who has worked together successfully before?)
 5. Create ASSIGNED_TO relationship between person and task
+
+#### Diagram: Task Assignment Optimization Workflow
 
 <details>
     <summary>Task Assignment Optimization Workflow</summary>

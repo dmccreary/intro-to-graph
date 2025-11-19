@@ -126,6 +126,8 @@ Taxonomies work great for organizing things that naturally fall into categories 
 
 In a graph database, taxonomies become trees (or directed acyclic graphs if you allow items to belong to multiple categories). Each category is a node, and "IS_A" or "SUBCATEGORY_OF" relationships connect children to parents. This makes it easy to answer questions like "Show me all products under Electronics" or "What's the parent category of Laptops?"
 
+#### Diagram: Product Taxonomy Hierarchy Diagram
+
 <details>
     <summary>Product Taxonomy Hierarchy Diagram</summary>
     Type: diagram
@@ -191,6 +193,8 @@ SKOS gives you a standardized vocabulary for describing concepts and their relat
 - **skos:definition**: For explaining what a concept means
 
 Here's why SKOS is useful: if you build your knowledge graph using SKOS concepts, your data becomes interoperable with other systems that use SKOS. Libraries, museums, governments, and research organizations all use SKOS, which means your graph can potentially connect with theirs. It's like everyone agreeing to use the same language for organizing knowledge.
+
+#### Diagram: SKOS Relationship Types Interactive Diagram
 
 <details>
     <summary>SKOS Relationship Types Interactive Diagram</summary>
@@ -279,6 +283,8 @@ A curriculum graph might show:
 - Which skills or competencies each course develops
 
 For example, in a computer science program, you might have "Introduction to Programming" as a prerequisite for both "Data Structures" and "Web Development," while "Data Structures" is itself a prerequisite for "Algorithms" and "Database Systems." The curriculum graph makes these relationships visual and queryable.
+
+#### Diagram: Interactive Concept Dependency Explorer MicroSim
 
 <details>
     <summary>Interactive Concept Dependency Explorer MicroSim</summary>
@@ -434,6 +440,8 @@ Enterprise knowledge graphs are used by major tech companies to power everything
 - External data sources (market research, industry databases, etc.)
 
 The value of an enterprise knowledge graph isn't just in storing all this information—it's in making it queryable and discoverable. Instead of asking "What data do we have?" you can ask "What do we know about this customer?" or "Which of our products are affected by this supply chain issue?" The graph can traverse relationships to give you comprehensive answers.
+
+#### Diagram: Multi-Scale Knowledge Management Graph Model
 
 <details>
     <summary>Multi-Scale Knowledge Management Graph Model</summary>
@@ -610,6 +618,8 @@ This creates a web of commitments that you can query: "What are all my action it
 - Connecting people who have knowledge with people who need it
 
 Graph databases support knowledge management by providing the infrastructure for knowledge to be connected, discovered, and maintained. But the technology alone isn't enough—you also need organizational commitment and good processes.
+
+#### Diagram: Knowledge Capture Workflow with Graph Integration
 
 <details>
     <summary>Knowledge Capture Workflow with Graph Integration</summary>
@@ -793,6 +803,8 @@ It doesn't help to have knowledge if people can't find it. Graph databases excel
 ### The Spectrum of Codifiability
 
 Not all knowledge is strictly tacit or codifiable—it's a spectrum. Some knowledge is relatively easy to capture, some is harder but possible with effort, and some is nearly impossible to fully articulate.
+
+#### Diagram: Tacit vs. Codifiable Knowledge Spectrum
 
 <details>
     <summary>Tacit vs. Codifiable Knowledge Spectrum</summary>

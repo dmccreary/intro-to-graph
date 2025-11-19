@@ -139,6 +139,8 @@ Multi-edges are appropriate when:
 - The relationships might have different directions (Alice follows Bob, but Bob doesn't follow Alice)
 - You want type safety and clear semantics in your queries
 
+#### Diagram: Graph Structure Patterns Diagram
+
 <details>
     <summary>Graph Structure Patterns Diagram</summary>
     Type: diagram
@@ -282,6 +284,8 @@ Now that we know some good patterns, let's talk about **anti-patterns**—common
 - It often indicates confusion about what the graph represents
 
 **The Fix:** Let your graph structure emerge from the actual relationships in your domain. Don't impose artificial hierarchy unless it has real meaning.
+
+#### Diagram: Graph Anti-Patterns Infographic
 
 <details>
     <summary>Graph Anti-Patterns Infographic</summary>
@@ -549,6 +553,8 @@ This is crucial for:
 
 Each version is its own node, creating a complete audit trail. Queries can filter by either or both time dimensions.
 
+#### Diagram: Time-Based Modeling Patterns MicroSim
+
 <details>
     <summary>Time-Based Modeling Patterns MicroSim</summary>
     Type: microsim
@@ -750,6 +756,8 @@ A robust validation approach runs checks:
 - **On write**: Validate data as it's being loaded (catch problems immediately)
 - **Periodic batch**: Run comprehensive validation nightly or weekly
 - **On demand**: Let users trigger validation when investigating issues
+
+#### Diagram: Graph Quality Metrics Dashboard Chart
 
 <details>
     <summary>Graph Quality Metrics Dashboard Chart</summary>
@@ -973,6 +981,8 @@ Know how to undo your changes. This might mean:
 - Logging all changes for potential reversal
 - Taking backups before major migrations
 - Testing rollback in non-production environment first
+
+#### Diagram: Schema Evolution and Migration Workflow
 
 <details>
     <summary>Schema Evolution and Migration Workflow</summary>
@@ -1308,6 +1318,8 @@ Many production systems use both:
 - Bulk load historical data during initial setup
 - Switch to incremental loading for ongoing updates
 - Periodically bulk reload to fix accumulated inconsistencies
+
+#### Diagram: Data Loading Strategies Comparison Chart
 
 <details>
     <summary>Data Loading Strategies Comparison Chart</summary>

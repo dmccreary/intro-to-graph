@@ -100,6 +100,8 @@ A **product catalog** is more than just a list of products—it's a rich network
 
 In a graph model, all of these relationships become first-class citizens. Instead of burying them in join tables or JSON blobs, you make them explicit edges that you can query, analyze, and leverage for recommendations.
 
+#### Diagram: E-Commerce Storefront Graph Model
+
 <details>
     <summary>E-Commerce Storefront Graph Model</summary>
     Type: graph-model
@@ -396,6 +398,8 @@ Then you can run queries like:
 
 These become graph traversal and aggregation queries that would be nightmarishly complex in SQL.
 
+#### Diagram: Bill of Materials Graph Model with Manufacturing Intelligence
+
 <details>
     <summary>Bill of Materials Graph Model with Manufacturing Intelligence</summary>
     Type: graph-model
@@ -603,6 +607,8 @@ The graph traversal automatically follows the dependency chain, accounting for m
 - "Which products can we still build?" (find products not dependent on affected warehouse)
 - "What's the financial impact?" (sum order values on affected path)
 - "Which orders should we prioritize?" (rank by order value, customer importance, delivery date)
+
+#### Diagram: Supply Chain Disruption Impact Analysis Interactive Diagram
 
 <details>
     <summary>Supply Chain Disruption Impact Analysis Interactive Diagram</summary>
@@ -857,6 +863,8 @@ Now you can query:
 - "Which applications use this deprecated config setting?" (need to update)
 - "Show me all configuration changes in the last 30 days" (audit trail)
 - "What's the full stack for Application Y?" (application → dependencies → servers → network)
+
+#### Diagram: IT Infrastructure Dependency Graph Model
 
 <details>
     <summary>IT Infrastructure Dependency Graph Model</summary>

@@ -65,6 +65,8 @@ print(customers[0])  # Output: "Alice"
 
 Arrays excel at ordered data and sequential access. However, they struggle when relationships matter more than order. If you want to know which customers purchased from which vendors, arrays force you to search through every element—a slow process that gets worse as your data grows.
 
+#### Diagram: Visual Comparison: Array Performance
+
 <details>
     <summary>Visual Comparison: Array Performance</summary>
     Type: diagram
@@ -112,6 +114,8 @@ print(customer_orders["Bob"])  # Output: 17 (instant lookup!)
 Hash maps are extraordinarily efficient for direct lookups—they find values in constant time regardless of how much data you have. This makes them perfect for simple key-value relationships.
 
 But here's the catch: **hash maps only work for one-hop relationships**. If you need to traverse multiple levels of connections (customers → orders → products → suppliers), you're back to multiple separate lookups, and performance tanks. This limitation becomes critical when modeling real-world business problems.
+
+#### Diagram: Hash Map Architecture Visualization
 
 <details>
     <summary>Hash Map Architecture Visualization</summary>
@@ -183,6 +187,8 @@ Consider a simple business scenario:
 - "Vendor Y is located in Country Z"
 
 Traditional databases store these as separate facts in different tables. But the knowledge isn't in the individual facts—it's in how they connect. Graph databases represent knowledge by making those connections explicit and queryable, enabling questions like "Which countries do my customers ultimately depend on?" to be answered in milliseconds rather than minutes.
+
+#### Diagram: Knowledge Representation Comparison
 
 <details>
     <summary>Knowledge Representation Comparison</summary>
@@ -264,6 +270,8 @@ Graph databases can operate under either model, but they excel at open world sce
 - Adapts to changing reality
 
 This flexibility gives graph-based systems a huge advantage when dealing with real-world complexity. While competitors using rigid closed-world systems struggle to adapt to new information, graph databases seamlessly incorporate new discoveries and evolving relationships.
+
+#### Diagram: Closed World vs. Open World Model Comparison Table
 
 <details>
     <summary>Closed World vs. Open World Model Comparison Table</summary>
@@ -377,6 +385,8 @@ Instead of scanning millions of timestamp records, you traverse the tree:
 - "Compare Mondays across all weeks" → Traverse day-of-week branches
 
 Time trees are essential for time-series analysis, scheduling systems, and historical trend queries. In a graph database, time trees combine naturally with other relationship types, enabling questions like "How did customer behavior on Mondays in Q3 affect supply chain performance?" that would be nightmarishly complex in relational systems.
+
+#### Diagram: Time Tree Structure Visualization
 
 <details>
     <summary>Time Tree Structure Visualization</summary>

@@ -63,6 +63,8 @@ Here's a comparison of the two approaches:
 
 The sweet spot for distributed graph databases kicks in when you're dealing with datasets too large for a single machine's RAM, when you need higher availability than a single server can provide, or when your query workload requires more throughput than one machine can deliver.
 
+#### Diagram: Distributed Graph Database Architecture Diagram
+
 <details>
     <summary>Distributed Graph Database Architecture Diagram</summary>
     Type: diagram
@@ -129,6 +131,8 @@ The key metrics for evaluating partition quality are:
 - **Communication Volume**: Total data transferred across network during typical queries (lower is better)
 
 Unfortunately, these goals often conflict. Achieving perfect balance might require cutting critical community structures, while minimizing edge cuts might produce wildly imbalanced partitions.
+
+#### Diagram: Graph Partitioning Visualization MicroSim
 
 <details>
     <summary>Graph Partitioning Visualization MicroSim</summary>
@@ -268,6 +272,8 @@ Here's a comparison of when to use each approach:
 
 The dirty secret of distributed graph databases is that no single sharding strategy works well for all query patterns. Production systems often use **hybrid approaches**: hash-based for initial placement with a layer of caching or replication that keeps frequently co-accessed nodes together in memory.
 
+#### Diagram: Sharding Strategy Comparison Diagram
+
 <details>
     <summary>Sharding Strategy Comparison Diagram</summary>
     Type: diagram
@@ -383,6 +389,8 @@ Here's when to use each approach:
 
 Most modern distributed graph databases use leaderless replication with configurable quorum settings, giving users the flexibility to tune consistency vs. availability for different use cases.
 
+#### Diagram: Replication Consistency Timeline Diagram
+
 <details>
     <summary>Replication Consistency Timeline Diagram</summary>
     Type: diagram
@@ -477,6 +485,8 @@ Graph databases make different choices here:
 | **ArangoDB** | CP (default) | Configurable consistency levels | Mixed workloads |
 | **Amazon Neptune** | AP | Eventual consistency | Highly available cloud graphs |
 | **TigerGraph** | CP | Strong consistency | Real-time analytics, fraud detection |
+
+#### Diagram: CAP Theorem Triangle Interactive Infographic
 
 <details>
     <summary>CAP Theorem Triangle Interactive Infographic</summary>
@@ -621,6 +631,8 @@ A typical batch workflow for distributed graph analytics:
 5. **Write**: Persist results back to graph database as node properties
 
 The performance bottleneck in batch processing is almost always the **shuffle phase**—sending updated vertex values across the network between iterations. Algorithms that minimize shuffle (by using vertex-local computations or clever aggregations) win big in distributed environments.
+
+#### Diagram: Real-Time vs Batch Processing Workflow Diagram
 
 <details>
     <summary>Real-Time vs Batch Processing Workflow Diagram</summary>
@@ -772,6 +784,8 @@ Start with a high-level view, let users drill down:
 - **Expand on click**: Show a node's neighborhood only when user clicks it
 - **Zoom levels**: Like Google Maps—zoom out to see communities, zoom in to see individual nodes
 - **Filter controls**: Let users hide/show nodes by type, property values, or connection patterns
+
+#### Diagram: Interactive Graph Visualization Dashboard
 
 <details>
     <summary>Interactive Graph Visualization Dashboard</summary>

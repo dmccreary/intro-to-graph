@@ -289,6 +289,8 @@ For high-risk customers (large transaction volumes, PEPs, high-risk countries), 
 - "Trace ultimate beneficial ownership through shell company structures"
 - "Discover shared addresses, phone numbers, or email addresses suggesting hidden connections"
 
+#### Diagram: Financial Network Graph Model for AML/Fraud Detection
+
 <details>
     <summary>Financial Network Graph Model for AML/Fraud Detection</summary>
     Type: graph-model
@@ -634,6 +636,8 @@ ORDER BY (outcome / cost) DESC
 ```
 
 This query identifies which diabetes care pathways achieve the best outcomes at the lowest cost—exactly what value-based care needs.
+
+#### Diagram: Clinical Care Graph Model for Value-Based Healthcare
 
 <details>
     <summary>Clinical Care Graph Model for Value-Based Healthcare</summary>
@@ -1024,6 +1028,8 @@ Graphs naturally support reference data models because these models define entit
 3. **Compliance**: Regulatory bodies often require specific reference data standards
 4. **Extensibility**: Organizations can extend reference models with custom concepts while maintaining compatibility
 5. **Queryability**: Traverse standard relationships to answer complex questions
+
+#### Diagram: Data Lineage and Governance Graph Workflow
 
 <details>
     <summary>Data Lineage and Governance Graph Workflow</summary>

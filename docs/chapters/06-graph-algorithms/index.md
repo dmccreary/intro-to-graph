@@ -88,6 +88,8 @@ DFS uses a stack data structure (last-in, first-out, like a stack of plates). He
 - Finding connected components in a network
 - Topological sorting (ordering tasks that depend on each other)
 
+#### Diagram: BFS vs DFS Interactive Visualization MicroSim
+
 <details>
     <summary>BFS vs DFS Interactive Visualization MicroSim</summary>
     Type: microsim
@@ -239,6 +241,8 @@ Real-world problems that reduce to TSP:
 - DNA sequencing (finding shortest overlapping sequences)
 - Telescope scheduling (minimizing movement between targets)
 
+#### Diagram: Traveling Salesman Problem Performance Chart
+
 <details>
     <summary>Traveling Salesman Problem Performance Chart</summary>
     Type: chart
@@ -333,6 +337,8 @@ Think of it as measuring efficiency:
 - Influencer identification (who can spread information fastest)
 - Server placement in content delivery networks
 
+#### Diagram: Centrality Measures Comparison Diagram
+
 <details>
     <summary>Centrality Measures Comparison Diagram</summary>
     Type: diagram
@@ -426,6 +432,8 @@ Where:
 - `d` = damping factor (usually 0.85) - probability surfer clicks a link vs jumping to random page
 - `T1...Tn` = pages that link to page A
 - `C(T)` = number of outbound links from page T
+
+#### Diagram: PageRank Interactive Infographic
 
 <details>
     <summary>PageRank Interactive Infographic</summary>
@@ -537,6 +545,8 @@ Popular algorithms include:
 - Fraud detection (finding fraud rings)
 - Biological networks (identifying protein complexes, gene modules)
 - Recommendation systems (grouping similar items or users)
+
+#### Diagram: Community Detection Graph Model Visualization
 
 <details>
     <summary>Community Detection Graph Model Visualization</summary>
@@ -709,6 +719,8 @@ GNNs excel at node classification because they can learn from both:
 
 - Node features (properties like age, location, posting frequency)
 - Graph structure (who connects to whom, community membership)
+
+#### Diagram: Graph Machine Learning Workflow Diagram
 
 <details>
     <summary>Graph Machine Learning Workflow Diagram</summary>

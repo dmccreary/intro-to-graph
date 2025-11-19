@@ -458,6 +458,8 @@ In 2000, computer scientist Eric Brewer proposed a theorem that explains why dis
 
 **Why this matters:** In real-world distributed systems, network partitions are inevitable—servers fail, cables break, data centers lose connectivity. So partition tolerance isn't optional. **The real choice is between consistency and availability**.
 
+#### Diagram: CAP Theorem Visualization
+
 <details>
     <summary>CAP Theorem Visualization</summary>
     Type: diagram
