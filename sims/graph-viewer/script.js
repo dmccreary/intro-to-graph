@@ -87,7 +87,28 @@ function uncheckAllGroups() {
 
 // Helper function to get readable color name
 function getColorName(color) {
-  const colorNames = {
+  // Normalize color to lowercase for comparison
+  const normalizedColor = color.toLowerCase();
+
+  // Map hex color codes to readable names
+  const hexColorNames = {
+    '#e74c3c': 'Red',
+    '#e67e22': 'Dark Orange',
+    '#f39c12': 'Orange',
+    '#27ae60': 'Green',
+    '#16a085': 'Teal',
+    '#2980b9': 'Blue',
+    '#8e44ad': 'Purple',
+    '#c0392b': 'Dark Red',
+    '#d35400': 'Burnt Orange',
+    '#1abc9c': 'Turquoise',
+    '#e91e63': 'Pink',
+    '#2c3e50': 'Dark Gray',
+    '#34495e': 'Charcoal'
+  };
+
+  // Map basic color names to readable names
+  const basicColorNames = {
     'red': 'Red',
     'orange': 'Orange',
     'gold': 'Gold',
@@ -97,16 +118,78 @@ function getColorName(color) {
     'violet': 'Violet',
     'gray': 'Gray',
     'brown': 'Brown',
-    'teal': 'Teal'
+    'teal': 'Teal',
+    'purple': 'Purple',
+    'pink': 'Pink',
+    'cyan': 'Cyan'
   };
-  return colorNames[color.toLowerCase()] || color;
+
+  // Try hex colors first, then basic colors, otherwise return original
+  return hexColorNames[normalizedColor] || basicColorNames[normalizedColor] || color;
 }
 
-// Helper function to determine if text should be white or black
+// Helper function to determine if text should be white or black based on background luminance
 function getTextColorForBackground(backgroundColor) {
-  // Colors that need white text
-  const darkColors = ['red', 'green', 'blue', 'indigo', 'violet', 'gray', 'brown'];
-  return darkColors.includes(backgroundColor.toLowerCase()) ? 'white' : 'black';
+  // Convert hex color to RGB
+  function hexToRgb(hex) {
+    // Remove # if present
+    hex = hex.replace('#', '');
+
+    // Parse hex values
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+
+    return { r, g, b };
+  }
+
+  // Calculate relative luminance using WCAG formula
+  function getLuminance(r, g, b) {
+    // Normalize RGB values to 0-1 range
+    const rsRGB = r / 255;
+    const gsRGB = g / 255;
+    const bsRGB = b / 255;
+
+    // Apply gamma correction
+    const rLinear = rsRGB <= 0.03928 ? rsRGB / 12.92 : Math.pow((rsRGB + 0.055) / 1.055, 2.4);
+    const gLinear = gsRGB <= 0.03928 ? gsRGB / 12.92 : Math.pow((gsRGB + 0.055) / 1.055, 2.4);
+    const bLinear = bsRGB <= 0.03928 ? bsRGB / 12.92 : Math.pow((bsRGB + 0.055) / 1.055, 2.4);
+
+    // Calculate relative luminance
+    return 0.2126 * rLinear + 0.7152 * gLinear + 0.0722 * bLinear;
+  }
+
+  // Handle named colors by converting to hex or using predefined values
+  const namedColorMap = {
+    'red': { r: 255, g: 0, b: 0 },
+    'green': { r: 0, g: 128, b: 0 },
+    'blue': { r: 0, g: 0, b: 255 },
+    'orange': { r: 255, g: 165, b: 0 },
+    'gold': { r: 255, g: 215, b: 0 },
+    'indigo': { r: 75, g: 0, b: 130 },
+    'violet': { r: 238, g: 130, b: 238 },
+    'gray': { r: 128, g: 128, b: 128 },
+    'brown': { r: 165, g: 42, b: 42 },
+    'teal': { r: 0, g: 128, b: 128 },
+    'purple': { r: 128, g: 0, b: 128 },
+    'pink': { r: 255, g: 192, b: 203 },
+    'cyan': { r: 0, g: 255, b: 255 }
+  };
+
+  let rgb;
+
+  // Determine if color is hex or named
+  if (backgroundColor.startsWith('#')) {
+    rgb = hexToRgb(backgroundColor);
+  } else {
+    rgb = namedColorMap[backgroundColor.toLowerCase()] || { r: 128, g: 128, b: 128 };
+  }
+
+  // Calculate luminance
+  const luminance = getLuminance(rgb.r, rgb.g, rgb.b);
+
+  // Use white text for dark backgrounds (luminance < 0.5), black for light backgrounds
+  return luminance < 0.5 ? 'white' : 'black';
 }
 
 // Function to generate legend table from groups data

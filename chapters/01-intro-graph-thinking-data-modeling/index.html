@@ -1,0 +1,1981 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/chapters/01-intro-graph-thinking-data-modeling/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../02-database-systems-nosql/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Chapter 1 - Introduction to Graph Thinking - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Chapter 1 - Introduction to Graph Thinking - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/chapters/01-intro-graph-thinking-data-modeling/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/chapters/01-intro-graph-thinking-data-modeling/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Chapter 1 - Introduction to Graph Thinking - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/chapters/01-intro-graph-thinking-data-modeling/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-graph-thinking-and-data-modeling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 1 - Introduction to Graph Thinking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction to Graph Thinking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction to Graph Thinking
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-graph-thinking-matters-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Graph Thinking Matters Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-foundation-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Foundation: Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Foundation: Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays-the-sequential-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays: The Sequential Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-maps-instant-lookups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash Maps: Instant Lookups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trees-hierarchical-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trees: Hierarchical Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-modeling-representing-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Modeling: Representing Reality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Modeling: Representing Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-representation-capturing-what-you-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Representation: Capturing What You Know
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world-models-how-systems-understand-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Models: How Systems Understand Reality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="World Models: How Systems Understand Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#closed-world-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed World Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-world-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open World Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-relational-model-and-its-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Relational Model and Its Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Relational Model and Its Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normalization-the-relational-strength" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalization: The Relational Strength
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-performance-cliff-when-relationships-explode" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Performance Cliff: When Relationships Explode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-design-planning-your-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Design: Planning Your Data Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-tree-structures-solving-specific-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Tree Structures: Solving Specific Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Tree Structures: Solving Specific Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-trees-automating-complex-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Trees: Automating Complex Choices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-trees-organizing-temporal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Trees: Organizing Temporal Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-spanning-tree-optimizing-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Spanning Tree: Optimizing Networks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-graph-advantage-why-this-matters-for-your-career" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Graph Advantage: Why This Matters for Your Career
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-database-systems-nosql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Database Systems and NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-labeled-property-graph-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - Labeled Property Graph Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-query-languages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - Query Languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-performance-metrics-benchmarking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - Performance and Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-graph-algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - Graph Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-network-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - Social Network Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-knowledge-representation-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 8 - Knowledge Representation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-modeling-patterns-data-loading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 9 - Modeling Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-commerce-supply-chain-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 10 - Commerce and Supply Chain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-financial-healthcare-regulatory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 11 - Financial and Healthcare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-advanced-topics-distributed-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 12 - Advanced Topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-graph-thinking-matters-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Graph Thinking Matters Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-foundation-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Foundation: Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Foundation: Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays-the-sequential-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays: The Sequential Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-maps-instant-lookups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash Maps: Instant Lookups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trees-hierarchical-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trees: Hierarchical Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-modeling-representing-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Modeling: Representing Reality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Modeling: Representing Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-representation-capturing-what-you-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Representation: Capturing What You Know
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world-models-how-systems-understand-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Models: How Systems Understand Reality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="World Models: How Systems Understand Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#closed-world-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed World Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-world-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open World Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-relational-model-and-its-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Relational Model and Its Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Relational Model and Its Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normalization-the-relational-strength" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalization: The Relational Strength
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-performance-cliff-when-relationships-explode" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Performance Cliff: When Relationships Explode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-design-planning-your-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Design: Planning Your Data Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-tree-structures-solving-specific-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Tree Structures: Solving Specific Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Tree Structures: Solving Specific Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-trees-automating-complex-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Trees: Automating Complex Choices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-trees-organizing-temporal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Trees: Organizing Temporal Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-spanning-tree-optimizing-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Spanning Tree: Optimizing Networks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-graph-advantage-why-this-matters-for-your-career" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Graph Advantage: Why This Matters for Your Career
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/chapters/01-intro-graph-thinking-data-modeling/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="introduction-to-graph-thinking-and-data-modeling">Introduction to Graph Thinking and Data Modeling</h1>
+<h2 id="summary">Summary</h2>
+<p>This foundational chapter introduces the core principles of data modeling and knowledge representation that underpin graph database thinking. You'll learn how world models shape our understanding of connected information and explore essential data structures that form the building blocks of graph systems. The chapter establishes the conceptual framework needed to understand why graphs are powerful tools for representing complex, interconnected data in modern AI-driven applications.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>Data Modeling</li>
+<li>World Models</li>
+<li>Knowledge Representation</li>
+<li>Schema Design</li>
+<li>Hash Maps</li>
+<li>Trees</li>
+<li>Arrays</li>
+<li>Data Structures</li>
+<li>Relational Model</li>
+<li>Normalization</li>
+<li>Open World Model</li>
+<li>Closed World Model</li>
+<li>Minimum Spanning Tree</li>
+<li>Time Trees</li>
+<li>Decision Trees</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>:</p>
+<ul>
+<li>Prior coursework in databases or data modeling (recommended)</li>
+<li>Basic programming knowledge (Python, JavaScript, or similar)</li>
+<li>Familiarity with data structures (arrays, hash maps, trees)</li>
+</ul>
+<hr />
+<h2 id="why-graph-thinking-matters-now">Why Graph Thinking Matters Now</h2>
+<p>In today's business world, there's a technology sitting right under your nose that could give you a massive competitive edge—yet most companies completely ignore it. Graph databases represent one of the most powerful, underutilized tools in modern data management. While your competitors struggle with slow, clunky traditional databases, you could be making decisions in real-time, discovering hidden patterns, and building intelligent systems that actually understand how things connect.</p>
+<p>The reason is simple: <strong>the world isn't organized in tables and rows</strong>. Your customers, products, employees, supply chains, and knowledge all exist in a web of relationships. Traditional relational databases were designed in the 1970s for a different world—one where data sat neatly in spreadsheets. Graph databases, by contrast, treat relationships as first-class citizens, making them exponentially faster and more intuitive for the connected data that drives modern business.</p>
+<p>This chapter introduces you to a fundamentally different way of thinking about data—one that mirrors how the real world actually works. By the end, you'll understand why some of the world's most innovative companies have quietly adopted graph databases as their secret weapon, and why you should too.</p>
+<h2 id="the-foundation-data-structures">The Foundation: Data Structures</h2>
+<p>Before we dive into graphs, let's build from what you already know. In programming, we organize information using <strong>data structures</strong>—specialized formats for storing and accessing data efficiently. Think of data structures as different types of containers, each optimized for specific tasks.</p>
+<p>The three most common data structures form the building blocks of nearly every software system:</p>
+<ul>
+<li><strong>Arrays</strong> - Sequential lists where items are stored in order</li>
+<li><strong>Hash maps</strong> - Key-value pairs that enable instant lookups</li>
+<li><strong>Trees</strong> - Hierarchical structures with parent-child relationships</li>
+</ul>
+<p>Understanding these structures is critical because graph databases evolved from recognizing their limitations when dealing with highly connected information.</p>
+<h3 id="arrays-the-sequential-container">Arrays: The Sequential Container</h3>
+<p><strong>Arrays</strong> store elements in a continuous sequence, like books on a shelf. You access elements by their position (index), which makes arrays incredibly fast when you know exactly where to look.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">customers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;Diana&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">customers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: &quot;Alice&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Arrays excel at ordered data and sequential access. However, they struggle when relationships matter more than order. If you want to know which customers purchased from which vendors, arrays force you to search through every element—a slow process that gets worse as your data grows.</p>
+<details>
+    <summary>Visual Comparison: Array Performance</summary>
+    Type: diagram
+
+    Purpose: Illustrate how array search performance degrades with size
+
+    Components:
+    - Three arrays of different sizes (10 elements, 100 elements, 1000 elements)
+    - Visual representation showing linear search path through array
+    - Clock icons showing increasing search time
+    - Search pattern arrows moving left-to-right through elements
+
+    Layout:
+    - Three horizontal rows, one for each array size
+    - Arrays shown as connected boxes
+    - Red highlighted box at end showing target element
+    - Search path shown with curved arrow moving through each box
+
+    Labels:
+    - "10 elements: ~5 comparisons average"
+    - "100 elements: ~50 comparisons average"
+    - "1000 elements: ~500 comparisons average"
+    - "O(n) linear time complexity"
+
+    Style: Clean line drawing with color-coded elements
+    Color scheme: Blue boxes for array elements, red for target, yellow for search path
+
+    Implementation: SVG diagram with annotations
+</details>
+
+<h3 id="hash-maps-instant-lookups">Hash Maps: Instant Lookups</h3>
+<p><strong>Hash maps</strong> (also called dictionaries or associative arrays) solve the lookup problem brilliantly. Instead of searching through every item, hash maps use a mathematical trick called <strong>hashing</strong> to instantly find the exact location of any value based on its key.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">customer_orders</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s2">&quot;Charlie&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
+    <span class="s2">&quot;Diana&quot;</span><span class="p">:</span> <span class="mi">8</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">customer_orders</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">])</span>  <span class="c1"># Output: 17 (instant lookup!)</span>
+</code></pre></div></td></tr></table></div>
+<p>Hash maps are extraordinarily efficient for direct lookups—they find values in constant time regardless of how much data you have. This makes them perfect for simple key-value relationships.</p>
+<p>But here's the catch: <strong>hash maps only work for one-hop relationships</strong>. If you need to traverse multiple levels of connections (customers → orders → products → suppliers), you're back to multiple separate lookups, and performance tanks. This limitation becomes critical when modeling real-world business problems.</p>
+<details>
+    <summary>Hash Map Architecture Visualization</summary>
+    Type: diagram
+
+    Purpose: Show how hash maps achieve constant-time lookups through hashing
+
+    Components:
+    - Input key ("Alice") at top
+    - Hash function box in middle
+    - Array of buckets at bottom
+    - Arrows showing key transformation to index
+    - Retrieved value highlighted
+
+    Process flow:
+    1. Key "Alice" enters hash function
+    2. Hash function converts to number: hash("Alice") = 7
+    3. Arrow points to bucket 7 in array
+    4. Value 42 retrieved from bucket 7
+
+    Additional elements:
+    - Side panel showing other key-value pairs
+    - "O(1) constant time" label
+    - Collision handling notation (chaining shown with linked nodes)
+
+    Visual style: Flowchart-style with clear directional arrows
+    Color scheme: Green for successful path, orange for hash function, blue for storage array
+
+    Implementation: SVG/HTML diagram
+</details>
+
+<h3 id="trees-hierarchical-organization">Trees: Hierarchical Organization</h3>
+<p><strong>Trees</strong> represent hierarchical relationships with a root node at the top and branches extending downward. Each node has exactly one parent (except the root) and can have multiple children. Trees naturally model organizational charts, file systems, and decision-making processes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>        CEO
+       /   \
+      CTO   CFO
+     /  \     \
+   Dev  QA   Accounting
+</code></pre></div></td></tr></table></div>
+<p>Trees are excellent for hierarchical data and enable efficient searching when organized properly (like binary search trees). However, trees enforce a strict limitation: <strong>no node can have multiple parents, and there can be no cycles</strong>. Real-world relationships don't follow these rules. An employee might report to multiple managers (matrix organization), customers might influence each other (social networks), and products might depend on each other in circular ways.</p>
+<p>This is where traditional data structures hit their wall, and where graphs become game-changing.</p>
+<h2 id="data-modeling-representing-reality">Data Modeling: Representing Reality</h2>
+<p><strong>Data modeling</strong> is the art and science of representing real-world information in a format that computers can process efficiently. Every software system, from Netflix recommendations to banking transactions, relies on data models to organize information.</p>
+<p>The choice of data model isn't just a technical decision—it's a strategic one that impacts:</p>
+<ul>
+<li>How fast your system responds to queries</li>
+<li>How easily you can add new features</li>
+<li>How much your infrastructure costs</li>
+<li>Whether you can discover hidden insights in your data</li>
+</ul>
+<p>Most businesses default to what they know: relational databases. But that choice, made without considering alternatives, can put you years behind competitors who've discovered better approaches for connected data.</p>
+<h3 id="knowledge-representation-capturing-what-you-know">Knowledge Representation: Capturing What You Know</h3>
+<p><strong>Knowledge representation</strong> asks a fundamental question: How do we encode human understanding into computer systems? It's not enough to store data—we need to capture meaning, relationships, and context.</p>
+<p>Consider a simple business scenario:</p>
+<ul>
+<li>"Alice purchased Product X"</li>
+<li>"Product X was manufactured by Vendor Y"</li>
+<li>"Vendor Y is located in Country Z"</li>
+</ul>
+<p>Traditional databases store these as separate facts in different tables. But the knowledge isn't in the individual facts—it's in how they connect. Graph databases represent knowledge by making those connections explicit and queryable, enabling questions like "Which countries do my customers ultimately depend on?" to be answered in milliseconds rather than minutes.</p>
+<details>
+    <summary>Knowledge Representation Comparison</summary>
+    Type: diagram
+
+    Purpose: Compare how traditional tables vs. graphs represent the same knowledge
+
+    Layout: Two-panel comparison (left: RDBMS, right: Graph)
+
+    Left panel - RDBMS representation:
+    - Three separate tables:
+      1. Purchases table: (customer_id, product_id, date)
+      2. Products table: (product_id, vendor_id, name)
+      3. Vendors table: (vendor_id, country, name)
+    - Red dotted lines showing foreign key relationships
+    - Label: "Knowledge is implicit in foreign keys"
+
+    Right panel - Graph representation:
+    - Same information shown as connected nodes:
+      * Alice (Customer node) --PURCHASED--> Product X (Product node)
+      * Product X --MANUFACTURED_BY--> Vendor Y (Vendor node)
+      * Vendor Y --LOCATED_IN--> Country Z (Location node)
+    - Green solid lines showing direct relationships
+    - Label: "Knowledge is explicit in relationships"
+
+    Visual styling:
+    - Tables shown as traditional database tables with rows/columns
+    - Graph nodes shown as labeled circles
+    - Relationship arrows with type labels
+    - Highlighting showing easier traversal path in graph
+
+    Color scheme: Orange for RDBMS elements, gold for graph elements
+
+    Implementation: Side-by-side SVG comparison diagram
+</details>
+
+<h2 id="world-models-how-systems-understand-reality">World Models: How Systems Understand Reality</h2>
+<p>A <strong>world model</strong> is a system's internal representation of how things work. Just as you have a mental model of your workplace (who does what, who reports to whom, where resources are located), software systems need world models to make intelligent decisions.</p>
+<p>There are two fundamentally different approaches to world models, each with profound implications:</p>
+<h3 id="closed-world-model">Closed World Model</h3>
+<p>The <strong>closed world model</strong> assumes that if something isn't explicitly stated in the database, it's false. Traditional relational databases operate under this assumption. If there's no row saying "Alice knows Bob," then Alice doesn't know Bob—end of story.</p>
+<p>This works well for controlled environments where you have complete information:</p>
+<ul>
+<li>Accounting systems (you know all transactions)</li>
+<li>Inventory systems (you know all products in stock)</li>
+<li>Employee databases (you know all employees)</li>
+</ul>
+<p><strong>Advantages of closed world:</strong></p>
+<ul>
+<li>Simpler queries and logic</li>
+<li>Guaranteed consistency</li>
+<li>Predictable behavior</li>
+</ul>
+<p><strong>Disadvantages of closed world:</strong></p>
+<ul>
+<li>Cannot handle incomplete information</li>
+<li>Struggles with evolving knowledge</li>
+<li>Forces premature commitments about what you know</li>
+</ul>
+<h3 id="open-world-model">Open World Model</h3>
+<p>The <strong>open world model</strong> recognizes that absence of information doesn't mean something is false—it means you don't know yet. This mirrors reality much better. If your database doesn't say "Alice knows Bob," it simply means that relationship hasn't been confirmed, not that it's impossible.</p>
+<p>Graph databases can operate under either model, but they excel at open world scenarios:</p>
+<ul>
+<li>Social networks (you don't know all friendships)</li>
+<li>Supply chains (new vendors emerge constantly)</li>
+<li>Knowledge graphs (information is continuously discovered)</li>
+</ul>
+<p><strong>Advantages of open world:</strong></p>
+<ul>
+<li>Handles incomplete information gracefully</li>
+<li>Supports incremental knowledge building</li>
+<li>Adapts to changing reality</li>
+</ul>
+<p>This flexibility gives graph-based systems a huge advantage when dealing with real-world complexity. While competitors using rigid closed-world systems struggle to adapt to new information, graph databases seamlessly incorporate new discoveries and evolving relationships.</p>
+<details>
+    <summary>Closed World vs. Open World Model Comparison Table</summary>
+    Type: markdown-table
+
+    A comparison table would be embedded here directly in markdown:
+</details>
+
+<p>Here's how the two models differ in practice:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Closed World Model</th>
+<th>Open World Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unknown information</strong></td>
+<td>Assumed false</td>
+<td>Assumed unknown</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Complete, controlled data</td>
+<td>Evolving, incomplete data</td>
+</tr>
+<tr>
+<td><strong>Typical use</strong></td>
+<td>RDBMS, traditional systems</td>
+<td>Knowledge graphs, AI systems</td>
+</tr>
+<tr>
+<td><strong>Query behavior</strong></td>
+<td>Returns definitive yes/no</td>
+<td>Returns yes/no/unknown</td>
+</tr>
+<tr>
+<td><strong>Adding new facts</strong></td>
+<td>Requires schema changes often</td>
+<td>Seamlessly integrated</td>
+</tr>
+<tr>
+<td><strong>Example domains</strong></td>
+<td>Banking, inventory, payroll</td>
+<td>Social networks, research, recommendations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-relational-model-and-its-limitations">The Relational Model and Its Limitations</h2>
+<p>The <strong>relational model</strong>, introduced by Edgar Codd in 1970, revolutionized data management. It organizes data into tables (relations) with rows (records) and columns (attributes), connected through foreign keys. For decades, this model dominated because it solved the critical problems of its era: reducing data redundancy and ensuring consistency.</p>
+<h3 id="normalization-the-relational-strength">Normalization: The Relational Strength</h3>
+<p><strong>Normalization</strong> is the process of organizing data to minimize redundancy. Instead of repeating customer information in every order record, you store customers once and reference them through IDs.</p>
+<p><strong>Example of normalization:</strong></p>
+<p>Unnormalized (redundant):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>Orders table:
+| order_id | customer_name | customer_email     | product   |
+|----------|---------------|-------------------|-----------|
+| 1        | Alice         | alice@email.com   | Widget    |
+| 2        | Alice         | alice@email.com   | Gadget    |
+| 3        | Bob           | bob@email.com     | Widget    |
+</code></pre></div></td></tr></table></div></p>
+<p>Normalized (efficient):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>Customers table:
+| customer_id | name  | email           |
+|-------------|-------|-----------------|
+| 101         | Alice | alice@email.com |
+| 102         | Bob   | bob@email.com   |
+
+Orders table:
+| order_id | customer_id | product |
+|----------|-------------|---------|
+| 1        | 101         | Widget  |
+| 2        | 101         | Gadget  |
+| 3        | 102         | Widget  |
+</code></pre></div></td></tr></table></div></p>
+<p>Normalization brilliantly solves data consistency: update Alice's email once, and all her orders automatically reflect the change. This was perfect for 1970s business applications like inventory and payroll.</p>
+<h3 id="the-performance-cliff-when-relationships-explode">The Performance Cliff: When Relationships Explode</h3>
+<p>Here's where relational databases hit their fundamental limit: <strong>JOINs</strong>. Every relationship traversal requires a JOIN operation—a expensive process where the database matches rows from different tables.</p>
+<p>One JOIN? Fast enough. Two JOINs? Still manageable. But real business questions require many levels of traversal:</p>
+<ul>
+<li>"Which products do friends of my friends recommend?" (3 hops)</li>
+<li>"What's the supply chain impact if this vendor fails?" (5+ hops)</li>
+<li>"Which skills are required for career paths to executive roles?" (7+ hops)</li>
+</ul>
+<p>Each additional JOIN multiplies the computational cost. By the time you're traversing 4-5 levels of relationships, query times explode from milliseconds to minutes. This isn't a minor inconvenience—<strong>it's the difference between building real-time recommendation engines and batch reports that run overnight</strong>.</p>
+<p><strong>See the performance cliff:</strong> The interactive chart below demonstrates this dramatic difference. Notice how RDBMS performance degrades exponentially (orange line) while graph databases maintain constant-time performance (gold line). Toggle between logarithmic and linear scales to see the difference from different perspectives.</p>
+<iframe src="../../sims/rdbms-vs-graph-performance/main.html" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 4px;" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/rdbms-vs-graph-performance/main.html">View Chart Fullscreen</a>
+<a class="md-button" href="../../sims/rdbms-vs-graph-performance/">See Detailed Analysis</a></p>
+<p>This performance difference isn't theoretical—it's the reason companies like LinkedIn, eBay, NASA, and Walmart have migrated relationship-heavy workloads to graph databases. <strong>While competitors wait minutes for insights, graph-powered systems respond instantly.</strong></p>
+<h2 id="schema-design-planning-your-data-structure">Schema Design: Planning Your Data Structure</h2>
+<p><strong>Schema design</strong> is the architectural blueprint for how you'll organize data. It defines what entities exist, what properties they have, and how they relate. Good schema design makes your system fast, flexible, and maintainable. Poor schema design creates technical debt that haunts you for years.</p>
+<p>Traditional relational databases require rigid schemas defined upfront. Adding a new property or relationship type means schema migrations, downtime, and developer headaches. This made sense when business requirements changed slowly, but modern businesses need agility.</p>
+<p>Graph databases offer <strong>schema-optional</strong> or <strong>schema-flexible</strong> approaches. You can enforce schemas when consistency matters (like financial data) but also add new node types, properties, and relationships on the fly as business needs evolve. This flexibility is a competitive weapon—you can experiment, iterate, and adapt faster than competitors locked into rigid relational schemas.</p>
+<h2 id="special-tree-structures-solving-specific-problems">Special Tree Structures: Solving Specific Problems</h2>
+<p>Trees aren't just academic concepts—they solve real business problems. Three specialized tree structures appear frequently in modern systems:</p>
+<h3 id="decision-trees-automating-complex-choices">Decision Trees: Automating Complex Choices</h3>
+<p><strong>Decision trees</strong> represent a series of choices leading to outcomes, like a flowchart. They're widely used in machine learning, business rule engines, and troubleshooting systems.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Is customer premium?
+├─ Yes → Offer expedited shipping
+└─ No → Is order over $50?
+    ├─ Yes → Offer free shipping
+    └─ No → Standard shipping only
+</code></pre></div></td></tr></table></div>
+<p>Graph databases excel at storing and traversing decision trees because they can represent the logic structure naturally, query it efficiently, and modify rules without rebuilding entire systems.</p>
+<h3 id="time-trees-organizing-temporal-data">Time Trees: Organizing Temporal Data</h3>
+<p><strong>Time trees</strong> organize events hierarchically by time periods: years contain months, months contain days, days contain hours. This structure enables incredibly efficient time-range queries.</p>
+<p>Instead of scanning millions of timestamp records, you traverse the tree:
+- "Show sales in Q3 2024" → Navigate to 2024 → Q3 → aggregate all descendants
+- "Compare Mondays across all weeks" → Traverse day-of-week branches</p>
+<p>Time trees are essential for time-series analysis, scheduling systems, and historical trend queries. In a graph database, time trees combine naturally with other relationship types, enabling questions like "How did customer behavior on Mondays in Q3 affect supply chain performance?" that would be nightmarishly complex in relational systems.</p>
+<details>
+    <summary>Time Tree Structure Visualization</summary>
+    Type: diagram
+
+    Purpose: Show how time trees organize temporal data hierarchically for efficient querying
+
+    Structure:
+    - Root: "All Time"
+    - Level 1: Years (2022, 2023, 2024)
+    - Level 2: Quarters (Q1, Q2, Q3, Q4)
+    - Level 3: Months (Jan, Feb, Mar...)
+    - Level 4: Weeks (Week 1, Week 2...)
+    - Level 5: Days (individual dates)
+
+    Visual representation:
+    - Expand one branch fully (e.g., 2024 → Q3 → July → Week 2 → July 10)
+    - Other branches collapsed or partially shown
+    - Highlight a query path: "All events in Q3 2024"
+    - Show aggregation happening at quarter level
+
+    Layout: Top-down tree with root at top
+
+    Annotations:
+    - "O(log n) time to reach any date"
+    - "Aggregate by traversing subtree"
+    - "Add new events by inserting leaves"
+
+    Color scheme:
+    - Blue for year nodes
+    - Green for quarter nodes
+    - Yellow for month nodes
+    - Orange for week/day nodes
+    - Red highlight for query path
+
+    Implementation: Interactive SVG tree diagram
+    Size: 800x600px
+</details>
+
+<h3 id="minimum-spanning-tree-optimizing-networks">Minimum Spanning Tree: Optimizing Networks</h3>
+<p>A <strong>minimum spanning tree</strong> is a subset of edges in a graph that connects all nodes with the minimum total weight, without creating cycles. This sounds abstract, but it solves critical real-world problems:</p>
+<ul>
+<li><strong>Network design:</strong> Connecting offices with minimum cable length</li>
+<li><strong>Supply chain optimization:</strong> Minimizing total shipping distance</li>
+<li><strong>Utility routing:</strong> Designing water, power, or data networks efficiently</li>
+</ul>
+<p>Graph databases can calculate minimum spanning trees using algorithms like Kruskal's or Prim's, then store and update them as networks evolve. This gives operations teams real-time answers to questions like "What's the cheapest way to connect these locations?" without running expensive batch calculations.</p>
+<p><strong>Try it yourself:</strong> The interactive simulation below demonstrates both Kruskal's and Prim's algorithms. Use the controls to step through the algorithm or watch it run automatically. Notice how both algorithms find the same optimal total weight, even though they select edges in different orders.</p>
+<iframe src="../../sims/minimum-spanning-tree/main.html" width="100%" height="652px" style="border: 1px solid #ccc; border-radius: 4px;" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/minimum-spanning-tree/main.html">View MicroSim Fullscreen</a>
+<a class="md-button" href="../../sims/minimum-spanning-tree/">See Full Documentation</a></p>
+<h2 id="the-graph-advantage-why-this-matters-for-your-career">The Graph Advantage: Why This Matters for Your Career</h2>
+<p>Understanding these fundamental concepts—data structures, data modeling, world models, and specialized algorithms—prepares you for the most significant shift in data management in 50 years.</p>
+<p>Companies using graph databases report:</p>
+<ul>
+<li><strong>10-100x faster query performance</strong> for relationship-heavy workloads</li>
+<li><strong>50-80% reduction</strong> in development time for connected data features</li>
+<li><strong>Significantly lower infrastructure costs</strong> due to efficient traversals</li>
+<li><strong>Faster time-to-market</strong> for new features requiring relationship analysis</li>
+</ul>
+<p>More importantly, graphs enable entirely new capabilities that are impractical with relational databases:</p>
+<ul>
+<li>Real-time fraud detection through network analysis</li>
+<li>Instant recommendation engines analyzing millions of connections</li>
+<li>Supply chain resilience planning considering multi-hop dependencies</li>
+<li>Knowledge graphs powering intelligent assistants</li>
+<li>Social network analysis revealing hidden influence patterns</li>
+</ul>
+<p>The companies leveraging these capabilities aren't all tech giants. They're nimble competitors who recognized that <strong>relationships are the new competitive advantage</strong>. In industries from healthcare to finance, retail to logistics, graph-powered insights are creating winners and losers.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>This chapter established the foundational concepts you'll build on throughout this course:</p>
+<ol>
+<li><strong>Data structures</strong> (arrays, hash maps, trees) each have strengths and limitations—none handle multi-hop relationships efficiently</li>
+<li><strong>Data modeling</strong> choices have strategic business implications, not just technical ones</li>
+<li><strong>World models</strong> (open vs. closed) determine how systems handle incomplete or evolving information</li>
+<li><strong>The relational model</strong> revolutionized data management but hits fundamental performance limits with connected data</li>
+<li><strong>Normalization</strong> solves redundancy but creates JOIN overhead that cripples relationship queries</li>
+<li><strong>Schema design</strong> requires balancing consistency with flexibility—graph databases offer both</li>
+<li><strong>Specialized tree structures</strong> (decision trees, time trees, minimum spanning trees) solve specific business problems efficiently</li>
+</ol>
+<p>Most importantly: <strong>Traditional approaches to data management create a performance cliff when relationships matter</strong>. Companies that recognize this reality and adopt graph databases gain years of competitive advantage while others struggle with overnight batch processes and can't build the real-time, intelligent features customers now expect.</p>
+<p>In the next chapter, we'll explore how NoSQL databases emerged to challenge relational dominance, and why graph databases represent the culmination of this evolution for relationship-rich data.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-database-systems-nosql/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 2 - Database Systems and NoSQL">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 2 - Database Systems and NoSQL
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1524 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive MicroSim demonstrating Kruskal's and Prim's algorithms for finding minimum spanning trees in weighted graphs.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/sims/minimum-spanning-tree/">
+      
+      
+        <link rel="prev" href="../graph-viewer/">
+      
+      
+        <link rel="next" href="../multi-hop-comparison/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Minimum Spanning Tree Algorithm Visualizer - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Minimum Spanning Tree Algorithm Visualizer - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive MicroSim demonstrating Kruskal's and Prim's algorithms for finding minimum spanning trees in weighted graphs." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/sims/minimum-spanning-tree/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/sims/minimum-spanning-tree/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Minimum Spanning Tree Algorithm Visualizer - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive MicroSim demonstrating Kruskal's and Prim's algorithms for finding minimum spanning trees in weighted graphs." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/sims/minimum-spanning-tree/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#minimum-spanning-tree-algorithm-visualizer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Minimum Spanning Tree Algorithm Visualizer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../graph-viewer/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Minimum Spanning Tree
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Minimum Spanning Tree
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-minimum-spanning-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Minimum Spanning Tree?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Controls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#educational-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Educational Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classroom-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classroom Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-infrastructure-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Infrastructure Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transportation-and-logistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transportation and Logistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-chain-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supply Chain Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structures-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures Used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Complexity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extension Ideas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-hop-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Hop Comparison
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdbms-vs-graph-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDBMS vs Graph Performance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-minimum-spanning-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Minimum Spanning Tree?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Controls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#educational-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Educational Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classroom-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classroom Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-infrastructure-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Infrastructure Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transportation-and-logistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transportation and Logistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-chain-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supply Chain Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structures-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures Used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Complexity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extension Ideas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/sims/minimum-spanning-tree/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="minimum-spanning-tree-algorithm-visualizer">Minimum Spanning Tree Algorithm Visualizer</h1>
+<iframe src="main.html" height="652px" width="100%" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="main.html">Run the Minimum Spanning Tree MicroSim Fullscreen</a></p>
+<p>You can include this MicroSim on your website using the following <code>iframe</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://dmccreary.github.io/intro-to-graph/sims/minimum-spanning-tree/main.html&quot;</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">&quot;652px&quot;</span>
+        <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span>
+        <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="description">Description</h2>
+<p>The Minimum Spanning Tree (MST) MicroSim provides an interactive visualization of two fundamental graph algorithms: Kruskal's algorithm and Prim's algorithm. Both algorithms solve the same problem—finding the minimum cost network that connects all nodes without creating cycles—but use different strategic approaches.</p>
+<h3 id="what-is-a-minimum-spanning-tree">What is a Minimum Spanning Tree?</h3>
+<p>A minimum spanning tree is a subset of edges in a weighted graph that:
+- <strong>Connects all nodes</strong> (vertices) together
+- <strong>Contains no cycles</strong> (is a tree structure)
+- <strong>Minimizes the total edge weight</strong> (has minimum total cost)</p>
+<p>MSTs solve critical real-world problems in network design, infrastructure planning, and optimization.</p>
+<h3 id="algorithm-comparison">Algorithm Comparison</h3>
+<p><strong>Kruskal's Algorithm (Edge-Based Greedy Approach):</strong>
+- Sorts all edges by weight from smallest to largest
+- Examines edges in order, adding each edge if it doesn't create a cycle
+- Uses a union-find data structure to detect cycles efficiently
+- Strategy: "Consider the cheapest available connection"</p>
+<p><strong>Prim's Algorithm (Node-Based Greedy Approach):</strong>
+- Starts from an arbitrary node and grows the tree one node at a time
+- Always adds the minimum-weight edge connecting a visited node to an unvisited node
+- Uses a priority queue to track candidate edges
+- Strategy: "Expand the tree with the cheapest connection to a new location"</p>
+<h3 id="visual-feedback">Visual Feedback</h3>
+<p>The simulation uses color coding to show algorithm progress:
+- <strong>Gray edges</strong>: Available for consideration
+- <strong>Yellow edge</strong>: Currently being evaluated
+- <strong>Gold edges</strong>: Accepted into the MST (thick lines)
+- <strong>Light gray edges</strong>: Rejected (would create cycle)
+- <strong>Green nodes</strong> (Prim's only): Visited nodes included in the MST</p>
+<p>Edge weights are displayed at the midpoint of each edge in white circles for easy reference.</p>
+<h3 id="interactive-controls">Interactive Controls</h3>
+<p><strong>Algorithm Selection:</strong>
+- Dropdown menu to switch between Kruskal's and Prim's algorithms
+- Changing algorithms resets the simulation with a new random graph</p>
+<p><strong>Execution Controls:</strong>
+- <strong>Step Forward</strong>: Execute one algorithm step to see detailed decision-making
+- <strong>Auto Run</strong>: Animate the complete algorithm execution
+- <strong>Reset</strong>: Generate a new random graph and restart</p>
+<p><strong>Animation Speed:</strong>
+- Slider controls the delay between steps (100-2000 milliseconds)
+- Slower speeds help understand each decision; faster speeds show overall behavior</p>
+<p><strong>Status Display:</strong>
+- Current action description explains each step
+- Edge counter shows progress (current/total edges needed)
+- Running total displays cumulative MST weight</p>
+<h2 id="educational-applications">Educational Applications</h2>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<p>Students using this MicroSim will:
+1. <strong>Understand</strong> the minimum spanning tree problem and its real-world applications
+2. <strong>Compare</strong> two different algorithmic approaches to the same problem
+3. <strong>Analyze</strong> how greedy algorithms make locally optimal choices
+4. <strong>Observe</strong> cycle detection mechanisms in action
+5. <strong>Apply</strong> graph theory concepts to network optimization</p>
+<h3 id="classroom-activities">Classroom Activities</h3>
+<p><strong>Activity 1: Algorithm Comparison</strong>
+- Run both algorithms on the same graph (use Reset to generate new graphs)
+- Verify that both produce MSTs with the same total weight
+- Observe how the order of edge selection differs between algorithms
+- Discuss: Why do different approaches yield the same optimal result?</p>
+<p><strong>Activity 2: Manual Prediction</strong>
+- Pause after each step and predict which edge will be selected next
+- For Kruskal's: Find the minimum weight edge that won't create a cycle
+- For Prim's: Find the minimum weight edge connecting to an unvisited node
+- Verify predictions by stepping forward</p>
+<p><strong>Activity 3: Real-World Applications</strong>
+- Given the graph represents cities connected by roads, what does the MST represent?
+  - Answer: Minimum road network connecting all cities
+- Brainstorm other scenarios: utility networks, computer networks, transportation routes
+- Calculate potential cost savings: Compare MST weight to total graph weight</p>
+<p><strong>Activity 4: Cycle Detection</strong>
+- Watch carefully when Kruskal's rejects edges
+- Identify which existing MST edges would create a cycle with the rejected edge
+- Understand why preventing cycles is essential for tree structures</p>
+<h3 id="discussion-questions">Discussion Questions</h3>
+<ol>
+<li>Why do both algorithms always find an MST with the same total weight, even though they select edges in different orders?</li>
+<li>In what situations might you prefer Kruskal's algorithm over Prim's (or vice versa)?</li>
+<li>How does the union-find data structure enable efficient cycle detection in Kruskal's algorithm?</li>
+<li>What would happen if edges had negative weights? Would these algorithms still work?</li>
+<li>Can you think of situations where you'd want the <em>maximum</em> spanning tree instead?</li>
+</ol>
+<h2 id="real-world-applications">Real-World Applications</h2>
+<h3 id="network-infrastructure-design">Network Infrastructure Design</h3>
+<ul>
+<li><strong>Telecommunications</strong>: Laying fiber optic cable to connect cities with minimum total length</li>
+<li><strong>Electrical grids</strong>: Connecting power stations with minimum transmission line cost</li>
+<li><strong>Water distribution</strong>: Designing pipe networks to serve all locations efficiently</li>
+</ul>
+<h3 id="computer-networks">Computer Networks</h3>
+<ul>
+<li><strong>Local Area Networks (LANs)</strong>: Minimizing cable length in building networks</li>
+<li><strong>Network routing</strong>: Finding efficient data transmission paths</li>
+<li><strong>Cluster analysis</strong>: Grouping similar data points with minimum total distance</li>
+</ul>
+<h3 id="transportation-and-logistics">Transportation and Logistics</h3>
+<ul>
+<li><strong>Road networks</strong>: Connecting communities with minimum pavement</li>
+<li><strong>Railway planning</strong>: Designing rail lines connecting stations</li>
+<li><strong>Airline route optimization</strong>: Hub-and-spoke network design</li>
+</ul>
+<h3 id="supply-chain-management">Supply Chain Management</h3>
+<ul>
+<li><strong>Distribution centers</strong>: Connecting warehouses with minimum shipping cost</li>
+<li><strong>Pipeline networks</strong>: Oil, gas, or water pipeline routing</li>
+<li><strong>Manufacturing</strong>: Connecting assembly stations on a factory floor</li>
+</ul>
+<h2 id="technical-implementation">Technical Implementation</h2>
+<p>This MicroSim is built with p5.js and follows educational MicroSim design standards:
+- <strong>Width-responsive</strong>: Adapts to any container width while maintaining proportions
+- <strong>Clean separation</strong>: Drawing area (graph) separate from control area (UI)
+- <strong>Immediate feedback</strong>: Real-time visualization of algorithm decisions
+- <strong>Educational focus</strong>: Clear labels, status messages, and visual differentiation</p>
+<h3 id="data-structures-used">Data Structures Used</h3>
+<p><strong>Graph Representation:</strong>
+- Nodes: Array of objects with position and label
+- Edges: Array of objects with endpoints, weight, and state</p>
+<p><strong>Kruskal's Algorithm:</strong>
+- Sorted edge list (priority queue)
+- Union-find (disjoint set) for cycle detection</p>
+<p><strong>Prim's Algorithm:</strong>
+- Visited node tracker (boolean array)
+- Priority queue of candidate edges</p>
+<h3 id="algorithm-complexity">Algorithm Complexity</h3>
+<p>Both algorithms have similar time complexity:
+- Kruskal's: O(E log E) where E = number of edges (dominated by sorting)
+- Prim's: O(E log V) where V = number of nodes (with binary heap priority queue)</p>
+<p>For dense graphs (many edges), Prim's can be more efficient. For sparse graphs (few edges), Kruskal's may perform better in practice.</p>
+<h2 id="extension-ideas">Extension Ideas</h2>
+<p>Teachers and advanced students can extend this simulation:</p>
+<ol>
+<li><strong>Compare performance</strong>: Add a step counter to compare how many steps each algorithm requires</li>
+<li><strong>Show the queue</strong>: Display Kruskal's sorted edge list or Prim's priority queue</li>
+<li><strong>Weight visualization</strong>: Use edge thickness to represent weight visually</li>
+<li><strong>Custom graphs</strong>: Allow students to create their own graphs by clicking to add nodes/edges</li>
+<li><strong>Maximum spanning tree</strong>: Modify algorithms to find maximum instead of minimum weight</li>
+<li><strong>Animation effects</strong>: Add particle flow along edges to show "network traffic"</li>
+</ol>
+<h2 id="lesson-plan">Lesson Plan</h2>
+<p><strong>Grade Level</strong>: High School (Grades 10-12) or Undergraduate Computer Science</p>
+<p><strong>Duration</strong>: 45-60 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Understanding of graphs (nodes and edges)
+- Basic algorithm concepts
+- Familiarity with greedy algorithms (helpful but not required)</p>
+<p><strong>Learning Sequence</strong>:</p>
+<ol>
+<li><strong>Introduction (10 min)</strong></li>
+<li>Define minimum spanning tree problem</li>
+<li>Discuss real-world applications</li>
+<li>
+<p>Introduce greedy algorithm concept</p>
+</li>
+<li>
+<p><strong>Guided Exploration (15 min)</strong></p>
+</li>
+<li>Demonstrate Kruskal's algorithm using Step Forward</li>
+<li>Students predict next edge selection</li>
+<li>
+<p>Discuss cycle detection mechanism</p>
+</li>
+<li>
+<p><strong>Algorithm Comparison (10 min)</strong></p>
+</li>
+<li>Show Prim's algorithm on same graph</li>
+<li>Compare edge selection order</li>
+<li>
+<p>Verify both find same total weight</p>
+</li>
+<li>
+<p><strong>Independent Practice (10 min)</strong></p>
+</li>
+<li>Students experiment with both algorithms</li>
+<li>Try different animation speeds</li>
+<li>
+<p>Generate multiple random graphs</p>
+</li>
+<li>
+<p><strong>Application Discussion (10 min)</strong></p>
+</li>
+<li>Brainstorm real-world MST problems</li>
+<li>Discuss when each algorithm might be preferred</li>
+<li>
+<p>Connect to broader graph theory concepts</p>
+</li>
+<li>
+<p><strong>Assessment (5 min)</strong></p>
+</li>
+<li>Quiz: Given a small graph, manually find the MST</li>
+<li>Verify answer using the simulation</li>
+</ol>
+<p><strong>Assessment Opportunities</strong>:
+- Can students correctly predict which edge will be selected next?
+- Do students understand why certain edges are rejected?
+- Can students explain the difference between the two algorithmic approaches?
+- Can students identify real-world applications of MSTs?</p>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li>Graph theory fundamentals</li>
+<li>Greedy algorithms</li>
+<li>Union-find (disjoint set) data structure</li>
+<li>Priority queues and heaps</li>
+<li>Network optimization</li>
+<li>Computational complexity</li>
+<li>NP-completeness (MST is actually in P, unlike many graph problems)</li>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Kruskal, J. B. (1956). "On the shortest spanning subtree of a graph and the traveling salesman problem". <em>Proceedings of the American Mathematical Society</em>, 7(1), 48-50.</p>
+</li>
+<li>
+<p>Prim, R. C. (1957). "Shortest connection networks and some generalizations". <em>Bell System Technical Journal</em>, 36(6), 1389-1401.</p>
+</li>
+<li>
+<p>Cormen, T. H., Leiserson, C. E., Rivest, R. L., &amp; Stein, C. (2009). <em>Introduction to Algorithms</em> (3rd ed.). MIT Press. Chapter 23: Minimum Spanning Trees.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../graph-viewer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Graph Viewer">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Graph Viewer
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../multi-hop-comparison/" class="md-footer__link md-footer__link--next" aria-label="Next: Multi-Hop Comparison">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Multi-Hop Comparison
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
