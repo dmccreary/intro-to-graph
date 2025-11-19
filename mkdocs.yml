@@ -33,6 +33,10 @@ nav:
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
+    - learning-graph/book-metrics.md
+    - learning-graph/chapter-metrics.md
+    - learning-graph/diagram-details.md
+    - learning-graph/diagram-table.md
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
