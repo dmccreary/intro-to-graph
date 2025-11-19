@@ -15,7 +15,7 @@ When the user hovers over any area, an infobox appears in a tool tip explaining 
 ### Non-Hover Presentation
 The base layer has a label of "Data Layer" in white text.
 It has a black background and has bright green 1 and 0 like on an old green screen terminal.
-When the user hovers over any part of the data layer it displays the following test.
+When the user hovers over any part of the data layer it displays the following text.
 
 ### Infobox Text for Data Layer
 The **Data Layer** contains raw binary data in the form of 1s and 0s.  It is the information
