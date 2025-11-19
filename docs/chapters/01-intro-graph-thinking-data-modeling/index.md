@@ -69,32 +69,32 @@ Arrays excel at ordered data and sequential access. However, they struggle when 
 
 <details>
     <summary>Visual Comparison: Array Performance</summary>
-    Type: diagram
+Type: diagram
 
-    Purpose: Illustrate how array search performance degrades with size
+Purpose: Illustrate how array search performance degrades with size
 
-    Components:
-    - Three arrays of different sizes (10 elements, 100 elements, 1000 elements)
-    - Visual representation showing linear search path through array
-    - Clock icons showing increasing search time
-    - Search pattern arrows moving left-to-right through elements
+Components:
+- Three arrays of different sizes (10 elements, 100 elements, 1000 elements)
+- Visual representation showing linear search path through array
+- Clock icons showing increasing search time
+- Search pattern arrows moving left-to-right through elements
 
-    Layout:
-    - Three horizontal rows, one for each array size
-    - Arrays shown as connected boxes
-    - Red highlighted box at end showing target element
-    - Search path shown with curved arrow moving through each box
+Layout:
+- Three horizontal rows, one for each array size
+- Arrays shown as connected boxes
+- Red highlighted box at end showing target element
+- Search path shown with curved arrow moving through each box
 
-    Labels:
-    - "10 elements: ~5 comparisons average"
-    - "100 elements: ~50 comparisons average"
-    - "1000 elements: ~500 comparisons average"
-    - "O(n) linear time complexity"
+Labels:
+- "10 elements: ~5 comparisons average"
+- "100 elements: ~50 comparisons average"
+- "1000 elements: ~500 comparisons average"
+- "O(n) linear time complexity"
 
-    Style: Clean line drawing with color-coded elements
-    Color scheme: Blue boxes for array elements, red for target, yellow for search path
+Style: Clean line drawing with color-coded elements
+Color scheme: Blue boxes for array elements, red for target, yellow for search path
 
-    Implementation: SVG diagram with annotations
+Implementation: SVG diagram with annotations
 </details>
 
 ### Hash Maps: Instant Lookups
@@ -119,32 +119,32 @@ But here's the catch: **hash maps only work for one-hop relationships**. If you 
 
 <details>
     <summary>Hash Map Architecture Visualization</summary>
-    Type: diagram
+Type: diagram
 
-    Purpose: Show how hash maps achieve constant-time lookups through hashing
+Purpose: Show how hash maps achieve constant-time lookups through hashing
 
-    Components:
-    - Input key ("Alice") at top
-    - Hash function box in middle
-    - Array of buckets at bottom
-    - Arrows showing key transformation to index
-    - Retrieved value highlighted
+Components:
+- Input key ("Alice") at top
+- Hash function box in middle
+- Array of buckets at bottom
+- Arrows showing key transformation to index
+- Retrieved value highlighted
 
-    Process flow:
-    1. Key "Alice" enters hash function
-    2. Hash function converts to number: hash("Alice") = 7
-    3. Arrow points to bucket 7 in array
-    4. Value 42 retrieved from bucket 7
+Process flow:
+1. Key "Alice" enters hash function
+2. Hash function converts to number: hash("Alice") = 7
+3. Arrow points to bucket 7 in array
+4. Value 42 retrieved from bucket 7
 
-    Additional elements:
-    - Side panel showing other key-value pairs
-    - "O(1) constant time" label
-    - Collision handling notation (chaining shown with linked nodes)
+Additional elements:
+- Side panel showing other key-value pairs
+- "O(1) constant time" label
+- Collision handling notation (chaining shown with linked nodes)
 
-    Visual style: Flowchart-style with clear directional arrows
-    Color scheme: Green for successful path, orange for hash function, blue for storage array
+Visual style: Flowchart-style with clear directional arrows
+Color scheme: Green for successful path, orange for hash function, blue for storage array
 
-    Implementation: SVG/HTML diagram
+Implementation: SVG/HTML diagram
 </details>
 
 ### Trees: Hierarchical Organization

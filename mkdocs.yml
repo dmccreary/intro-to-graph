@@ -13,23 +13,48 @@ nav:
   - Course Description: course-description.md
   - Chapters:
     - Overview: chapters/index.md
-    - Chapter 1 - Introduction to Graph Thinking: chapters/01-intro-graph-thinking-data-modeling/index.md
-    - Chapter 2 - Database Systems and NoSQL: chapters/02-database-systems-nosql/index.md
-    - Chapter 3 - Labeled Property Graph Model: chapters/03-labeled-property-graph-model/index.md
-    - Chapter 4 - Query Languages: chapters/04-query-languages/index.md
-    - Chapter 5 - Performance and Benchmarking: chapters/05-performance-metrics-benchmarking/index.md
-    - Chapter 6 - Graph Algorithms: chapters/06-graph-algorithms/index.md
-    - Chapter 7 - Social Network Modeling: chapters/07-social-network-modeling/index.md
-    - Chapter 8 - Knowledge Representation: chapters/08-knowledge-representation-management/index.md
-    - Chapter 9 - Modeling Patterns: chapters/09-modeling-patterns-data-loading/index.md
-    - Chapter 10 - Commerce and Supply Chain: chapters/10-commerce-supply-chain-it/index.md
-    - Chapter 11 - Financial and Healthcare: chapters/11-financial-healthcare-regulatory/index.md
-    - Chapter 12 - Advanced Topics: chapters/12-advanced-topics-distributed-systems/index.md
+    - Chapter 1 - Introduction to Graph Thinking:
+      - Content: chapters/01-intro-graph-thinking-data-modeling/index.md
+      - Quiz: chapters/01-intro-graph-thinking-data-modeling/quiz.md
+    - Chapter 2 - Database Systems and NoSQL:
+      - Content: chapters/02-database-systems-nosql/index.md
+      - Quiz: chapters/02-database-systems-nosql/quiz.md
+    - Chapter 3 - Labeled Property Graph Model:
+      - Content: chapters/03-labeled-property-graph-model/index.md
+      - Quiz: chapters/03-labeled-property-graph-model/quiz.md
+    - Chapter 4 - Query Languages:
+      - Content: chapters/04-query-languages/index.md
+      - Quiz: chapters/04-query-languages/quiz.md
+    - Chapter 5 - Performance and Benchmarking:
+      - Content: chapters/05-performance-metrics-benchmarking/index.md
+      - Quiz: chapters/05-performance-metrics-benchmarking/quiz.md
+    - Chapter 6 - Graph Algorithms:
+      - Content: chapters/06-graph-algorithms/index.md
+      - Quiz: chapters/06-graph-algorithms/quiz.md
+    - Chapter 7 - Social Network Modeling:
+      - Content: chapters/07-social-network-modeling/index.md
+      - Quiz: chapters/07-social-network-modeling/quiz.md
+    - Chapter 8 - Knowledge Representation:
+      - Content: chapters/08-knowledge-representation-management/index.md
+      - Quiz: chapters/08-knowledge-representation-management/quiz.md
+    - Chapter 9 - Modeling Patterns:
+      - Content: chapters/09-modeling-patterns-data-loading/index.md
+      - Quiz: chapters/09-modeling-patterns-data-loading/quiz.md
+    - Chapter 10 - Commerce and Supply Chain:
+      - Content: chapters/10-commerce-supply-chain-it/index.md
+      - Quiz: chapters/10-commerce-supply-chain-it/quiz.md
+    - Chapter 11 - Financial and Healthcare:
+      - Content: chapters/11-financial-healthcare-regulatory/index.md
+      - Quiz: chapters/11-financial-healthcare-regulatory/quiz.md
+    - Chapter 12 - Advanced Topics:
+      - Content: chapters/12-advanced-topics-distributed-systems/index.md
+      - Quiz: chapters/12-advanced-topics-distributed-systems/quiz.md
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
     - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
     - Multi-Hop Comparison: sims/multi-hop-comparison/index.md
+    - Organizational Chart: sims/org-chart/index.md
     - RDBMS vs Graph Performance: sims/rdbms-vs-graph-performance/index.md
 
   - Learning Graph:
@@ -43,8 +68,13 @@ nav:
     - learning-graph/chapter-metrics.md
     - learning-graph/diagram-details.md
     - learning-graph/diagram-table.md
-  
- 
+    - learning-graph/glossary-quality-report.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - FAQ Coverage Gaps: learning-graph/faq-coverage-gaps.md
+    - Quiz Generation Report: learning-graph/quiz-generation-report.md
+
+  - FAQs: faq.md
+
   - Stories:
     - List of Stories: stories/index.md
     - The Neighborhood Walk: stories/neighborhood-walk/index.md
