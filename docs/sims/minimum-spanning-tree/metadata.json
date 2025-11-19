@@ -1,0 +1,102 @@
+{
+  "title": "Minimum Spanning Tree Algorithm Visualizer",
+  "creator": "Claude Code AI Assistant",
+  "subject": ["Computer Science", "Graph Theory", "Algorithms", "Data Structures"],
+  "description": "Interactive visualization demonstrating Kruskal's and Prim's algorithms for finding minimum spanning trees in weighted graphs. Students can step through algorithm execution, compare approaches, and understand cycle detection in network optimization.",
+  "date": "2025-01-18",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "educationalLevel": "High School (Grades 10-12), Undergraduate",
+  "subjectArea": "Computer Science",
+  "topic": "Minimum Spanning Tree Algorithms",
+  "learningObjectives": [
+    "Understand the minimum spanning tree problem and its applications",
+    "Compare Kruskal's edge-based and Prim's node-based algorithmic approaches",
+    "Analyze how greedy algorithms make locally optimal choices",
+    "Observe cycle detection mechanisms using union-find data structures",
+    "Apply graph theory concepts to real-world network optimization problems"
+  ],
+  "bloomsTaxonomy": ["Understand", "Apply", "Analyze", "Evaluate"],
+  "duration": "45-60 minutes",
+  "prerequisites": [
+    "Understanding of graphs (nodes and edges)",
+    "Basic algorithm concepts",
+    "Familiarity with greedy algorithms (helpful but not required)"
+  ],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive × 650",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10 CDN"],
+  "accessibility": {
+    "screenReader": "ARIA labels provided via p5 describe() function",
+    "keyboardNav": "Mouse-based controls (buttons, sliders, dropdown)",
+    "colorblindSafe": "High contrast colors used for edge states"
+  },
+  "controls": [
+    {
+      "type": "dropdown",
+      "name": "Algorithm Selection",
+      "description": "Choose between Kruskal's (edge-based) or Prim's (node-based) algorithm"
+    },
+    {
+      "type": "button",
+      "name": "Step Forward",
+      "description": "Execute one algorithm step to observe decision-making process"
+    },
+    {
+      "type": "button",
+      "name": "Auto Run",
+      "description": "Automatically animate complete algorithm execution"
+    },
+    {
+      "type": "button",
+      "name": "Reset",
+      "description": "Generate new random graph and restart simulation"
+    },
+    {
+      "type": "slider",
+      "name": "Animation Speed",
+      "range": "100-2000 milliseconds",
+      "default": 500,
+      "description": "Control delay between algorithm steps for learning pace"
+    }
+  ],
+  "modelType": "Greedy graph algorithm simulation",
+  "variables": [
+    "nodes - graph vertices with positions and labels",
+    "edges - graph edges with weights and states",
+    "mstEdges - edges accepted into minimum spanning tree",
+    "totalMSTWeight - cumulative weight of MST",
+    "currentAlgorithm - selected algorithm (Kruskal or Prim)",
+    "animationSpeed - milliseconds between steps",
+    "parent - union-find structure for Kruskal's cycle detection",
+    "visited - node tracker for Prim's algorithm",
+    "priorityQueue - candidate edges for Prim's algorithm"
+  ],
+  "equations": [
+    "MST weight = sum of all accepted edge weights",
+    "Union-Find: find(x) with path compression",
+    "Greedy choice: min(available edges satisfying constraints)"
+  ],
+  "assumptions": [
+    "Graph is connected (all nodes reachable from any starting node)",
+    "Edge weights are positive integers (50-200 range)",
+    "8 nodes with ~15 edges provides good visualization",
+    "Both algorithms always find an MST (may differ in edge selection order)"
+  ],
+  "limitations": [
+    "Does not handle disconnected graphs",
+    "Does not visualize internal data structures (union-find tree, priority queue)",
+    "Random graph generation may create varying difficulty levels",
+    "Cannot create custom graphs interactively"
+  ],
+  "realWorldApplications": [
+    "Network infrastructure design (telecom, electrical, water)",
+    "Computer network routing and optimization",
+    "Transportation planning (roads, railways, airlines)",
+    "Supply chain and distribution network design",
+    "Manufacturing facility layout optimization"
+  ]
+}

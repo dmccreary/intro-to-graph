@@ -9,6 +9,20 @@ edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
+  - Chapters:
+    - Overview: chapters/index.md
+    - Chapter 1 - Introduction to Graph Thinking: chapters/01-intro-graph-thinking-data-modeling/index.md
+    - Chapter 2 - Database Systems and NoSQL: chapters/02-database-systems-nosql/index.md
+    - Chapter 3 - Labeled Property Graph Model: chapters/03-labeled-property-graph-model/index.md
+    - Chapter 4 - Query Languages: chapters/04-query-languages/index.md
+    - Chapter 5 - Performance and Benchmarking: chapters/05-performance-metrics-benchmarking/index.md
+    - Chapter 6 - Graph Algorithms: chapters/06-graph-algorithms/index.md
+    - Chapter 7 - Social Network Modeling: chapters/07-social-network-modeling/index.md
+    - Chapter 8 - Knowledge Representation: chapters/08-knowledge-representation-management/index.md
+    - Chapter 9 - Modeling Patterns: chapters/09-modeling-patterns-data-loading/index.md
+    - Chapter 10 - Commerce and Supply Chain: chapters/10-commerce-supply-chain-it/index.md
+    - Chapter 11 - Financial and Healthcare: chapters/11-financial-healthcare-regulatory/index.md
+    - Chapter 12 - Advanced Topics: chapters/12-advanced-topics-distributed-systems/index.md
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
@@ -18,6 +32,7 @@ nav:
     - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
+    - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
