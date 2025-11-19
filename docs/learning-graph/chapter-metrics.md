@@ -9,7 +9,7 @@ This file contains chapter-by-chapter metrics.
 | 3 | [Labeled Property Graph Information Model](../chapters/03-labeled-property-graph-model/index.md) | 33 | 0 | 5,213 |
 | 4 | [Query Languages for Graph Databases](../chapters/04-query-languages/index.md) | 42 | 0 | 3,802 |
 | 5 | [Performance, Metrics, and Benchmarking](../chapters/05-performance-metrics-benchmarking/index.md) | 43 | 0 | 4,271 |
-| 6 | [Graph Algorithms](../chapters/06-graph-algorithms/index.md) | 3 | 0 | 185 |
+| 6 | [Graph Algorithms](../chapters/06-graph-algorithms/index.md) | 30 | 0 | 5,915 |
 | 7 | [Social Network Modeling](../chapters/07-social-network-modeling/index.md) | 20 | 0 | 11,220 |
 | 8 | [Knowledge Representation and Management](../chapters/08-knowledge-representation-management/index.md) | 32 | 0 | 7,135 |
 | 9 | [Graph Modeling Patterns and Data Loading](../chapters/09-modeling-patterns-data-loading/index.md) | 39 | 0 | 8,457 |
