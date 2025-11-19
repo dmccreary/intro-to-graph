@@ -121,6 +121,14 @@
          <lastmod>2025-11-19</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/intro-to-graph/prompts/chapter-06-content/</loc>
+         <lastmod>2025-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/intro-to-graph/prompts/the-neighborhood-walk/</loc>
+         <lastmod>2025-11-19</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/graph-viewer/</loc>
          <lastmod>2025-11-19</lastmod>
     </url>
@@ -134,6 +142,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/rdbms-vs-graph-performance/</loc>
+         <lastmod>2025-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/intro-to-graph/stories/neighborhood-walk/</loc>
          <lastmod>2025-11-19</lastmod>
     </url>
 </urlset>

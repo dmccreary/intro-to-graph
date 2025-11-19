@@ -1,0 +1,983 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/prompts/the-neighborhood-walk/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>The neighborhood walk - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="The neighborhood walk - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/prompts/the-neighborhood-walk.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/prompts/the-neighborhood-walk/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="The neighborhood walk - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/prompts/the-neighborhood-walk.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#panel-n-title" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The neighborhood walk
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panel-n-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel N: Title
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hot-apple-pie-adventure-a-tale-of-two-worlds" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hot Apple Pie Adventure: A Tale of Two Worlds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Hot Apple Pie Adventure: A Tale of Two Worlds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#panel-1-a-new-neighbor-arrives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 1: A New Neighbor Arrives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-2-the-wall-of-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 2: The Wall of Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-3-the-bureaucratic-detour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 3: The Bureaucratic Detour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-4-the-long-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 4: The Long Journey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-5-the-endless-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 5: The Endless Queue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-6-the-green-screen-of-despair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 6: The Green Screen of Despair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-7-arrival-with-cold-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 7: Arrival with Cold Pie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-8-the-revelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 8: The Revelation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-9-instant-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 9: Instant Transport!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-10-the-happy-ending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 10: The Happy Ending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-technical-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Technical Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/prompts/the-neighborhood-walk.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<p>Create a narrative for a fun 10-panel graphic novel that explains the graph database concept of index-free adjacency to a wide audience in a fun way.  As a basis for this story consider the blog called "The Neighborhood Walk".  https://dmccreary.medium.com/how-to-explain-index-free-adjacency-to-your-manager-1a8e68ec664a </p>
+<p>In this story, we compare two worlds: table world and graph world.</p>
+<p>In table world, you are not allowed to walk right over to your cute new neighbor's house to deliver a hot apple pie. There is an mean-looking police officer with a STOP sign when you try this.  The tells you that in table world you need to take a two hour walk downtown to the "Central Search Index Tower.  This is a huge tower with a brutal architecture and with a very long line of people outside all looking very sad, board or angry.  You wait in line for four hours.  When you get to the front of the line you tell them the address you want to go to.  They look up your address in their Central Search Index Mainframe with a Green Screen and they give you the coordinates to your destination.  In two more hours you finally arrive.  But the pie is cold.  Your neighbor is grateful but wonders why it took so long to get there.  She tells you: "Haven't you heard about graph databases?".</p>
+<p>By contrast, in graph land, you just "Point" to your neighbor's house and hop right over!  30 seconds MAX!  The pie is hot and everyone is happy!  Just follow the pointer in memory!  Poof!  You are there.  It is just like the instant transporters in Star Trek!</p>
+<p>This is the metaphor of RDBMS "lookup" (very slow) and the idea of just following a memory pointer to resolve a relationship traversal. Pointer following is one of the fastest operations in computer science.  And pointer traversal does NOT slow down the more data you have.  As long as you have enough RAM, relationship traversal is SUPER FAST!!</p>
+<p>The drawing descriptions must use the following format:</p>
+<h2 id="panel-n-title">Panel N: Title</h2>
+<p><img alt="Summary Text" src="panel-01.png" /></p>
+<details>
+
+ <summary>Title</summary>
+
+Panel N
+
+Generate a wide-landscape drawing in the style of a comic book.  The image should be consistent in style with other images in this session.
+
+[Detailed Description of the content of the panel here]
+
+</details>
+
+<h2 id="result">Result</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Start the chat with: </p>
+<p>You will now be asked to generate a series of images for a fun graphic novel. All images must be in a wide-landscape format and be rendered as a graphic novel comic book.</p>
+</div>
+<h1 id="the-hot-apple-pie-adventure-a-tale-of-two-worlds">The Hot Apple Pie Adventure: A Tale of Two Worlds</h1>
+<h2 id="panel-1-a-new-neighbor-arrives">Panel 1: A New Neighbor Arrives</h2>
+<details>
+ <summary>A New Neighbor Arrives</summary>
+Panel 1
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+Split scene showing two adjacent houses in a cheerful suburban neighborhood. On the left, our protagonist (a friendly person in casual clothes with an apron) waves from their front porch. On the right, a cute new neighbor is unpacking boxes on their porch. There's a white picket fence between the properties. Thought bubble above the protagonist shows a steaming apple pie with hearts around it. The houses are close - maybe 30 feet apart. A sign in the neighbor's yard reads "Welcome to Table World!" The sky is bright and sunny, with a few fluffy clouds.
+
+</details>
+
+<h2 id="panel-2-the-wall-of-rules">Panel 2: The Wall of Rules</h2>
+<p><img alt="" src="./panel-02.png" /></p>
+<details>
+ <summary>The Wall of Rules</summary>
+Panel 2
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+Our protagonist, now holding a beautiful steaming apple pie with heat waves rising from it, approaches the property line between the houses. Suddenly, a stern-looking police officer in an old-fashioned uniform appears, holding a large red STOP sign. The officer has an exaggerated serious expression with furrowed brows. Behind the officer is a large official-looking sign that reads "TABLE WORLD REGULATIONS: All visits require Central Index Lookup. Direct access PROHIBITED!" The protagonist looks confused and disappointed. The neighbor can be seen in the background through their window, looking friendly. A small clock in the corner shows it's 2:00 PM.
+
+</details>
+
+<h2 id="panel-3-the-bureaucratic-detour">Panel 3: The Bureaucratic Detour</h2>
+<details>
+ <summary>The Bureaucratic Detour</summary>
+Panel 3
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+The police officer is pointing authoritatively toward a distant city skyline visible on the horizon. In the far distance, there's an ominous, brutalist concrete tower that rises above all other buildings - dark gray and imposing with small rectangular windows. The officer has a speech bubble saying "You must visit the CENTRAL SEARCH INDEX TOWER downtown!" The protagonist looks dismayed, still holding the pie (steam still rising but slightly less). A helpful road sign in the foreground shows "Central Search Index Tower: 2 Hours" with an arrow pointing away. The cheerful neighborhood is in the foreground, while the dystopian city looms in the distance.
+
+</details>
+
+<h2 id="panel-4-the-long-journey">Panel 4: The Long Journey</h2>
+<details>
+ <summary>The Long Journey</summary>
+Panel 4
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+A montage panel showing the protagonist's journey downtown. The panel is divided into three vignettes: Top left shows them walking past suburban houses that gradually give way to buildings. Top right shows them on a crowded bus or subway looking tired. Bottom shows them finally arriving at the base of the massive Central Search Index Tower - a brutalist concrete monstrosity with angular architecture, small windows, and an unwelcoming appearance. The tower looms overhead menacingly. The protagonist is sweating, looking exhausted, and the pie now has significantly less steam rising from it. A small clock shows it's now 4:00 PM. Other tired people are visible in the background.
+
+</details>
+
+<h2 id="panel-5-the-endless-queue">Panel 5: The Endless Queue</h2>
+<details>
+ <summary>The Endless Queue</summary>
+Panel 5
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+A wide shot showing an incredibly long line of people snaking around the outside of the Central Search Index Tower. The line has velvet ropes like at a movie theater. People in line look bored, angry, frustrated, or sleeping while standing. Some are checking watches, others have their heads in their hands. Our protagonist is near the back of the line, looking exhausted and holding the pie (barely any steam now). Speech bubbles show people complaining: "I've been here for 3 hours!", "This is ridiculous!", "Why is this so slow?". A sign reads "Estimated Wait Time: 4 Hours". The clock shows 4:30 PM. Dark clouds are starting to gather in the sky.
+
+</details>
+
+<h2 id="panel-6-the-green-screen-of-despair">Panel 6: The Green Screen of Despair</h2>
+<details>
+ <summary>The Green Screen of Despair</summary>
+Panel 6
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+Interior of the Central Search Index Tower. Our protagonist has finally reached the front desk counter. Behind thick plexiglass sits a bored-looking clerk in front of a massive, ancient computer with a glowing green monochrome screen displaying rows of data (like an old mainframe terminal). The keyboard is huge and clunky. Filing cabinets and stacks of papers fill the background. The protagonist is giving their neighbor's address. The clerk is slowly typing with one finger. Speech bubble from clerk: "Searching central index... this may take a moment... scanning 10 billion records..." The pie is now visibly cold with NO steam. Clock shows 8:00 PM. Fluorescent lights buzz overhead.
+
+</details>
+
+<h2 id="panel-7-arrival-with-cold-pie">Panel 7: Arrival with Cold Pie</h2>
+<details>
+ <summary>Arrival with Cold Pie</summary>
+Panel 7
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+It's now nighttime (stars and moon visible). The protagonist finally arrives at the neighbor's door, looking completely exhausted and disheveled. They're holding the pie which now has a visible frost layer on top (small icicles) - it's gone completely cold. The neighbor opens the door, looking concerned and sympathetic. Speech bubble from neighbor: "Oh my! Is that... frozen? You poor thing! How long did this take you?" Speech bubble from protagonist: "Eight hours... had to go to the Central Index Tower..." Clock in the corner shows 10:00 PM. The neighbor has a sad but kind expression. A single tear rolls down the protagonist's cheek.
+
+</details>
+
+<h2 id="panel-8-the-revelation">Panel 8: The Revelation</h2>
+<details>
+ <summary>The Revelation</summary>
+Panel 8
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+Inside the neighbor's cozy kitchen. They're sitting at a table with the thawed (but still cold) pie between them. The neighbor is leaning forward excitedly, pointing to a colorful poster on the wall that shows "GRAPH WORLD" with happy people hopping between connected nodes/houses. The poster looks vibrant and inviting - the opposite of Table World. Speech bubble from neighbor with bright, exciting text: "Haven't you heard about GRAPH DATABASES? In GRAPH WORLD, you can just POINT and HOP directly to any neighbor! No index lookups needed!" The protagonist's eyes are wide with amazement and curiosity. Little sparkle effects around the neighbor's head show this is an exciting revelation. A glowing diagram on the poster shows connected nodes with arrows and the word "POINTERS!"
+
+</details>
+
+<h2 id="panel-9-instant-transport">Panel 9: Instant Transport!</h2>
+<details>
+ <summary>Instant Transport!</summary>
+Panel 9
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+Next day, bright sunny morning in GRAPH WORLD - the scene looks more colorful and vibrant than Table World. The protagonist stands at their front door with a NEW steaming hot apple pie (lots of heat waves). They simply POINT toward the neighbor's house. A glowing pointer arrow/ray shoots from their hand directly to the neighbor's house. Comic book style "WHOOSH!" and "ZOOM!" sound effects. The protagonist is instantly transported (Star Trek transporter-style sparkles) in a split second, appearing at the neighbor's door. A banner at the top reads "GRAPH WORLD: Index-Free Adjacency!" A stopwatch graphic shows "0:00:30 - 30 SECONDS!" No police officer. No barriers. Pure freedom! The neighbor is already at the door smiling and welcoming them.
+
+</details>
+
+<h2 id="panel-10-the-happy-ending">Panel 10: The Happy Ending</h2>
+<details>
+ <summary>The Happy Ending</summary>
+Panel 10
+Generate a wide-landscape drawing in the style of a comic book. The image should be consistent in style with other images in this session.
+
+Split comparison panel. TOP HALF labeled "TABLE WORLD: 8 HOURS" shows a gloomy, grayed-out scene: the Central Search Index Tower in the background, the long line, exhausted protagonist, cold frozen pie, sad faces. Annotations point to elements: "Index Lookup Required", "Scales Poorly", "Slow & Bureaucratic". BOTTOM HALF labeled "GRAPH WORLD: 30 SECONDS" shows bright, cheerful colors: both neighbors happily eating HOT apple pie together on the porch, smiling and laughing. Direct pointer arrow shown between houses. Annotations read: "Direct Pointer Following", "Constant Time O(1)", "SUPER FAST!". At the bottom, a conclusion banner states: "In Graph Databases, relationships are just memory pointers - one of the fastest operations in computer science! More data ≠ Slower queries!" Both neighbors give thumbs up in Graph World.
+
+</details>
+
+<hr />
+<h2 id="the-technical-takeaway">The Technical Takeaway</h2>
+<p>This graphic novel illustrates the fundamental difference between traditional relational databases (RDBMS) and graph databases:</p>
+<p><strong>Table World (RDBMS)</strong></p>
+<ul>
+<li>Requires index lookups to find related data</li>
+<li>Must query central indexes for each relationship</li>
+<li>Performance degrades as data grows</li>
+<li>Multiple lookups required for connected data</li>
+</ul>
+<p><strong>Graph World (Index-Free Adjacency)</strong></p>
+<ul>
+<li>Relationships stored as direct memory pointers</li>
+<li>No index lookup required for traversals</li>
+<li>Constant-time relationship traversal O(1)</li>
+<li>Performance doesn't degrade with data size (given sufficient RAM)</li>
+</ul>
+<p>Index-free adjacency makes graph databases extraordinarily fast for relationship-heavy queries - like delivering hot apple pies to your neighbors! 🥧</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
