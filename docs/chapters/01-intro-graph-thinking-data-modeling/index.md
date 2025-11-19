@@ -333,58 +333,12 @@ One JOIN? Fast enough. Two JOINs? Still manageable. But real business questions 
 
 Each additional JOIN multiplies the computational cost. By the time you're traversing 4-5 levels of relationships, query times explode from milliseconds to minutes. This isn't a minor inconvenience—**it's the difference between building real-time recommendation engines and batch reports that run overnight**.
 
-<details>
-    <summary>Interactive Performance Comparison: RDBMS JOIN Cost vs. Graph Traversal</summary>
-    Type: chart
+**See the performance cliff:** The interactive chart below demonstrates this dramatic difference. Notice how RDBMS performance degrades exponentially (orange line) while graph databases maintain constant-time performance (gold line). Toggle between logarithmic and linear scales to see the difference from different perspectives.
 
-    Chart type: Line chart with logarithmic Y-axis
+<iframe src="../../sims/rdbms-vs-graph-performance/main.html" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 4px;" scrolling="no"></iframe>
 
-    Purpose: Dramatically illustrate the performance degradation of RDBMS multi-hop queries compared to graph databases
-
-    X-axis: Number of relationship hops (1, 2, 3, 4, 5, 6)
-    Y-axis: Query response time (milliseconds, logarithmic scale from 1ms to 1,000,000ms)
-
-    Data series 1 - RDBMS with JOINs (orange line with circle markers):
-    - 1 hop: 12ms
-    - 2 hops: 185ms
-    - 3 hops: 3,400ms
-    - 4 hops: 58,000ms
-    - 5 hops: 920,000ms
-    - 6 hops: Off the chart (query timeout)
-
-    Data series 2 - Graph Database traversal (gold line with square markers):
-    - 1 hop: 5ms
-    - 2 hops: 7ms
-    - 3 hops: 11ms
-    - 4 hops: 14ms
-    - 5 hops: 18ms
-    - 6 hops: 22ms
-
-    Title: "The Performance Cliff: Why Relationships Break Relational Databases"
-    Subtitle: "Response time for multi-hop relationship queries"
-
-    Annotations:
-    - Arrow pointing to RDBMS line at 4 hops: "1 minute response time"
-    - Arrow pointing to RDBMS line at 5 hops: "15+ minutes (unusable for real-time)"
-    - Shaded region below 100ms: "Real-time user experience zone"
-    - Text box: "Graph databases maintain constant-time performance through index-free adjacency"
-
-    Legend position: Top right
-    Grid: Horizontal grid lines for readability
-
-    Interactive features:
-    - Hover over data points to see exact values
-    - Toggle to switch between linear and logarithmic Y-axis
-    - Highlight "real-time zone" below 100ms threshold
-
-    Visual emphasis:
-    - Make the divergence point (around 2-3 hops) visually striking
-    - Use different line thickness (thicker for graph DB)
-    - Add zone shading to emphasize usable vs. unusable performance
-
-    Implementation: Chart.js with logarithmic scale and hover interactivity
-    Canvas size: 800x500px
-</details>
+[View Chart Fullscreen](../../sims/rdbms-vs-graph-performance/main.html){ .md-button .md-button--primary }
+[See Detailed Analysis](../../sims/rdbms-vs-graph-performance/){ .md-button }
 
 This performance difference isn't theoretical—it's the reason companies like LinkedIn, eBay, NASA, and Walmart have migrated relationship-heavy workloads to graph databases. **While competitors wait minutes for insights, graph-powered systems respond instantly.**
 

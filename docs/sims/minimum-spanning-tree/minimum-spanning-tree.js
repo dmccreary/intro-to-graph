@@ -7,7 +7,7 @@ let drawHeight = 500;
 let controlHeight = 150;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 25;
-let sliderLeftMargin = 150;
+let sliderLeftMargin = 210;
 let defaultTextSize = 16;
 
 // Graph data structures

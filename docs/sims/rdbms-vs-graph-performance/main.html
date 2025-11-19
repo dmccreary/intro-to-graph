@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDBMS vs Graph Database Performance Comparison</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="performanceChart"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="toggleScale" class="btn">Toggle Linear/Logarithmic Scale</button>
+            <button id="toggleRealTimeZone" class="btn">Toggle Real-Time Zone</button>
+        </div>
+
+        <div class="analysis">
+            <h2>Key Insights</h2>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h3>2-3 Hop Divergence</h3>
+                    <p>RDBMS performance begins degrading significantly at 2-3 relationship hops, while graph databases maintain constant-time performance.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>4+ Hops: Unusable</h3>
+                    <p>At 4 hops, RDBMS queries take nearly 1 minute. At 5 hops, over 15 minutes—completely impractical for real-time applications.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Graph Advantage</h3>
+                    <p>Graph databases maintain sub-100ms response times even at 6 hops through index-free adjacency, enabling real-time relationship queries at any depth.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Performance Ratio</h3>
+                    <p>At 5 hops: Graph DB is <strong>51,000× faster</strong> than RDBMS (18ms vs 920,000ms). This isn't optimization—it's a fundamental architectural advantage.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data for the chart
+        const data = {
+            labels: ['1 Hop', '2 Hops', '3 Hops', '4 Hops', '5 Hops', '6 Hops'],
+            datasets: [
+                {
+                    label: 'RDBMS with JOINs',
+                    data: [12, 185, 3400, 58000, 920000, null],
+                    borderColor: 'rgb(255, 140, 0)',
+                    backgroundColor: 'rgba(255, 140, 0, 0.1)',
+                    borderWidth: 2,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointStyle: 'circle',
+                    tension: 0.1,
+                    spanGaps: false
+                },
+                {
+                    label: 'Graph Database',
+                    data: [5, 7, 11, 14, 18, 22],
+                    borderColor: 'rgb(255, 215, 0)',
+                    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+                    borderWidth: 4,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointStyle: 'rect',
+                    tension: 0.1
+                }
+            ]
+        };
+
+        // Chart configuration
+        let isLogarithmic = true;
+        let showRealTimeZone = true;
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 1.6,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'The Performance Cliff: Why Relationships Break Relational Databases',
+                        font: {
+                            size: 20,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 20
+                        }
+                    },
+                    subtitle: {
+                        display: true,
+                        text: 'Response time for multi-hop relationship queries',
+                        font: {
+                            size: 14,
+                            style: 'italic'
+                        },
+                        padding: {
+                            bottom: 20
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        align: 'end',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 15,
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    if (context.parsed.y >= 60000) {
+                                        const minutes = (context.parsed.y / 60000).toFixed(1);
+                                        label += minutes + ' minutes (' + context.parsed.y.toLocaleString() + ' ms)';
+                                    } else if (context.parsed.y >= 1000) {
+                                        const seconds = (context.parsed.y / 1000).toFixed(1);
+                                        label += seconds + ' seconds (' + context.parsed.y.toLocaleString() + ' ms)';
+                                    } else {
+                                        label += context.parsed.y + ' ms';
+                                    }
+                                } else {
+                                    label += 'Query timeout (>15 minutes)';
+                                }
+                                return label;
+                            },
+                            footer: function(tooltipItems) {
+                                if (tooltipItems.length === 2) {
+                                    const rdbmsValue = tooltipItems[0].parsed.y;
+                                    const graphValue = tooltipItems[1].parsed.y;
+                                    if (rdbmsValue && graphValue) {
+                                        const ratio = (rdbmsValue / graphValue).toFixed(0);
+                                        return 'Graph DB is ' + ratio.toLocaleString() + '× faster';
+                                    }
+                                }
+                                return '';
+                            }
+                        },
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        titleFont: {
+                            size: 14
+                        },
+                        bodyFont: {
+                            size: 13
+                        },
+                        footerFont: {
+                            size: 12,
+                            weight: 'bold'
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            realTimeZone: {
+                                type: 'box',
+                                yMin: 0,
+                                yMax: 100,
+                                backgroundColor: 'rgba(0, 255, 0, 0.1)',
+                                borderColor: 'rgba(0, 200, 0, 0.5)',
+                                borderWidth: 2,
+                                borderDash: [5, 5],
+                                label: {
+                                    display: true,
+                                    content: 'Real-Time User Experience Zone (<100ms)',
+                                    position: 'start',
+                                    backgroundColor: 'rgba(0, 200, 0, 0.8)',
+                                    color: 'white',
+                                    font: {
+                                        size: 11,
+                                        weight: 'bold'
+                                    },
+                                    padding: 4
+                                },
+                                display: showRealTimeZone
+                            },
+                            hop4Label: {
+                                type: 'label',
+                                xValue: 3,
+                                yValue: 58000,
+                                content: ['~1 minute', 'response time'],
+                                backgroundColor: 'rgba(255, 140, 0, 0.9)',
+                                color: 'white',
+                                font: {
+                                    size: 10,
+                                    weight: 'bold'
+                                },
+                                padding: 6,
+                                yAdjust: -30
+                            },
+                            hop5Label: {
+                                type: 'label',
+                                xValue: 4,
+                                yValue: 920000,
+                                content: ['15+ minutes', '(unusable for real-time)'],
+                                backgroundColor: 'rgba(200, 0, 0, 0.9)',
+                                color: 'white',
+                                font: {
+                                    size: 10,
+                                    weight: 'bold'
+                                },
+                                padding: 6,
+                                yAdjust: -30
+                            },
+                            indexFreeAdjacency: {
+                                type: 'label',
+                                xValue: 5,
+                                yValue: 22,
+                                content: ['Constant-time performance', 'via index-free adjacency'],
+                                backgroundColor: 'rgba(255, 215, 0, 0.9)',
+                                color: 'black',
+                                font: {
+                                    size: 10,
+                                    weight: 'bold'
+                                },
+                                padding: 6,
+                                yAdjust: 30
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'logarithmic',
+                        min: 1,
+                        max: 1000000,
+                        title: {
+                            display: true,
+                            text: 'Query Response Time (milliseconds, logarithmic scale)',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            callback: function(value, index, values) {
+                                if (value === 1 || value === 10 || value === 100 ||
+                                    value === 1000 || value === 10000 || value === 100000 ||
+                                    value === 1000000) {
+                                    if (value >= 60000) {
+                                        return (value / 60000).toFixed(0) + ' min';
+                                    } else if (value >= 1000) {
+                                        return (value / 1000).toFixed(0) + ' sec';
+                                    } else {
+                                        return value + ' ms';
+                                    }
+                                }
+                                return null;
+                            },
+                            font: {
+                                size: 11
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Number of Relationship Hops',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            font: {
+                                size: 12
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                }
+            }
+        };
+
+        // Create the chart
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const chart = new Chart(ctx, config);
+
+        // Toggle scale button
+        document.getElementById('toggleScale').addEventListener('click', function() {
+            isLogarithmic = !isLogarithmic;
+
+            if (isLogarithmic) {
+                chart.options.scales.y.type = 'logarithmic';
+                chart.options.scales.y.min = 1;
+                chart.options.scales.y.max = 1000000;
+                chart.options.scales.y.title.text = 'Query Response Time (milliseconds, logarithmic scale)';
+                this.textContent = 'Switch to Linear Scale';
+            } else {
+                chart.options.scales.y.type = 'linear';
+                chart.options.scales.y.min = 0;
+                chart.options.scales.y.max = 1000000;
+                chart.options.scales.y.title.text = 'Query Response Time (milliseconds, linear scale)';
+                this.textContent = 'Switch to Logarithmic Scale';
+
+                chart.options.scales.y.ticks.callback = function(value) {
+                    if (value >= 60000) {
+                        return (value / 60000).toFixed(0) + ' min';
+                    } else if (value >= 1000) {
+                        return (value / 1000).toFixed(0) + ' sec';
+                    } else if (value % 100 === 0) {
+                        return value + ' ms';
+                    }
+                    return null;
+                };
+            }
+
+            chart.update();
+        });
+
+        // Toggle real-time zone button
+        document.getElementById('toggleRealTimeZone').addEventListener('click', function() {
+            showRealTimeZone = !showRealTimeZone;
+            chart.options.plugins.annotation.annotations.realTimeZone.display = showRealTimeZone;
+            this.textContent = showRealTimeZone ? 'Hide Real-Time Zone' : 'Show Real-Time Zone';
+            chart.update();
+        });
+    </script>
+</body>
+</html>

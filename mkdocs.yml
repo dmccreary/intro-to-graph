@@ -1,6 +1,6 @@
 # template for a general MicroSite built with mkdocs and the material theme
-site_name: Mkdocs Template Site
-site_description: 'Description of microsite'
+site_name: Introduction to Graph Databases
+site_description: 'An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/intro-to-graph/'
@@ -23,6 +23,7 @@ nav:
     - Chapter 10 - Commerce and Supply Chain: chapters/10-commerce-supply-chain-it/index.md
     - Chapter 11 - Financial and Healthcare: chapters/11-financial-healthcare-regulatory/index.md
     - Chapter 12 - Advanced Topics: chapters/12-advanced-topics-distributed-systems/index.md
+  
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
@@ -30,9 +31,13 @@ nav:
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
+  
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
     - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
+    - Multi-Hop Comparison: sims/multi-hop-comparison/index.md
+    - RDBMS vs Graph Performance: sims/rdbms-vs-graph-performance/index.md
+
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
