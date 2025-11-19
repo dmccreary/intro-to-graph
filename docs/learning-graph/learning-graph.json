@@ -12,86 +12,86 @@
   "groups": {
     "FOUND": {
       "classifierName": "Foundation Concepts",
-      "color": "#E74C3C",
+      "color": "red",
       "font": {
         "color": "black"
       }
     },
     "GRAPH": {
       "classifierName": "Graph Data Model",
-      "color": "#F39C12",
+      "color": "orange",
       "font": {
         "color": "black"
       }
     },
     "QUERY": {
       "classifierName": "Query Languages",
-      "color": "#27AE60",
+      "color": "yellow",
       "font": {
-        "color": "white"
+        "color": "black"
       }
     },
     "PERF": {
       "classifierName": "Performance & Optimization",
-      "color": "#16A085",
+      "color": "lightgreen",
       "font": {
-        "color": "white"
+        "color": "black"
       }
     },
     "ALGO": {
       "classifierName": "Graph Algorithms",
-      "color": "#2980B9",
+      "color": "blue",
       "font": {
         "color": "white"
       }
     },
     "SOCIAL": {
       "classifierName": "Social Networks",
-      "color": "#8E44AD",
+      "color": "purple",
       "font": {
         "color": "white"
       }
     },
     "KNOW": {
       "classifierName": "Knowledge Management",
-      "color": "#C0392B",
+      "color": "pink",
       "font": {
-        "color": "white"
+        "color": "black"
       }
     },
     "PATTERN": {
       "classifierName": "Modeling Patterns",
-      "color": "#D35400",
+      "color": "brown",
       "font": {
         "color": "white"
       }
     },
     "FIN": {
       "classifierName": "Financial Applications",
-      "color": "#1ABC9C",
+      "color": "green",
       "font": {
         "color": "white"
       }
     },
     "HEALTH": {
       "classifierName": "Healthcare Applications",
-      "color": "#E91E63",
+      "color": "gray",
       "font": {
         "color": "white"
       }
     },
     "SUPPLY": {
       "classifierName": "Supply Chain & IT",
-      "color": "#2C3E50",
+      "color": "navy",
       "font": {
         "color": "white"
       }
     },
     "ADV": {
       "classifierName": "Advanced Topics",
-      "color": "#34495E",
+      "color": "gold",
       "font": {
-        "color": "white"
+        "color": "black"
       }
     }
   },
