@@ -43,7 +43,7 @@ function setup() {
   generateInfoLayer();
   generateKnowledgeLayer();
 
-  describe('Knowledge Triangle visualization showing three layers: Data (binary), Information (facts), and Knowledge (connected graph)', LABEL);
+  describe('Knowledge Triangle visualization showing three layers: Data (binary), Information (facts), and Knowledge (connected graph)');
 }
 
 function draw() {
@@ -73,19 +73,12 @@ function draw() {
   text('Knowledge Triangle', canvasWidth/2, margin*2);
 
   // Reset text settings
-  stroke();
   textAlign(LEFT, CENTER);
   textSize(defaultTextSize);
 
   // Check for hover and draw infobox
   checkHover();
   drawInfoBox();
-
-  // Debug: Show hover state in control area
-  fill('gray');
-  textSize(14);
-  textAlign(LEFT, CENTER);
-  text('Hover: ' + (hoveredLayer || 'none'), 10, drawHeight + 25);
 }
 
 function calculateTriangle() {
@@ -376,9 +369,24 @@ function isPointInKnowledgeLayer(x, y) {
 function drawInfoBox() {
   if (hoveredLayer === null) return;
 
-  // Simple debug box - just show a colored rectangle that follows mouse
-  let boxWidth = 300;
-  let boxHeight = 100;
+  // Define infobox content based on hovered layer
+  let title = '';
+  let content = '';
+
+  if (hoveredLayer === 'data') {
+    title = 'Data Layer';
+    content = 'Contains raw binary data in the form of 1s and 0s. It is the information you might see by creating a raw dump of the data on a hard drive. Finding meaning out of the data layer takes a lot of work.';
+  } else if (hoveredLayer === 'info') {
+    title = 'Information Layer';
+    content = 'Contains isolated facts extracted from the raw data. These facts are each disconnected from other facts.';
+  } else if (hoveredLayer === 'knowledge') {
+    title = 'Knowledge Layer';
+    content = 'Contains connected facts. It is a graph where facts are all connected together. Each fact must connect to other facts to be valuable. Insight occurs by traversing the network of facts.';
+  }
+
+  // Calculate box dimensions
+  let boxWidth = 350;
+  let boxHeight = 130;
   let boxX = mouseX + 15;
   let boxY = mouseY + 15;
 
@@ -390,18 +398,53 @@ function drawInfoBox() {
     boxY = mouseY - boxHeight - 15;
   }
 
-  // Draw a bright visible box for debugging
-  fill('yellow');
-  stroke('red');
-  strokeWeight(3);
-  rect(boxX, boxY, boxWidth, boxHeight);
-
-  // Draw the layer name in large text
-  fill('black');
+  // Draw box background with shadow effect
+  fill(0, 0, 0, 30);
   noStroke();
-  textSize(24);
-  textAlign(CENTER, CENTER);
-  text('Layer: ' + hoveredLayer.toUpperCase(), boxX + boxWidth/2, boxY + boxHeight/2);
+  rect(boxX + 4, boxY + 4, boxWidth, boxHeight, 8);
+
+  // Draw main box with border
+  fill(255, 255, 255, 250);
+  stroke(100);
+  strokeWeight(2);
+  rect(boxX, boxY, boxWidth, boxHeight, 8);
+
+  // Draw title bar
+  fill(70, 130, 180);
+  noStroke();
+  rect(boxX, boxY, boxWidth, 35, 8, 8, 0, 0);
+
+  // Draw title text
+  fill(255);
+  textSize(18);
+  textAlign(LEFT, CENTER);
+  textStyle(BOLD);
+  text(title, boxX + 12, boxY + 18);
+
+  // Draw content text with word wrapping
+  fill(50);
+  textSize(14);
+  textStyle(NORMAL);
+  textAlign(LEFT, TOP);
+
+  let words = content.split(' ');
+  let line = '';
+  let yPos = boxY + 45;
+  let maxWidth = boxWidth - 24;
+
+  for (let word of words) {
+    let testLine = line + word + ' ';
+    let testWidth = textWidth(testLine);
+
+    if (testWidth > maxWidth && line.length > 0) {
+      text(line, boxX + 12, yPos);
+      line = word + ' ';
+      yPos += 20;
+    } else {
+      line = testLine;
+    }
+  }
+  text(line, boxX + 12, yPos);
 }
 
 function windowResized() {

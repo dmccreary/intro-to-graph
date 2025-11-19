@@ -10,7 +10,7 @@ social:
 
 # Knowledge Triangle
 
-<iframe src="main.html" height="552px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="502px" width="100%" scrolling="no"></iframe>
 
 [Run the Knowledge Triangle MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
