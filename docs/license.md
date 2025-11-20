@@ -1,14 +1,8 @@
-# License
-
-## Copyright Notice
-
-**Copyright © 2025 Dan McCreary. All rights reserved.**
-
-## Non-Commercial License Grant
+# Creative Commons License
 
 ![License](./img/license.png)
 
-This work is licensed to the public under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License for **non-commercial use only**. Commercial rights are reserved by the copyright holder.
+All content in this repository is governed by the following license agreement:
 
 ## License Type
 
@@ -43,4 +37,4 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 ## Commercial Licensing
 
-Commercial rights are reserved by the copyright holder. For commercial licensing, publication inquiries, or permission to use this work in commercial contexts, please contact Dan McCreary at [contact information].
+Commercial rights are reserved by the copyright holder. For commercial licensing, publication inquiries, or permission to use this work in commercial contexts, please contact [Dan McCreary on LinkedIn](https://www.linkedin.com/in/danmccreary/).
