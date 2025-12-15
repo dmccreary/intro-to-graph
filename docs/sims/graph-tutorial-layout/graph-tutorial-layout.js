@@ -111,10 +111,59 @@ function draw() {
 
   // Draw the layout components
   drawLayoutAnnotations();
-  drawEdges();
-  drawNodes();
-  drawStepLog();
-  drawControlArea();
+
+  // Only draw sample content if checkbox is checked
+  if (showSampleContent) {
+    drawEdges();
+    drawNodes();
+    drawStepLog();
+    drawControlArea();
+  } else {
+    // Draw empty region placeholders
+    drawEmptyRegions();
+  }
+}
+
+function drawEmptyRegions() {
+  // Draw placeholder labels for empty regions
+  let graphCenterX = canvasWidth * 0.34;
+  let graphCenterY = drawHeight / 2 + 20;
+
+  // Graph region placeholder
+  fill(150);
+  noStroke();
+  textAlign(CENTER, CENTER);
+  textSize(18);
+  text('Graph Visualization', graphCenterX, graphCenterY - 20);
+  textSize(14);
+  text('(nodes and edges)', graphCenterX, graphCenterY + 10);
+
+  // Step log placeholder
+  let logX = canvasWidth * 0.66;
+  let logWidth = canvasWidth * 0.32;
+  let logY = 50;
+  let logHeight = drawHeight - 80;
+
+  fill(255, 255, 255, 230);
+  stroke(200);
+  strokeWeight(1);
+  rect(logX, logY, logWidth, logHeight, 8);
+
+  fill(150);
+  noStroke();
+  textAlign(CENTER, CENTER);
+  textSize(18);
+  text('Step Log', logX + logWidth / 2, logY + logHeight / 2 - 15);
+  textSize(14);
+  text('(algorithm decisions)', logX + logWidth / 2, logY + logHeight / 2 + 15);
+
+  // Control area placeholder labels
+  fill(150);
+  textAlign(LEFT, CENTER);
+  textSize(14);
+  text('Controls: [Algorithm Select] [Step] [Auto Run] [Reset]', 15, drawHeight + 50);
+  text('Speed Slider: Slower ←―――――――――――――→ Faster', 15, drawHeight + 80);
+  text('Status: [step description] | Progress: [X/Y edges]', 15, drawHeight + 110);
 }
 
 function drawLayoutAnnotations() {
@@ -358,5 +407,10 @@ function updateCanvasSize() {
   const container = document.querySelector('main');
   if (container) {
     canvasWidth = container.offsetWidth;
+
+    // Reposition checkbox
+    if (typeof showSampleContentCheckbox !== 'undefined') {
+      showSampleContentCheckbox.position(canvasWidth - 180, drawHeight + 15);
+    }
   }
 }
