@@ -12,9 +12,13 @@ Step-by-step graph animations are powerful teaching tools that help students:
 - Track algorithm progress through a visual log
 - Control the pace of learning through manual stepping or auto-run
 
-## Standard Layout
+The key insight behind these visualizations is that algorithms are easier to understand when you can see each decision being made. Rather than showing only the final result, we reveal the process—showing students *why* certain edges are chosen and others rejected.
 
-The recommended layout divides the canvas into distinct functional areas:
+## Standard MicroSim Layout
+
+
+
+The recommended layout divides the canvas into distinct functional areas. This consistent structure helps students quickly orient themselves when using different algorithm visualizations.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -35,7 +39,11 @@ The recommended layout divides the canvas into distinct functional areas:
 └─────────────────────────────────────────────────────────────┘
 ```
 
+The **graph visualization** occupies the left portion where students can see nodes and edges change state as the algorithm progresses. The **step log** on the right provides a textual record of each decision, allowing students to review the algorithm's history. The **control panel** at the bottom gives students complete control over execution.
+
 ### Layout Proportions
+
+These proportions have been tested to provide good visual balance across different screen sizes:
 
 | Area | Position | Size |
 |------|----------|------|
@@ -48,6 +56,8 @@ The recommended layout divides the canvas into distinct functional areas:
 
 ### Dimension Variables
 
+We begin by defining global variables that control the canvas layout. Keeping these as variables (rather than hard-coded values) makes the visualization responsive and easy to adjust.
+
 ```javascript
 // Canvas dimensions - REQUIRED structure
 let canvasWidth = 800;
@@ -59,7 +69,11 @@ let sliderLeftMargin = 210;
 let defaultTextSize = 16;
 ```
 
+The `drawHeight` separates the visualization area from the controls. The `controlHeight` provides space for buttons, sliders, and status text. The `margin` and `sliderLeftMargin` ensure consistent spacing throughout the interface.
+
 ### Setup Function
+
+The `setup()` function runs once when the page loads. It's responsible for creating the canvas, initializing the graph data, and creating the UI controls.
 
 ```javascript
 function setup() {
@@ -74,7 +88,11 @@ function setup() {
 }
 ```
 
+Notice that we call `updateCanvasSize()` *before* creating the canvas. This ensures our canvas matches the container width for responsive design. The `describe()` function provides accessibility support for screen readers.
+
 ### Draw Function Structure
+
+The `draw()` function is called repeatedly by p5.js (typically 60 times per second). It's responsible for rendering the current state of the visualization and checking if it's time to execute the next algorithm step during auto-run mode.
 
 ```javascript
 function draw() {
@@ -82,23 +100,19 @@ function draw() {
 
   // Drawing area (light background)
   fill('aliceblue');
+  // draw a light gray border around both drawing region and control region
+  stroke('silver');
   rect(0, 0, width, drawHeight);
-
   // Control area (white background)
   fill('white');
   rect(0, drawHeight, width, controlHeight);
-
-  // Draw border
-  stroke('silver');
-  noFill();
-  rect(0, 0, width, drawHeight);
 
   // Draw title
   fill('black');
   textSize(28);
   textAlign(CENTER, TOP);
   noStroke();
-  text('Algorithm Name Visualizer', canvasWidth/2, 10);
+  text('Algorithm Name Visualizer', canvasWidth/2, margin*.5);
 
   // Reset to default settings
   stroke(0);
@@ -122,9 +136,20 @@ function draw() {
 }
 ```
 
+The draw function follows a consistent pattern:
+
+1. **Clear and set up backgrounds** - We draw the aliceblue drawing area and white control area fresh each frame
+2. **Draw the title** - Centered at the top of the canvas
+3. **Reset drawing settings** - Ensure consistent defaults before drawing components
+4. **Draw graph components** - Edges first (so they appear behind nodes), then nodes, then the step log
+5. **Handle auto-run timing** - Check if enough time has passed to execute the next step
+6. **Draw control labels** - Status text and slider labels in the control area
+
 ## Data Structures
 
 ### Graph Representation
+
+The graph is stored using simple JavaScript arrays and objects. This approach is easy to understand and manipulate, making it ideal for educational purposes.
 
 ```javascript
 // Graph data structures
@@ -133,7 +158,11 @@ let edges = [];
 let resultEdges = [];  // Edges in the result (e.g., MST)
 let nodeCount = 8;
 let nodeRadius = 15;
+```
 
+Each **node** contains its position, identifier, and display label:
+
+```javascript
 // Node structure
 {
   id: 0,
@@ -141,7 +170,13 @@ let nodeRadius = 15;
   y: 200,
   label: 'A'
 }
+```
 
+The `id` is used internally to reference nodes in edges. The `x` and `y` coordinates determine where the node is drawn. The `label` (typically a letter A-H) is displayed to the user.
+
+Each **edge** connects two nodes and tracks its current state in the algorithm:
+
+```javascript
 // Edge structure
 {
   from: 0,      // Source node ID
@@ -151,7 +186,11 @@ let nodeRadius = 15;
 }
 ```
 
+The `state` property is crucial for visualization. As the algorithm runs, edges transition through states: they start as `'available'`, may briefly be `'considering'` while being evaluated, and end up either `'accepted'` (included in the result) or `'rejected'` (excluded). Each state is rendered with a different color.
+
 ### Algorithm State Variables
+
+Beyond the graph data, we need variables to track the algorithm's execution state:
 
 ```javascript
 // Algorithm state
@@ -169,9 +208,22 @@ let lastStepTime = 0;
 let stepLog = [];  // Log of all steps taken
 ```
 
+These variables serve different purposes:
+
+- **`currentAlgorithm`** - Allows switching between multiple algorithms (e.g., Kruskal's vs. Prim's)
+- **`animationSpeed`** - Controls the delay between steps during auto-run (in milliseconds)
+- **`isRunning`** - True when auto-run is active, false when paused or stepping manually
+- **`isComplete`** - True when the algorithm has finished (prevents further steps)
+- **`stepIndex`** - Tracks progress through the algorithm's work queue
+- **`consideredElement`** - The edge currently being evaluated (highlighted in yellow)
+- **`stepDescription`** - Human-readable text explaining the current/last step
+- **`stepLog`** - Array of all steps for display in the log panel
+
 ## UI Controls
 
 ### Control Creation
+
+The control panel provides four buttons and a slider. Each control is created using p5.js DOM functions and positioned absolutely within the canvas.
 
 ```javascript
 function createControls() {
@@ -218,7 +270,19 @@ function createControls() {
 }
 ```
 
+**Algorithm Selector**: A dropdown that lets users choose between algorithms. When changed, it resets the visualization to start fresh with the new algorithm.
+
+**Step Forward Button**: Executes exactly one step of the algorithm. This is essential for detailed study—students can carefully examine each decision.
+
+**Auto Run Button**: Toggles between automatic execution and paused state. The button label changes to "Pause" when running.
+
+**Reset Button**: Generates a new random graph and resets all algorithm state. This lets students see the algorithm work on different inputs.
+
+**Speed Slider**: Controls the delay between auto-run steps. Notice the inversion logic: we want "Slower" on the left (intuitive), but higher delay values mean slower animation. The formula `2100 - sliderValue` converts the slider's 100-2000 range into a 2000-100ms delay range.
+
 ### Auto-Run Toggle
+
+The auto-run toggle function manages the running state and updates the button label to reflect the current mode:
 
 ```javascript
 function toggleAutoRun() {
@@ -233,7 +297,11 @@ function toggleAutoRun() {
 }
 ```
 
+When starting auto-run, we record the current time in `lastStepTime`. This ensures the first step doesn't execute immediately—it waits for the full `animationSpeed` delay, giving students time to observe the initial state.
+
 ### Control Labels
+
+The control panel needs text labels to explain the slider and show current status. This function draws those labels, being careful to reset text alignment after drawing positioned labels.
 
 ```javascript
 function drawControlLabels() {
@@ -262,9 +330,15 @@ function drawControlLabels() {
 }
 ```
 
+**Important**: After drawing the right-aligned "Faster" label, we must reset `textAlign` back to `LEFT, CENTER`. Forgetting this will cause the status text to render off-screen. This is a common p5.js pitfall—drawing state persists between calls.
+
 ## Step Execution Pattern
 
+The step execution pattern is the heart of the visualization. It separates the concerns of *when* to execute (timing/UI) from *what* to execute (algorithm logic).
+
 ### Main Execution Function
+
+This function acts as a dispatcher, routing to the appropriate algorithm and checking for completion:
 
 ```javascript
 function executeNextStep() {
@@ -288,7 +362,11 @@ function executeNextStep() {
 }
 ```
 
+The early return on `isComplete` prevents any action after the algorithm finishes. After executing a step, we check if the algorithm is now complete (e.g., MST has n-1 edges). If so, we update the UI state and log the completion.
+
 ### Algorithm Step Function Template
+
+Each algorithm step follows a consistent pattern: get the next element to consider, evaluate it, and either accept or reject it. This template can be adapted for any greedy graph algorithm:
 
 ```javascript
 function executeAlgorithmStep() {
@@ -324,7 +402,13 @@ function executeAlgorithmStep() {
 }
 ```
 
+The key educational value comes from the branching logic. Students see clearly that the algorithm makes a binary decision for each element: accept or reject. The `stepDescription` provides detailed context, while the `stepLog` entry provides a concise record.
+
+For **Kruskal's algorithm**, the acceptance criterion is "does this edge create a cycle?" (using union-find). For **Prim's algorithm**, it's "does this edge connect a visited node to an unvisited node?"
+
 ### Reset Function
+
+The reset function restores all state to initial values, preparing for a fresh run:
 
 ```javascript
 function resetAlgorithm() {
@@ -349,9 +433,13 @@ function resetAlgorithm() {
 }
 ```
 
+Notice that we reset both the general state (arrays, flags) and the visual state (edge states back to 'available'). The `initializeAlgorithmState()` call handles algorithm-specific setup—for Kruskal's, this sorts edges by weight and initializes union-find; for Prim's, it marks the starting node as visited and populates the priority queue.
+
 ## Visual Styling
 
 ### Node Drawing
+
+Nodes are drawn as colored circles with letter labels. The color indicates state—particularly useful for algorithms like Prim's where "visited" status matters.
 
 ```javascript
 function drawNodes() {
@@ -377,7 +465,11 @@ function drawNodes() {
 }
 ```
 
+We draw nodes *after* edges so they appear on top, covering the edge lines where they connect. The steel blue default color provides good contrast with the white labels and distinguishes nodes from edge weight labels.
+
 ### Edge Drawing
+
+Edges require more complex rendering: the line itself, and a label showing the weight. The visual treatment varies dramatically based on edge state, providing immediate feedback about the algorithm's decisions.
 
 ```javascript
 function drawEdges() {
@@ -424,7 +516,18 @@ function drawEdges() {
 }
 ```
 
+The visual hierarchy is important:
+
+- **Gold (accepted)**: Bright and thick—these edges are the result
+- **Yellow (considering)**: Draws attention to the current decision
+- **Gray (available)**: Neutral, waiting to be evaluated
+- **Light gray (rejected)**: Faded and thin—de-emphasized but still visible
+
+For weight labels, we use a fitted rectangle rather than a fixed-size circle. This accommodates different weight values (single digits vs. three digits) and provides a cleaner look.
+
 ### Color Standards
+
+Consistent colors across all algorithm visualizations help students transfer their understanding:
 
 | Element State | Color | RGB Value |
 |---------------|-------|-----------|
@@ -438,9 +541,16 @@ function drawEdges() {
 
 ## Step Log
 
-The step log provides a running history of algorithm decisions, helping students trace the execution.
+The step log provides a running history of algorithm decisions. This is valuable for several reasons:
+
+1. Students can review earlier decisions without having to restart
+2. The log makes the algorithm's decision pattern visible
+3. Color coding reinforces which actions were accepts vs. rejects
+4. The completion marker provides clear feedback when done
 
 ### Log Data Structure
+
+Each log entry is a simple object with a type (for coloring) and display text:
 
 ```javascript
 let stepLog = [];
@@ -452,7 +562,11 @@ let stepLog = [];
 }
 ```
 
+The text includes Unicode symbols (✓, ✗, ★) for quick visual scanning. Keep the text concise—the log panel has limited width.
+
 ### Drawing the Step Log
+
+The log panel is drawn as a semi-transparent white rectangle with a list of entries. When there are more entries than fit, it automatically scrolls to show the most recent.
 
 ```javascript
 function drawStepLog() {
@@ -508,6 +622,8 @@ function drawStepLog() {
 }
 ```
 
+The auto-scroll logic (`startIndex = max(0, stepLog.length - maxVisible)`) ensures that when the log fills up, older entries scroll off the top while the most recent entries remain visible. Entry numbers are preserved so students can reference specific steps.
+
 ### Log Entry Types and Symbols
 
 | Type | Symbol | Color | Usage |
@@ -518,7 +634,11 @@ function drawStepLog() {
 
 ## Responsive Design
 
+The visualization should adapt to different screen sizes, particularly for embedding in course materials or viewing on tablets.
+
 ### Window Resize Handler
+
+When the browser window resizes, we need to update the canvas and reposition elements:
 
 ```javascript
 function windowResized() {
@@ -534,7 +654,11 @@ function windowResized() {
     node.y = drawHeight / 2 + sin(angle) * radius;
   }
 }
+```
 
+Nodes are arranged in a circle, so we recalculate their positions using polar coordinates. The center point and radius are based on the new canvas width, keeping the graph properly positioned in the left portion of the canvas.
+
+```javascript
 function updateCanvasSize() {
   const container = document.querySelector('main');
   if (container) {
@@ -548,29 +672,46 @@ function updateCanvasSize() {
 }
 ```
 
+The `updateCanvasSize()` function reads the container width and updates the slider to stretch accordingly. This function is called both on resize and at the start of each `draw()` frame to handle container changes.
+
 ## Best Practices
 
 ### 1. Clear Visual Feedback
+
+Students should never wonder "what just happened?" Use distinct colors for different states, make transitions visible, and always highlight the element currently being considered.
+
 - Use distinct colors for different states
 - Animate transitions between states when possible
 - Highlight the currently considered element
 
 ### 2. Informative Status Messages
+
+The status text should tell a complete story. Don't just say "edge rejected"—explain *why*. For Kruskal's: "would create cycle." For Prim's: "both nodes already visited."
+
 - Explain what happened in each step
 - Include relevant values (weights, counts)
 - State why elements were rejected
 
 ### 3. Accessible Controls
+
+Place frequently used controls (Step, Auto Run) prominently. Use intuitive labels—"Slower/Faster" communicates better than raw millisecond values. Provide both manual and automatic modes to accommodate different learning styles.
+
 - Place frequently used controls prominently
 - Use intuitive labels ("Slower" / "Faster" not just values)
 - Provide both manual and automatic modes
 
 ### 4. Educational Value
+
+The goal is learning, not just demonstration. Show intermediate states so students can pause and think. Log all decisions so students can review. Let students control the pace—some need more time than others.
+
 - Show intermediate state, not just final result
 - Log all decisions for review
 - Allow students to control the pace
 
 ### 5. Consistent Layout
+
+When students use multiple algorithm visualizations, consistency reduces cognitive load. They can focus on the algorithm differences rather than relearning the interface.
+
 - Follow the standard layout across all algorithm visualizations
 - Use consistent color schemes
 - Maintain the same control positions
@@ -587,15 +728,15 @@ This pattern can be adapted for various graph algorithms:
 
 For each algorithm, modify:
 
-1. The `executeAlgorithmStep()` function with algorithm logic
-2. The acceptance/rejection criteria
-3. The step log messages
-4. Any algorithm-specific state variables
-5. Node/edge coloring based on algorithm state
+1. **The `executeAlgorithmStep()` function** - Implement the algorithm's core logic for selecting and evaluating elements
+2. **The acceptance/rejection criteria** - Define what makes an element valid for inclusion
+3. **The step log messages** - Write clear, educational explanations for each decision
+4. **Any algorithm-specific state variables** - Add data structures the algorithm needs (priority queues, distance arrays, etc.)
+5. **Node/edge coloring based on algorithm state** - Decide what states are meaningful to visualize
 
 ## Reference Implementation
 
 See the complete Minimum Spanning Tree MicroSim at:
 `docs/sims/minimum-spanning-tree/minimum-spanning-tree.js`
 
-This implementation demonstrates all the patterns described in this guide with both Kruskal's and Prim's algorithms.
+This implementation demonstrates all the patterns described in this guide with both Kruskal's and Prim's algorithms. Study the code to see how the abstract patterns translate into working visualization code.

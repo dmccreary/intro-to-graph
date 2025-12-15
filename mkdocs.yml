@@ -13,45 +13,46 @@ nav:
   - Course Description: course-description.md
   - Chapters:
     - Overview: chapters/index.md
-    - Chapter 1 - Introduction to Graph Thinking:
+    - Ch 1 - Introduction to Graph Thinking:
       - Content: chapters/01-intro-graph-thinking-data-modeling/index.md
       - Quiz: chapters/01-intro-graph-thinking-data-modeling/quiz.md
-    - Chapter 2 - Database Systems and NoSQL:
+    - Ch 2 - Database Systems and NoSQL:
       - Content: chapters/02-database-systems-nosql/index.md
       - Quiz: chapters/02-database-systems-nosql/quiz.md
-    - Chapter 3 - Labeled Property Graph Model:
+    - Ch 3 - Labeled Property Graph Model:
       - Content: chapters/03-labeled-property-graph-model/index.md
       - Quiz: chapters/03-labeled-property-graph-model/quiz.md
-    - Chapter 4 - Query Languages:
+    - Ch 4 - Query Languages:
       - Content: chapters/04-query-languages/index.md
       - Quiz: chapters/04-query-languages/quiz.md
-    - Chapter 5 - Performance and Benchmarking:
+    - Ch 5 - Performance and Benchmarking:
       - Content: chapters/05-performance-metrics-benchmarking/index.md
       - Quiz: chapters/05-performance-metrics-benchmarking/quiz.md
-    - Chapter 6 - Graph Algorithms:
+    - Ch 6 - Graph Algorithms:
       - Content: chapters/06-graph-algorithms/index.md
       - Quiz: chapters/06-graph-algorithms/quiz.md
-    - Chapter 7 - Social Network Modeling:
+    - Ch 7 - Social Network Modeling:
       - Content: chapters/07-social-network-modeling/index.md
       - Quiz: chapters/07-social-network-modeling/quiz.md
-    - Chapter 8 - Knowledge Representation:
+    - Ch 8 - Knowledge Representation:
       - Content: chapters/08-knowledge-representation-management/index.md
       - Quiz: chapters/08-knowledge-representation-management/quiz.md
-    - Chapter 9 - Modeling Patterns:
+    - Ch 9 - Modeling Patterns:
       - Content: chapters/09-modeling-patterns-data-loading/index.md
       - Quiz: chapters/09-modeling-patterns-data-loading/quiz.md
-    - Chapter 10 - Commerce and Supply Chain:
+    - Ch 10 - Commerce and Supply Chain:
       - Content: chapters/10-commerce-supply-chain-it/index.md
       - Quiz: chapters/10-commerce-supply-chain-it/quiz.md
-    - Chapter 11 - Financial and Healthcare:
+    - Ch 11 - Financial and Healthcare:
       - Content: chapters/11-financial-healthcare-regulatory/index.md
       - Quiz: chapters/11-financial-healthcare-regulatory/quiz.md
-    - Chapter 12 - Advanced Topics:
+    - Ch 12 - Advanced Topics:
       - Content: chapters/12-advanced-topics-distributed-systems/index.md
       - Quiz: chapters/12-advanced-topics-distributed-systems/quiz.md
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
+    - Graph Tutorial Layout: sims/graph-tutorial-layout/index.md
     - Knowledge Triangle: sims/knowledge-triangle/index.md
     - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
     - Multi-Hop Comparison: sims/multi-hop-comparison/index.md
@@ -84,6 +85,9 @@ nav:
     - prompts/index.md
     - prompts/chapter-06-content.md
     - prompts/the-neighborhood-walk.md
+  - Instructor's Guide:
+    - instructors-guide/index.md
+    - Step-by-Step Graph Animation: instructors-guide/creating-a-step-by-step-graph-animation.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
