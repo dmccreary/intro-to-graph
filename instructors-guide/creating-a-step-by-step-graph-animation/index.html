@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/instructors-guide/creating-a-step-by-step-graph-animation/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../glossary/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Creating a Step-by-Step Graph Animation - Introduction to Graph Databases</title>
+        <title>Step-by-Step Graph Animation - Introduction to Graph Databases</title>
       
     
     
@@ -59,7 +63,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Creating a Step-by-Step Graph Animation - Introduction to Graph Databases" >
+        <meta  property="og:title"  content="Step-by-Step Graph Animation - Introduction to Graph Databases" >
       
         <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
       
@@ -75,7 +79,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Creating a Step-by-Step Graph Animation - Introduction to Graph Databases" >
+        <meta  name="twitter:title"  content="Step-by-Step Graph Animation - Introduction to Graph Databases" >
       
         <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
       
@@ -135,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating a Step-by-Step Graph Animation
+              Step-by-Step Graph Animation
             
           </span>
         </div>
@@ -406,6 +410,10 @@
           
         
       
+        
+          
+        
+      
     
     
     
@@ -631,6 +639,509 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Instructor's Guide
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Instructor's Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Step-by-Step Graph Animation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Step-by-Step Graph Animation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-microsim-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard MicroSim Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard MicroSim Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-proportions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout Proportions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvas Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#draw-function-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draw Function Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-state-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm State Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-run-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-Run Toggle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Labels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-execution-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Execution Pattern
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Execution Pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-execution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Execution Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-step-function-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Step Function Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset Function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Styling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Styling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Drawing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Drawing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Standards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Log
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Data Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing-the-step-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing the Step Log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-entry-types-and-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Entry Types and Symbols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#window-resize-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Resize Handler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clear-visual-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clear Visual Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-informative-status-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Informative Status Messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-accessible-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Accessible Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-educational-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Educational Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consistent-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consistent Layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-adapting-for-different-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Adapting for Different Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Implementation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
@@ -783,13 +1294,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-layout" class="md-nav__link">
+  <a href="#standard-microsim-layout" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Layout
+      Standard MicroSim Layout
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Standard Layout">
+    <nav class="md-nav" aria-label="Standard MicroSim Layout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1185,8 +1696,9 @@
 <li>Track algorithm progress through a visual log</li>
 <li>Control the pace of learning through manual stepping or auto-run</li>
 </ul>
-<h2 id="standard-layout">Standard Layout</h2>
-<p>The recommended layout divides the canvas into distinct functional areas:</p>
+<p>The key insight behind these visualizations is that algorithms are easier to understand when you can see each decision being made. Rather than showing only the final result, we reveal the process—showing students <em>why</em> certain edges are chosen and others rejected.</p>
+<h2 id="standard-microsim-layout">Standard MicroSim Layout</h2>
+<p>The recommended layout divides the canvas into distinct functional areas. This consistent structure helps students quickly orient themselves when using different algorithm visualizations.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1219,7 +1731,9 @@
 │  Progress: X/Y edges  |  Total Weight: Z                    │
 └─────────────────────────────────────────────────────────────┘
 </code></pre></div></td></tr></table></div>
+<p>The <strong>graph visualization</strong> occupies the left portion where students can see nodes and edges change state as the algorithm progresses. The <strong>step log</strong> on the right provides a textual record of each decision, allowing students to review the algorithm's history. The <strong>control panel</strong> at the bottom gives students complete control over execution.</p>
 <h3 id="layout-proportions">Layout Proportions</h3>
+<p>These proportions have been tested to provide good visual balance across different screen sizes:</p>
 <table>
 <thead>
 <tr>
@@ -1253,6 +1767,7 @@
 </table>
 <h2 id="canvas-structure">Canvas Structure</h2>
 <h3 id="dimension-variables">Dimension Variables</h3>
+<p>We begin by defining global variables that control the canvas layout. Keeping these as variables (rather than hard-coded values) makes the visualization responsive and easy to adjust.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1269,7 +1784,9 @@
 <span class="kd">let</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">210</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">defaultTextSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
+<p>The <code>drawHeight</code> separates the visualization area from the controls. The <code>controlHeight</code> provides space for buttons, sliders, and status text. The <code>margin</code> and <code>sliderLeftMargin</code> ensure consistent spacing throughout the interface.</p>
 <h3 id="setup-function">Setup Function</h3>
+<p>The <code>setup()</code> function runs once when the page loads. It's responsible for creating the canvas, initializing the graph data, and creating the UI controls.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1290,7 +1807,9 @@
 <span class="w">  </span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Description for accessibility&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">LABEL</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Notice that we call <code>updateCanvasSize()</code> <em>before</em> creating the canvas. This ensures our canvas matches the container width for responsive design. The <code>describe()</code> function provides accessibility support for screen readers.</p>
 <h3 id="draw-function-structure">Draw Function Structure</h3>
+<p>The <code>draw()</code> function is called repeatedly by p5.js (typically 60 times per second). It's responsible for rendering the current state of the visualization and checking if it's time to execute the next algorithm step during auto-run mode.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1329,32 +1848,24 @@
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
 
 <span class="w">  </span><span class="c1">// Drawing area (light background)</span>
 <span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;aliceblue&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// draw a light gray border around both drawing region and control region</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">);</span>
-
 <span class="w">  </span><span class="c1">// Control area (white background)</span>
 <span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">controlHeight</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">// Draw border</span>
-<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">noFill</span><span class="p">();</span>
-<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Draw title</span>
 <span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">28</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">TOP</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
-<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Algorithm Name Visualizer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Algorithm Name Visualizer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">margin</span><span class="o">*</span><span class="mf">.5</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Reset to default settings</span>
 <span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
@@ -1377,45 +1888,54 @@
 <span class="w">  </span><span class="nx">drawControlLabels</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The draw function follows a consistent pattern:</p>
+<ol>
+<li><strong>Clear and set up backgrounds</strong> - We draw the aliceblue drawing area and white control area fresh each frame</li>
+<li><strong>Draw the title</strong> - Centered at the top of the canvas</li>
+<li><strong>Reset drawing settings</strong> - Ensure consistent defaults before drawing components</li>
+<li><strong>Draw graph components</strong> - Edges first (so they appear behind nodes), then nodes, then the step log</li>
+<li><strong>Handle auto-run timing</strong> - Check if enough time has passed to execute the next step</li>
+<li><strong>Draw control labels</strong> - Status text and slider labels in the control area</li>
+</ol>
 <h2 id="data-structures">Data Structures</h2>
 <h3 id="graph-representation">Graph Representation</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Graph data structures</span>
+<p>The graph is stored using simple JavaScript arrays and objects. This approach is easy to understand and manipulate, making it ideal for educational purposes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Graph data structures</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">nodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">resultEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w">  </span><span class="c1">// Edges in the result (e.g., MST)</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">nodeCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">nodeRadius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
-
-<span class="c1">// Node structure</span>
+</code></pre></div></td></tr></table></div>
+<p>Each <strong>node</strong> contains its position, identifier, and display label:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Node structure</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;A&#39;</span>
 <span class="p">}</span>
-
-<span class="c1">// Edge structure</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>id</code> is used internally to reference nodes in edges. The <code>x</code> and <code>y</code> coordinates determine where the node is drawn. The <code>label</code> (typically a letter A-H) is displayed to the user.</p>
+<p>Each <strong>edge</strong> connects two nodes and tracks its current state in the algorithm:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Edge structure</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w">      </span><span class="c1">// Source node ID</span>
 <span class="w">  </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w">        </span><span class="c1">// Target node ID</span>
@@ -1423,7 +1943,9 @@
 <span class="w">  </span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;available&#39;</span><span class="w">  </span><span class="c1">// available, considering, accepted, rejected</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The <code>state</code> property is crucial for visualization. As the algorithm runs, edges transition through states: they start as <code>'available'</code>, may briefly be <code>'considering'</code> while being evaluated, and end up either <code>'accepted'</code> (included in the result) or <code>'rejected'</code> (excluded). Each state is rendered with a different color.</p>
 <h3 id="algorithm-state-variables">Algorithm State Variables</h3>
+<p>Beyond the graph data, we need variables to track the algorithm's execution state:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1450,8 +1972,20 @@
 <span class="kd">let</span><span class="w"> </span><span class="nx">lastStepTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">stepLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w">  </span><span class="c1">// Log of all steps taken</span>
 </code></pre></div></td></tr></table></div>
+<p>These variables serve different purposes:</p>
+<ul>
+<li><strong><code>currentAlgorithm</code></strong> - Allows switching between multiple algorithms (e.g., Kruskal's vs. Prim's)</li>
+<li><strong><code>animationSpeed</code></strong> - Controls the delay between steps during auto-run (in milliseconds)</li>
+<li><strong><code>isRunning</code></strong> - True when auto-run is active, false when paused or stepping manually</li>
+<li><strong><code>isComplete</code></strong> - True when the algorithm has finished (prevents further steps)</li>
+<li><strong><code>stepIndex</code></strong> - Tracks progress through the algorithm's work queue</li>
+<li><strong><code>consideredElement</code></strong> - The edge currently being evaluated (highlighted in yellow)</li>
+<li><strong><code>stepDescription</code></strong> - Human-readable text explaining the current/last step</li>
+<li><strong><code>stepLog</code></strong> - Array of all steps for display in the log panel</li>
+</ul>
 <h2 id="ui-controls">UI Controls</h2>
 <h3 id="control-creation">Control Creation</h3>
+<p>The control panel provides four buttons and a slider. Each control is created using p5.js DOM functions and positioned absolutely within the canvas.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1536,7 +2070,13 @@
 <span class="w">  </span><span class="nx">animationSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p><strong>Algorithm Selector</strong>: A dropdown that lets users choose between algorithms. When changed, it resets the visualization to start fresh with the new algorithm.</p>
+<p><strong>Step Forward Button</strong>: Executes exactly one step of the algorithm. This is essential for detailed study—students can carefully examine each decision.</p>
+<p><strong>Auto Run Button</strong>: Toggles between automatic execution and paused state. The button label changes to "Pause" when running.</p>
+<p><strong>Reset Button</strong>: Generates a new random graph and resets all algorithm state. This lets students see the algorithm work on different inputs.</p>
+<p><strong>Speed Slider</strong>: Controls the delay between auto-run steps. Notice the inversion logic: we want "Slower" on the left (intuitive), but higher delay values mean slower animation. The formula <code>2100 - sliderValue</code> converts the slider's 100-2000 range into a 2000-100ms delay range.</p>
 <h3 id="auto-run-toggle">Auto-Run Toggle</h3>
+<p>The auto-run toggle function manages the running state and updates the button label to reflect the current mode:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1557,7 +2097,9 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>When starting auto-run, we record the current time in <code>lastStepTime</code>. This ensures the first step doesn't execute immediately—it waits for the full <code>animationSpeed</code> delay, giving students time to observe the initial state.</p>
 <h3 id="control-labels">Control Labels</h3>
+<p>The control panel needs text labels to explain the slider and show current status. This function draws those labels, being careful to reset text alignment after drawing positioned labels.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1606,8 +2148,11 @@
 <span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="sb">`Progress: </span><span class="si">${</span><span class="nx">resultEdges</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">nodeCount</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">120</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p><strong>Important</strong>: After drawing the right-aligned "Faster" label, we must reset <code>textAlign</code> back to <code>LEFT, CENTER</code>. Forgetting this will cause the status text to render off-screen. This is a common p5.js pitfall—drawing state persists between calls.</p>
 <h2 id="step-execution-pattern">Step Execution Pattern</h2>
+<p>The step execution pattern is the heart of the visualization. It separates the concerns of <em>when</em> to execute (timing/UI) from <em>what</em> to execute (algorithm logic).</p>
 <h3 id="main-execution-function">Main Execution Function</h3>
+<p>This function acts as a dispatcher, routing to the appropriate algorithm and checking for completion:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1646,7 +2191,9 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The early return on <code>isComplete</code> prevents any action after the algorithm finishes. After executing a step, we check if the algorithm is now complete (e.g., MST has n-1 edges). If so, we update the UI state and log the completion.</p>
 <h3 id="algorithm-step-function-template">Algorithm Step Function Template</h3>
+<p>Each algorithm step follows a consistent pattern: get the next element to consider, evaluate it, and either accept or reject it. This template can be adapted for any greedy graph algorithm:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1709,7 +2256,10 @@
 <span class="w">  </span><span class="nx">stepIndex</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The key educational value comes from the branching logic. Students see clearly that the algorithm makes a binary decision for each element: accept or reject. The <code>stepDescription</code> provides detailed context, while the <code>stepLog</code> entry provides a concise record.</p>
+<p>For <strong>Kruskal's algorithm</strong>, the acceptance criterion is "does this edge create a cycle?" (using union-find). For <strong>Prim's algorithm</strong>, it's "does this edge connect a visited node to an unvisited node?"</p>
 <h3 id="reset-function">Reset Function</h3>
+<p>The reset function restores all state to initial values, preparing for a fresh run:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1750,8 +2300,10 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Notice that we reset both the general state (arrays, flags) and the visual state (edge states back to 'available'). The <code>initializeAlgorithmState()</code> call handles algorithm-specific setup—for Kruskal's, this sorts edges by weight and initializes union-find; for Prim's, it marks the starting node as visited and populates the priority queue.</p>
 <h2 id="visual-styling">Visual Styling</h2>
 <h3 id="node-drawing">Node Drawing</h3>
+<p>Nodes are drawn as colored circles with letter labels. The color indicates state—particularly useful for algorithms like Prim's where "visited" status matters.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1794,7 +2346,9 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>We draw nodes <em>after</em> edges so they appear on top, covering the edge lines where they connect. The steel blue default color provides good contrast with the white labels and distinguishes nodes from edge weight labels.</p>
 <h3 id="edge-drawing">Edge Drawing</h3>
+<p>Edges require more complex rendering: the line itself, and a label showing the weight. The visual treatment varies dramatically based on edge state, providing immediate feedback about the algorithm's decisions.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1879,7 +2433,16 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The visual hierarchy is important:</p>
+<ul>
+<li><strong>Gold (accepted)</strong>: Bright and thick—these edges are the result</li>
+<li><strong>Yellow (considering)</strong>: Draws attention to the current decision</li>
+<li><strong>Gray (available)</strong>: Neutral, waiting to be evaluated</li>
+<li><strong>Light gray (rejected)</strong>: Faded and thin—de-emphasized but still visible</li>
+</ul>
+<p>For weight labels, we use a fitted rectangle rather than a fixed-size circle. This accommodates different weight values (single digits vs. three digits) and provides a cleaner look.</p>
 <h3 id="color-standards">Color Standards</h3>
+<p>Consistent colors across all algorithm visualizations help students transfer their understanding:</p>
 <table>
 <thead>
 <tr>
@@ -1927,8 +2490,15 @@
 </tbody>
 </table>
 <h2 id="step-log">Step Log</h2>
-<p>The step log provides a running history of algorithm decisions, helping students trace the execution.</p>
+<p>The step log provides a running history of algorithm decisions. This is valuable for several reasons:</p>
+<ol>
+<li>Students can review earlier decisions without having to restart</li>
+<li>The log makes the algorithm's decision pattern visible</li>
+<li>Color coding reinforces which actions were accepts vs. rejects</li>
+<li>The completion marker provides clear feedback when done</li>
+</ol>
 <h3 id="log-data-structure">Log Data Structure</h3>
+<p>Each log entry is a simple object with a type (for coloring) and display text:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1943,7 +2513,9 @@
 <span class="w">  </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;✓ A-B (75)&#39;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The text includes Unicode symbols (✓, ✗, ★) for quick visual scanning. Keep the text concise—the log panel has limited width.</p>
 <h3 id="drawing-the-step-log">Drawing the Step Log</h3>
+<p>The log panel is drawn as a semi-transparent white rectangle with a list of entries. When there are more entries than fit, it automatically scrolls to show the most recent.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2046,6 +2618,7 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The auto-scroll logic (<code>startIndex = max(0, stepLog.length - maxVisible)</code>) ensures that when the log fills up, older entries scroll off the top while the most recent entries remain visible. Entry numbers are preserved so students can reference specific steps.</p>
 <h3 id="log-entry-types-and-symbols">Log Entry Types and Symbols</h3>
 <table>
 <thead>
@@ -2078,7 +2651,9 @@
 </tbody>
 </table>
 <h2 id="responsive-design">Responsive Design</h2>
+<p>The visualization should adapt to different screen sizes, particularly for embedding in course materials or viewing on tablets.</p>
 <h3 id="window-resize-handler">Window Resize Handler</h3>
+<p>When the browser window resizes, we need to update the canvas and reposition elements:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2091,19 +2666,7 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">windowResized</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">windowResized</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
 <span class="w">  </span><span class="nx">resizeCanvas</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasHeight</span><span class="p">);</span>
 
@@ -2116,8 +2679,19 @@
 <span class="w">    </span><span class="nx">node</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">sin</span><span class="p">(</span><span class="nx">angle</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">radius</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-
-<span class="kd">function</span><span class="w"> </span><span class="nx">updateCanvasSize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div></td></tr></table></div>
+<p>Nodes are arranged in a circle, so we recalculate their positions using polar coordinates. The center point and radius are based on the new canvas width, keeping the graph properly positioned in the left portion of the canvas.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">updateCanvasSize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">container</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">container</span><span class="p">.</span><span class="nx">offsetWidth</span><span class="p">;</span>
@@ -2129,32 +2703,38 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>The <code>updateCanvasSize()</code> function reads the container width and updates the slider to stretch accordingly. This function is called both on resize and at the start of each <code>draw()</code> frame to handle container changes.</p>
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="1-clear-visual-feedback">1. Clear Visual Feedback</h3>
+<p>Students should never wonder "what just happened?" Use distinct colors for different states, make transitions visible, and always highlight the element currently being considered.</p>
 <ul>
 <li>Use distinct colors for different states</li>
 <li>Animate transitions between states when possible</li>
 <li>Highlight the currently considered element</li>
 </ul>
 <h3 id="2-informative-status-messages">2. Informative Status Messages</h3>
+<p>The status text should tell a complete story. Don't just say "edge rejected"—explain <em>why</em>. For Kruskal's: "would create cycle." For Prim's: "both nodes already visited."</p>
 <ul>
 <li>Explain what happened in each step</li>
 <li>Include relevant values (weights, counts)</li>
 <li>State why elements were rejected</li>
 </ul>
 <h3 id="3-accessible-controls">3. Accessible Controls</h3>
+<p>Place frequently used controls (Step, Auto Run) prominently. Use intuitive labels—"Slower/Faster" communicates better than raw millisecond values. Provide both manual and automatic modes to accommodate different learning styles.</p>
 <ul>
 <li>Place frequently used controls prominently</li>
 <li>Use intuitive labels ("Slower" / "Faster" not just values)</li>
 <li>Provide both manual and automatic modes</li>
 </ul>
 <h3 id="4-educational-value">4. Educational Value</h3>
+<p>The goal is learning, not just demonstration. Show intermediate states so students can pause and think. Log all decisions so students can review. Let students control the pace—some need more time than others.</p>
 <ul>
 <li>Show intermediate state, not just final result</li>
 <li>Log all decisions for review</li>
 <li>Allow students to control the pace</li>
 </ul>
 <h3 id="5-consistent-layout">5. Consistent Layout</h3>
+<p>When students use multiple algorithm visualizations, consistency reduces cognitive load. They can focus on the algorithm differences rather than relearning the interface.</p>
 <ul>
 <li>Follow the standard layout across all algorithm visualizations</li>
 <li>Use consistent color schemes</li>
@@ -2171,16 +2751,16 @@
 </ul>
 <p>For each algorithm, modify:</p>
 <ol>
-<li>The <code>executeAlgorithmStep()</code> function with algorithm logic</li>
-<li>The acceptance/rejection criteria</li>
-<li>The step log messages</li>
-<li>Any algorithm-specific state variables</li>
-<li>Node/edge coloring based on algorithm state</li>
+<li><strong>The <code>executeAlgorithmStep()</code> function</strong> - Implement the algorithm's core logic for selecting and evaluating elements</li>
+<li><strong>The acceptance/rejection criteria</strong> - Define what makes an element valid for inclusion</li>
+<li><strong>The step log messages</strong> - Write clear, educational explanations for each decision</li>
+<li><strong>Any algorithm-specific state variables</strong> - Add data structures the algorithm needs (priority queues, distance arrays, etc.)</li>
+<li><strong>Node/edge coloring based on algorithm state</strong> - Decide what states are meaningful to visualize</li>
 </ol>
 <h2 id="reference-implementation">Reference Implementation</h2>
 <p>See the complete Minimum Spanning Tree MicroSim at:
 <code>docs/sims/minimum-spanning-tree/minimum-spanning-tree.js</code></p>
-<p>This implementation demonstrates all the patterns described in this guide with both Kruskal's and Prim's algorithms.</p>
+<p>This implementation demonstrates all the patterns described in this guide with both Kruskal's and Prim's algorithms. Study the code to see how the abstract patterns translate into working visualization code.</p>
 
 
 
@@ -2214,6 +2794,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Instructors Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Instructors Guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
