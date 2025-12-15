@@ -27,13 +27,22 @@ let stepLog = [
   { type: 'complete', text: '★ Complete! Total: 242' }
 ];
 
-// UI controls (simulated)
+// UI controls
 let showAnnotations = true;
+let showSampleContentCheckbox;
+let showSampleContent = false;
 
 function setup() {
   updateCanvasSize();
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
+
+  // Create checkbox for toggling sample content
+  showSampleContentCheckbox = createCheckbox('Show Sample Content', false);
+  showSampleContentCheckbox.position(canvasWidth - 180, drawHeight + 15);
+  showSampleContentCheckbox.changed(() => {
+    showSampleContent = showSampleContentCheckbox.checked();
+  });
 
   // Initialize sample graph nodes in a circle
   initializeGraph();
