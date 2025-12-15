@@ -19,6 +19,8 @@ The key insight behind these visualizations is that algorithms are easier to und
 
 
 The recommended layout divides the canvas into distinct functional areas. This consistent structure helps students quickly orient themselves when using different algorithm visualizations.
+<iframe src="../sims/graph-tutorial-layout/main.html" height="652px" width="100%" scrolling="no"></iframe>
+[Run the Graph Tutorial Layout Fullscreen](../sims/graph-tutorial-layout/main.html)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
