@@ -2,258 +2,266 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/about/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/contact/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/course-description/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/faq/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/feedback/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/glossary/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/how-we-built-this-site/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/license/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/references/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/01-intro-graph-thinking-data-modeling/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/01-intro-graph-thinking-data-modeling/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/02-database-systems-nosql/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/02-database-systems-nosql/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/03-labeled-property-graph-model/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/03-labeled-property-graph-model/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/04-query-languages/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/04-query-languages/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/05-performance-metrics-benchmarking/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/05-performance-metrics-benchmarking/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/06-graph-algorithms/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/06-graph-algorithms/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/07-social-network-modeling/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/07-social-network-modeling/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/08-knowledge-representation-management/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/08-knowledge-representation-management/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/09-modeling-patterns-data-loading/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/09-modeling-patterns-data-loading/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/10-commerce-supply-chain-it/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/10-commerce-supply-chain-it/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/11-financial-healthcare-regulatory/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/11-financial-healthcare-regulatory/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/12-advanced-topics-distributed-systems/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/chapters/12-advanced-topics-distributed-systems/quiz/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/intro-to-graph/instructors-guide/</loc>
+         <lastmod>2025-12-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/intro-to-graph/instructors-guide/creating-a-step-by-step-graph-animation/</loc>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/book-metrics/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/chapter-metrics/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/concept-list/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/course-description-assessment/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/diagram-details/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/diagram-table/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/faq-coverage-gaps/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/faq-quality-report/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/glossary-quality-report/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/quality-metrics/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/quiz-generation-report/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/notes/knowledge-types/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/prompts/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/prompts/chapter-06-content/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/prompts/the-neighborhood-walk/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/graph-viewer/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/requirements/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/logs/knowledge-triangle/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/minimum-spanning-tree/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/multi-hop-comparison/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/org-chart/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/sims/rdbms-vs-graph-performance/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/stories/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/stories/jellyfish-and-flatworm/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/intro-to-graph/stories/neighborhood-walk/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-15</lastmod>
     </url>
 </urlset>

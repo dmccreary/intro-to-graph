@@ -1,0 +1,2249 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/instructors-guide/creating-a-step-by-step-graph-animation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Creating a Step-by-Step Graph Animation - Introduction to Graph Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Creating a Step-by-Step Graph Animation - Introduction to Graph Databases" >
+      
+        <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/instructors-guide/creating-a-step-by-step-graph-animation.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/instructors-guide/creating-a-step-by-step-graph-animation/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Creating a Step-by-Step Graph Animation - Introduction to Graph Databases" >
+      
+        <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/instructors-guide/creating-a-step-by-step-graph-animation.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-a-step-by-step-graph-animation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Graph Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating a Step-by-Step Graph Animation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Introduction to Graph Databases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intro-to-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-proportions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout Proportions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvas Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#draw-function-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draw Function Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-state-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm State Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-run-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-Run Toggle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Labels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-execution-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Execution Pattern
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Execution Pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-execution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Execution Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-step-function-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Step Function Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset Function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Styling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Styling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Drawing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Drawing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Standards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Log
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Data Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing-the-step-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing the Step Log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-entry-types-and-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Entry Types and Symbols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#window-resize-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Resize Handler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clear-visual-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clear Visual Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-informative-status-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Informative Status Messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-accessible-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Accessible Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-educational-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Educational Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consistent-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consistent Layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-adapting-for-different-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Adapting for Different Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Implementation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/instructors-guide/creating-a-step-by-step-graph-animation.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="creating-a-step-by-step-graph-animation">Creating a Step-by-Step Graph Animation</h1>
+<p>This guide provides comprehensive standards and patterns for creating interactive step-by-step graph algorithm visualizations using p5.js. These MicroSims allow students to understand algorithms by watching them execute one step at a time or running automatically at a controlled speed.</p>
+<h2 id="overview">Overview</h2>
+<p>Step-by-step graph animations are powerful teaching tools that help students:</p>
+<ul>
+<li>Visualize how graph algorithms make decisions</li>
+<li>Understand the order of operations</li>
+<li>See which elements are being considered, accepted, or rejected</li>
+<li>Track algorithm progress through a visual log</li>
+<li>Control the pace of learning through manual stepping or auto-run</li>
+</ul>
+<h2 id="standard-layout">Standard Layout</h2>
+<p>The recommended layout divides the canvas into distinct functional areas:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│                         Title                                │
+├────────────────────────────────┬────────────────────────────┤
+│                                │                            │
+│                                │        Step Log            │
+│       Graph Visualization      │                            │
+│       (Left 2/3 of canvas)     │    (Right 1/3 of canvas)   │
+│                                │                            │
+│                                │                            │
+├────────────────────────────────┴────────────────────────────┤
+│                      Control Panel                           │
+│  [Algorithm Select] [Step] [Auto Run] [Reset]               │
+│  Animation Speed: ___ms    Slower ═══════════════ Faster    │
+│  Status: Current step description                           │
+│  Progress: X/Y edges  |  Total Weight: Z                    │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></td></tr></table></div>
+<h3 id="layout-proportions">Layout Proportions</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Position</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Graph Center</td>
+<td><code>canvasWidth * 0.34</code></td>
+<td>Left portion</td>
+</tr>
+<tr>
+<td>Step Log</td>
+<td><code>canvasWidth * 0.67</code></td>
+<td>Right 30%</td>
+</tr>
+<tr>
+<td>Drawing Area</td>
+<td>Top</td>
+<td><code>drawHeight</code> (500px default)</td>
+</tr>
+<tr>
+<td>Control Panel</td>
+<td>Bottom</td>
+<td><code>controlHeight</code> (150px default)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="canvas-structure">Canvas Structure</h2>
+<h3 id="dimension-variables">Dimension Variables</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Canvas dimensions - REQUIRED structure</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">controlHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">canvasHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">controlHeight</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">margin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">210</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultTextSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="setup-function">Setup Function</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span><span class="w">  </span><span class="c1">// Get container width first</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasHeight</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">));</span>
+
+<span class="w">  </span><span class="nx">initializeGraph</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">createControls</span><span class="p">();</span>
+
+<span class="w">  </span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Description for accessibility&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">LABEL</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="draw-function-structure">Draw Function Structure</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Drawing area (light background)</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;aliceblue&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Control area (white background)</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">controlHeight</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Draw border</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noFill</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Draw title</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">28</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">TOP</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Algorithm Name Visualizer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Reset to default settings</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="nx">defaultTextSize</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Draw components</span>
+<span class="w">  </span><span class="nx">drawEdges</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">drawNodes</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">drawStepLog</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Auto-run animation</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isRunning</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">isComplete</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">lastStepTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">animationSpeed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">executeNextStep</span><span class="p">();</span>
+<span class="w">      </span><span class="nx">lastStepTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">millis</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">drawControlLabels</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="data-structures">Data Structures</h2>
+<h3 id="graph-representation">Graph Representation</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Graph data structures</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resultEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w">  </span><span class="c1">// Edges in the result (e.g., MST)</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nodeCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nodeRadius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
+
+<span class="c1">// Node structure</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;A&#39;</span>
+<span class="p">}</span>
+
+<span class="c1">// Edge structure</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w">      </span><span class="c1">// Source node ID</span>
+<span class="w">  </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w">        </span><span class="c1">// Target node ID</span>
+<span class="w">  </span><span class="nx">weight</span><span class="o">:</span><span class="w"> </span><span class="mf">75</span><span class="p">,</span><span class="w">   </span><span class="c1">// Edge weight (if applicable)</span>
+<span class="w">  </span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;available&#39;</span><span class="w">  </span><span class="c1">// available, considering, accepted, rejected</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="algorithm-state-variables">Algorithm State Variables</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Algorithm state</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">currentAlgorithm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;algorithm1&#39;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">animationSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span><span class="w">  </span><span class="c1">// milliseconds between steps</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">isRunning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">     </span><span class="c1">// Auto-run enabled</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">isComplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">    </span><span class="c1">// Algorithm finished</span>
+
+<span class="c1">// Execution tracking</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">stepIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">consideredElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">rejectedElements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">stepDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">lastStepTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">stepLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w">  </span><span class="c1">// Log of all steps taken</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="ui-controls">UI Controls</h2>
+<h3 id="control-creation">Control Creation</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">createControls</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Algorithm selector (if multiple algorithms)</span>
+<span class="w">  </span><span class="nx">algorithmSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSelect</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">algorithmSelect</span><span class="p">.</span><span class="nx">option</span><span class="p">(</span><span class="s1">&#39;Algorithm 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;algo1&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">algorithmSelect</span><span class="p">.</span><span class="nx">option</span><span class="p">(</span><span class="s1">&#39;Algorithm 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;algo2&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">algorithmSelect</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">algorithmSelect</span><span class="p">.</span><span class="nx">changed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">currentAlgorithm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">algorithmSelect</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">resetAlgorithm</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Step button - advances one step</span>
+<span class="w">  </span><span class="nx">stepButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createButton</span><span class="p">(</span><span class="s1">&#39;Step Forward&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">stepButton</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="mf">180</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">stepButton</span><span class="p">.</span><span class="nx">mousePressed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">isComplete</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">executeNextStep</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Auto Run button - toggles automatic execution</span>
+<span class="w">  </span><span class="nx">autoRunButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createButton</span><span class="p">(</span><span class="s1">&#39;Auto Run&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">autoRunButton</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="mf">290</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">autoRunButton</span><span class="p">.</span><span class="nx">mousePressed</span><span class="p">(</span><span class="nx">toggleAutoRun</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Reset button - restarts with new random graph</span>
+<span class="w">  </span><span class="nx">resetButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createButton</span><span class="p">(</span><span class="s1">&#39;Reset&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">resetButton</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="mf">380</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">resetButton</span><span class="p">.</span><span class="nx">mousePressed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">initializeGraph</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Speed slider (inverted: left=slow, right=fast)</span>
+<span class="w">  </span><span class="nx">speedSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span><span class="w"> </span><span class="mf">1600</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">sliderLeftMargin</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">60</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margin</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">input</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Invert: slider 100 = 2000ms (slow), slider 2000 = 100ms (fast)</span>
+<span class="w">    </span><span class="nx">animationSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="nx">animationSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="auto-run-toggle">Auto-Run Toggle</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">toggleAutoRun</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isComplete</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">isRunning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">isRunning</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">autoRunButton</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">isRunning</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;Pause&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Auto Run&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isRunning</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">lastStepTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">millis</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="control-labels">Control Labels</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">drawControlLabels</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="nx">defaultTextSize</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Speed slider label</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Animation Speed: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">animationSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;ms&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">70</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Slower/Faster labels above the slider</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="nx">defaultTextSize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">BOTTOM</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Slower&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">57</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">RIGHT</span><span class="p">,</span><span class="w"> </span><span class="nx">BOTTOM</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Faster&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margin</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">57</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Reset alignment for status information</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">14</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Status: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">stepDescription</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="sb">`Progress: </span><span class="si">${</span><span class="nx">resultEdges</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">nodeCount</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">120</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="step-execution-pattern">Step Execution Pattern</h2>
+<h3 id="main-execution-function">Main Execution Function</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">executeNextStep</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isComplete</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Dispatch to appropriate algorithm</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">currentAlgorithm</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;algo1&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">executeAlgo1Step</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">executeAlgo2Step</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Check for completion</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isAlgorithmComplete</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">isComplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">isRunning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stepDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Complete! Final result achieved.&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stepLog</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;complete&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;★ Complete!&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">autoRunButton</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Auto Run&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="algorithm-step-function-template">Algorithm Step Function Template</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">executeAlgorithmStep</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get next element to consider</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getNextElement</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">isComplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Evaluate the element</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">shouldAccept</span><span class="p">(</span><span class="nx">element</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Accept the element</span>
+<span class="w">    </span><span class="nx">resultEdges</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">element</span><span class="p">.</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;accepted&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stepDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Accepted: </span><span class="si">${</span><span class="nx">describeElement</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stepLog</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;accepted&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="sb">`✓ </span><span class="si">${</span><span class="nx">shortDescription</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Reject the element</span>
+<span class="w">    </span><span class="nx">rejectedElements</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">element</span><span class="p">.</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;rejected&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stepDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Rejected: </span><span class="si">${</span><span class="nx">describeElement</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="si">}</span><span class="sb"> - reason`</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stepLog</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rejected&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="sb">`✗ </span><span class="si">${</span><span class="nx">shortDescription</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="si">}</span><span class="sb"> - reason`</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">stepIndex</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="reset-function">Reset Function</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">resetAlgorithm</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">isRunning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">isComplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">resultEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="nx">rejectedElements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="nx">stepIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">consideredElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">stepLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="nx">stepDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Click &quot;Step Forward&quot; or &quot;Auto Run&quot; to begin&#39;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Reset element states</span>
+<span class="w">  </span><span class="nx">edges</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;available&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Initialize algorithm-specific data structures</span>
+<span class="w">  </span><span class="nx">initializeAlgorithmState</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">autoRunButton</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">autoRunButton</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Auto Run&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="visual-styling">Visual Styling</h2>
+<h3 id="node-drawing">Node Drawing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">drawNodes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">node</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">nodes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Color based on state</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isNodeVisited</span><span class="p">(</span><span class="nx">node</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fill</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span><span class="w">  </span><span class="c1">// Light green for visited</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fill</span><span class="p">(</span><span class="mf">70</span><span class="p">,</span><span class="w"> </span><span class="mf">130</span><span class="p">,</span><span class="w"> </span><span class="mf">180</span><span class="p">);</span><span class="w">   </span><span class="c1">// Steel blue default</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">stroke</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">ellipse</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">node</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">nodeRadius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">nodeRadius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="mf">255</span><span class="p">);</span><span class="w">  </span><span class="c1">// White text</span>
+<span class="w">    </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">label</span><span class="p">,</span><span class="w"> </span><span class="nx">node</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">node</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="edge-drawing">Edge Drawing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">drawEdges</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">edge</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">edges</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">fromNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nodes</span><span class="p">[</span><span class="nx">edge</span><span class="p">.</span><span class="kr">from</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">toNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nodes</span><span class="p">[</span><span class="nx">edge</span><span class="p">.</span><span class="nx">to</span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// Determine color and width based on state</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">edgeColor</span><span class="p">,</span><span class="w"> </span><span class="nx">edgeWidth</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edge</span><span class="p">.</span><span class="nx">state</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;accepted&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">edgeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">215</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Gold</span>
+<span class="w">      </span><span class="nx">edgeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edge</span><span class="p">.</span><span class="nx">state</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;rejected&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">edgeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">(</span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span><span class="w">  </span><span class="c1">// Light gray</span>
+<span class="w">      </span><span class="nx">edgeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edge</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">consideredElement</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">edgeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Yellow (considering)</span>
+<span class="w">      </span><span class="nx">edgeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">edgeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">(</span><span class="mf">128</span><span class="p">,</span><span class="w"> </span><span class="mf">128</span><span class="p">,</span><span class="w"> </span><span class="mf">128</span><span class="p">);</span><span class="w">  </span><span class="c1">// Gray default</span>
+<span class="w">      </span><span class="nx">edgeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">stroke</span><span class="p">(</span><span class="nx">edgeColor</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="nx">edgeWidth</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">line</span><span class="p">(</span><span class="nx">fromNode</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">fromNode</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">toNode</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">toNode</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Draw weight label (fitted rectangle)</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">midX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">fromNode</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">toNode</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">midY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">fromNode</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">toNode</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">12</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">weightText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="nx">edge</span><span class="p">.</span><span class="nx">weight</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">textW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textWidth</span><span class="p">(</span><span class="nx">weightText</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">padding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="mf">240</span><span class="p">,</span><span class="w"> </span><span class="mf">248</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">);</span><span class="w">  </span><span class="c1">// Aliceblue background</span>
+<span class="w">    </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">rectMode</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">rect</span><span class="p">(</span><span class="nx">midX</span><span class="p">,</span><span class="w"> </span><span class="nx">midY</span><span class="p">,</span><span class="w"> </span><span class="nx">textW</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">padding</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">rectMode</span><span class="p">(</span><span class="nx">CORNER</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="nx">weightText</span><span class="p">,</span><span class="w"> </span><span class="nx">midX</span><span class="p">,</span><span class="w"> </span><span class="nx">midY</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="color-standards">Color Standards</h3>
+<table>
+<thead>
+<tr>
+<th>Element State</th>
+<th>Color</th>
+<th>RGB Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node default</td>
+<td>Steel blue</td>
+<td><code>(70, 130, 180)</code></td>
+</tr>
+<tr>
+<td>Node visited</td>
+<td>Light green</td>
+<td><code>(100, 200, 100)</code></td>
+</tr>
+<tr>
+<td>Edge default</td>
+<td>Gray</td>
+<td><code>(128, 128, 128)</code></td>
+</tr>
+<tr>
+<td>Edge accepted</td>
+<td>Gold</td>
+<td><code>(255, 215, 0)</code></td>
+</tr>
+<tr>
+<td>Edge rejected</td>
+<td>Light gray</td>
+<td><code>(200, 200, 200)</code></td>
+</tr>
+<tr>
+<td>Edge considering</td>
+<td>Yellow</td>
+<td><code>(255, 255, 0)</code></td>
+</tr>
+<tr>
+<td>Edge label bg</td>
+<td>Aliceblue</td>
+<td><code>(240, 248, 255)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-log">Step Log</h2>
+<p>The step log provides a running history of algorithm decisions, helping students trace the execution.</p>
+<h3 id="log-data-structure">Log Data Structure</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">stepLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+
+<span class="c1">// Log entry structure</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;accepted&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// &#39;accepted&#39;, &#39;rejected&#39;, or &#39;complete&#39;</span>
+<span class="w">  </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;✓ A-B (75)&#39;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="drawing-the-step-log">Drawing the Step Log</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">drawStepLog</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Position on right side</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">logX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.67</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">logY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">logWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.30</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">logHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">70</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">lineHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">22</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Draw background</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">230</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="mf">200</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="nx">logX</span><span class="p">,</span><span class="w"> </span><span class="nx">logY</span><span class="p">,</span><span class="w"> </span><span class="nx">logWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">logHeight</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Draw title</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">TOP</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Step Log&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">logX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">logWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">logY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Draw entries (auto-scroll to show recent)</span>
+<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">,</span><span class="w"> </span><span class="nx">TOP</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">14</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">maxVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">floor</span><span class="p">((</span><span class="nx">logHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">lineHeight</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">startIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">max</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">stepLog</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">maxVisible</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">startIndex</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">stepLog</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">stepLog</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">yPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">logY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">40</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">startIndex</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">lineHeight</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Color by type</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;accepted&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fill</span><span class="p">(</span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="mf">139</span><span class="p">,</span><span class="w"> </span><span class="mf">34</span><span class="p">);</span><span class="w">      </span><span class="c1">// Forest green</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;complete&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fill</span><span class="p">(</span><span class="mf">184</span><span class="p">,</span><span class="w"> </span><span class="mf">134</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">);</span><span class="w">     </span><span class="c1">// Dark goldenrod</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fill</span><span class="p">(</span><span class="mf">178</span><span class="p">,</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="mf">34</span><span class="p">);</span><span class="w">      </span><span class="c1">// Firebrick red</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">. </span><span class="si">${</span><span class="nx">entry</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="nx">logX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">yPos</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Empty state message</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">stepLog</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="mf">128</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;No steps yet&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">logX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">logWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">logY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">logHeight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="log-entry-types-and-symbols">Log Entry Types and Symbols</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Symbol</th>
+<th>Color</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accepted</td>
+<td>✓</td>
+<td>Forest green</td>
+<td>Element added to result</td>
+</tr>
+<tr>
+<td>Rejected</td>
+<td>✗</td>
+<td>Firebrick red</td>
+<td>Element skipped/rejected</td>
+</tr>
+<tr>
+<td>Complete</td>
+<td>★</td>
+<td>Dark goldenrod</td>
+<td>Algorithm finished</td>
+</tr>
+</tbody>
+</table>
+<h2 id="responsive-design">Responsive Design</h2>
+<h3 id="window-resize-handler">Window Resize Handler</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">windowResized</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">resizeCanvas</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasHeight</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Reposition nodes proportionally</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">graphCenterX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.34</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">node</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">nodes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">TWO_PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">nodeCount</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">node</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">HALF_PI</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">min</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.35</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">node</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">graphCenterX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">cos</span><span class="p">(</span><span class="nx">angle</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">node</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">sin</span><span class="p">(</span><span class="nx">angle</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">radius</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">updateCanvasSize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">container</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">container</span><span class="p">.</span><span class="nx">offsetWidth</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Resize slider</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">speedSlider</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">speedSlider</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margin</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-clear-visual-feedback">1. Clear Visual Feedback</h3>
+<ul>
+<li>Use distinct colors for different states</li>
+<li>Animate transitions between states when possible</li>
+<li>Highlight the currently considered element</li>
+</ul>
+<h3 id="2-informative-status-messages">2. Informative Status Messages</h3>
+<ul>
+<li>Explain what happened in each step</li>
+<li>Include relevant values (weights, counts)</li>
+<li>State why elements were rejected</li>
+</ul>
+<h3 id="3-accessible-controls">3. Accessible Controls</h3>
+<ul>
+<li>Place frequently used controls prominently</li>
+<li>Use intuitive labels ("Slower" / "Faster" not just values)</li>
+<li>Provide both manual and automatic modes</li>
+</ul>
+<h3 id="4-educational-value">4. Educational Value</h3>
+<ul>
+<li>Show intermediate state, not just final result</li>
+<li>Log all decisions for review</li>
+<li>Allow students to control the pace</li>
+</ul>
+<h3 id="5-consistent-layout">5. Consistent Layout</h3>
+<ul>
+<li>Follow the standard layout across all algorithm visualizations</li>
+<li>Use consistent color schemes</li>
+<li>Maintain the same control positions</li>
+</ul>
+<h2 id="example-adapting-for-different-algorithms">Example: Adapting for Different Algorithms</h2>
+<p>This pattern can be adapted for various graph algorithms:</p>
+<ul>
+<li><strong>Minimum Spanning Tree</strong>: Kruskal's, Prim's</li>
+<li><strong>Shortest Path</strong>: Dijkstra's, Bellman-Ford</li>
+<li><strong>Graph Traversal</strong>: BFS, DFS</li>
+<li><strong>Network Flow</strong>: Ford-Fulkerson</li>
+<li><strong>Matching</strong>: Hungarian algorithm</li>
+</ul>
+<p>For each algorithm, modify:</p>
+<ol>
+<li>The <code>executeAlgorithmStep()</code> function with algorithm logic</li>
+<li>The acceptance/rejection criteria</li>
+<li>The step log messages</li>
+<li>Any algorithm-specific state variables</li>
+<li>Node/edge coloring based on algorithm state</li>
+</ol>
+<h2 id="reference-implementation">Reference Implementation</h2>
+<p>See the complete Minimum Spanning Tree MicroSim at:
+<code>docs/sims/minimum-spanning-tree/minimum-spanning-tree.js</code></p>
+<p>This implementation demonstrates all the patterns described in this guide with both Kruskal's and Prim's algorithms.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
