@@ -15,7 +15,7 @@ let nodes = [];
 let edges = [];
 let mstEdges = [];
 let nodeCount = 8;
-let nodeRadius = 25;
+let nodeRadius = 15;
 
 // Algorithm state
 let currentAlgorithm = 'kruskal'; // 'kruskal' or 'prim'
@@ -34,6 +34,7 @@ let priorityQueue = []; // For Prim's
 let stepDescription = '';
 let totalMSTWeight = 0;
 let lastStepTime = 0;
+let stepLog = []; // Log of all steps taken
 
 // UI controls
 let algorithmSelect;
@@ -54,6 +55,52 @@ function setup() {
   createControls();
 
   describe('Interactive visualization of Minimum Spanning Tree algorithms (Kruskal\'s and Prim\'s) showing step-by-step how to find the minimum cost network connecting all nodes', LABEL);
+}
+
+function createControls() {
+  // Algorithm selector
+  algorithmSelect = createSelect();
+  algorithmSelect.option('Kruskal\'s Algorithm', 'kruskal');
+  algorithmSelect.option('Prim\'s Algorithm', 'prim');
+  algorithmSelect.value('kruskal');
+  algorithmSelect.position(10, drawHeight + 15);
+  algorithmSelect.changed(() => {
+    currentAlgorithm = algorithmSelect.value();
+    resetAlgorithm();
+  });
+
+  // Step button
+  stepButton = createButton('Step Forward');
+  stepButton.position(180, drawHeight + 15);
+  stepButton.mousePressed(() => {
+    if (!isComplete) {
+      executeNextStep();
+    }
+  });
+
+
+  // Auto Run button
+  autoRunButton = createButton('Auto Run');
+  autoRunButton.position(290, drawHeight + 15);
+  autoRunButton.mousePressed(toggleAutoRun);
+
+  // Reset button
+  resetButton = createButton('Reset');
+  resetButton.position(380, drawHeight + 15);
+  resetButton.mousePressed(() => {
+    initializeGraph();
+  });
+
+  // Speed slider (inverted: left=slow, right=fast)
+  speedSlider = createSlider(100, 2000, 1600, 100);
+  speedSlider.position(sliderLeftMargin, drawHeight + 60);
+  speedSlider.size(canvasWidth - sliderLeftMargin - margin);
+  speedSlider.input(() => {
+    // Invert: slider 100 = 2000ms (slow), slider 2000 = 100ms (fast)
+    animationSpeed = 2100 - speedSlider.value();
+  });
+  // Set initial animation speed
+  animationSpeed = 2100 - speedSlider.value();
 }
 
 function draw() {
@@ -88,6 +135,9 @@ function draw() {
   drawEdges();
   drawNodes();
 
+  // Draw step log on the right side
+  drawStepLog();
+
   // Auto-run animation
   if (isRunning && !isComplete) {
     if (millis() - lastStepTime > animationSpeed) {
@@ -100,17 +150,23 @@ function draw() {
   drawControlLabels();
 }
 
+// Initialize graph with nodes and edges
 function initializeGraph() {
   nodes = [];
   edges = [];
   mstEdges = [];
   rejectedEdges = [];
 
-  // Create nodes in a circular layout
+  // Create nodes in a circular layout (centered at 30% from left)
+  // the center x position is at 35% to leave room for the log on the right
+  let graphCenterX = canvasWidth * 0.34;
+
   for (let i = 0; i < nodeCount; i++) {
     let angle = (TWO_PI / nodeCount) * i - HALF_PI;
-    let radius = min(canvasWidth, drawHeight - 100) * 0.35;
-    let x = canvasWidth / 2 + cos(angle) * radius;
+
+    // This determines how big the circle of nodes is
+    let radius = min(canvasWidth * 0.65, drawHeight - 40) * 0.41;
+    let x = graphCenterX + cos(angle) * radius;
     let y = drawHeight / 2 + sin(angle) * radius;
     nodes.push({
       id: i,
@@ -167,6 +223,7 @@ function resetAlgorithm() {
   edgeIndex = 0;
   consideredEdge = null;
   totalMSTWeight = 0;
+  stepLog = []; // Clear the step log
   stepDescription = 'Click "Step Forward" or "Auto Run" to begin';
 
   // Reset edge states
@@ -212,6 +269,7 @@ function executeNextStep() {
     isComplete = true;
     isRunning = false;
     stepDescription = `Complete! Minimum spanning tree found with total weight: ${totalMSTWeight}`;
+    stepLog.push({ type: 'complete', text: `★ Complete! Total: ${totalMSTWeight}` });
     if (autoRunButton) {
       autoRunButton.html('Auto Run');
     }
@@ -238,11 +296,13 @@ function executeKruskalStep() {
     edge.state = 'accepted';
     totalMSTWeight += edge.weight;
     stepDescription = `Accepted edge ${nodes[edge.from].label}-${nodes[edge.to].label} (weight ${edge.weight}). Total: ${totalMSTWeight}`;
+    stepLog.push({ type: 'accepted', text: `✓ ${nodes[edge.from].label}-${nodes[edge.to].label} (${edge.weight})` });
   } else {
     // Cycle detected - reject edge
     rejectedEdges.push(edge);
     edge.state = 'rejected';
     stepDescription = `Rejected edge ${nodes[edge.from].label}-${nodes[edge.to].label} (weight ${edge.weight}) - would create cycle`;
+    stepLog.push({ type: 'rejected', text: `✗ ${nodes[edge.from].label}-${nodes[edge.to].label} (${edge.weight}) - cycle` });
   }
 
   edgeIndex++;
@@ -268,6 +328,7 @@ function executePrimStep() {
     rejectedEdges.push(edge);
     edge.state = 'rejected';
     stepDescription = `Rejected edge ${nodes[edge.from].label}-${nodes[edge.to].label} (weight ${edge.weight}) - both nodes visited`;
+    stepLog.push({ type: 'rejected', text: `✗ ${nodes[edge.from].label}-${nodes[edge.to].label} (${edge.weight}) - visited` });
     consideredEdge = null;
     return;
   }
@@ -281,6 +342,7 @@ function executePrimStep() {
   let newNode = fromVisited ? edge.to : edge.from;
   visited[newNode] = true;
   stepDescription = `Accepted edge ${nodes[edge.from].label}-${nodes[edge.to].label} (weight ${edge.weight}). Added node ${nodes[newNode].label}. Total: ${totalMSTWeight}`;
+  stepLog.push({ type: 'accepted', text: `✓ ${nodes[edge.from].label}-${nodes[edge.to].label} (${edge.weight}) +${nodes[newNode].label}` });
 
   // Add new edges to priority queue
   let newEdges = edges.filter(e => {
@@ -339,15 +401,18 @@ function drawEdges() {
     // Draw weight label
     let midX = (fromNode.x + toNode.x) / 2;
     let midY = (fromNode.y + toNode.y) / 2;
-    fill(255);
-    stroke(0);
-    strokeWeight(1);
-    ellipse(midX, midY, 35, 35);
-    fill(0);
-    noStroke();
-    textAlign(CENTER, CENTER);
     textSize(12);
-    text(edge.weight, midX, midY);
+    let weightText = String(edge.weight);
+    let textW = textWidth(weightText);
+    let padding = 4;
+    fill(240, 248, 255); // Aliceblue for edge labels
+    noStroke();
+    rectMode(CENTER);
+    rect(midX, midY, textW + padding * 2, 18, 3);
+    rectMode(CORNER);
+    fill(0);
+    textAlign(CENTER, CENTER);
+    text(weightText, midX, midY);
   }
 }
 
@@ -360,59 +425,17 @@ function drawNodes() {
     if (currentAlgorithm === 'prim' && visited[node.id]) {
       fill(100, 200, 100); // Light green for visited
     } else {
-      fill(255);
+      fill(70, 130, 180); // Steel blue for nodes
     }
 
     stroke(0);
     strokeWeight(2);
     ellipse(node.x, node.y, nodeRadius * 2, nodeRadius * 2);
 
-    fill(0);
+    fill(255); // White text
     noStroke();
     text(node.label, node.x, node.y);
   }
-}
-
-function createControls() {
-  // Algorithm selector
-  algorithmSelect = createSelect();
-  algorithmSelect.option('Kruskal\'s Algorithm', 'kruskal');
-  algorithmSelect.option('Prim\'s Algorithm', 'prim');
-  algorithmSelect.value('kruskal');
-  algorithmSelect.position(10, drawHeight + 15);
-  algorithmSelect.changed(() => {
-    currentAlgorithm = algorithmSelect.value();
-    resetAlgorithm();
-  });
-
-  // Step button
-  stepButton = createButton('Step Forward');
-  stepButton.position(180, drawHeight + 15);
-  stepButton.mousePressed(() => {
-    if (!isComplete) {
-      executeNextStep();
-    }
-  });
-
-  // Auto Run button
-  autoRunButton = createButton('Auto Run');
-  autoRunButton.position(290, drawHeight + 15);
-  autoRunButton.mousePressed(toggleAutoRun);
-
-  // Reset button
-  resetButton = createButton('Reset');
-  resetButton.position(380, drawHeight + 15);
-  resetButton.mousePressed(() => {
-    initializeGraph();
-  });
-
-  // Speed slider
-  speedSlider = createSlider(100, 2000, 500, 100);
-  speedSlider.position(sliderLeftMargin, drawHeight + 60);
-  speedSlider.size(canvasWidth - sliderLeftMargin - margin);
-  speedSlider.input(() => {
-    animationSpeed = speedSlider.value();
-  });
 }
 
 function toggleAutoRun() {
@@ -435,21 +458,85 @@ function drawControlLabels() {
   // Speed slider label
   text('Animation Speed: ' + animationSpeed + 'ms', 10, drawHeight + 70);
 
-  // Status information
+  // Slower/Faster labels above the slider
+  textSize(defaultTextSize - 4);
+  fill(100);
+  textAlign(LEFT, BOTTOM);
+  text('Slower', sliderLeftMargin, drawHeight + 57);
+  textAlign(RIGHT, BOTTOM);
+  text('Faster', canvasWidth - margin, drawHeight + 57);
+
+  // Reset alignment for status information
+  fill(0);
+  textAlign(LEFT, CENTER);
   textSize(14);
   text('Status: ' + stepDescription, 10, drawHeight + 100);
   text(`MST Edges: ${mstEdges.length}/${nodeCount - 1}  |  Total Weight: ${totalMSTWeight}`, 10, drawHeight + 120);
+}
+
+function drawStepLog() {
+  // Draw log panel on the right side
+  // start at 2/3 of canvas width
+  let logX = canvasWidth * 0.67;
+  let logY = 50;
+  let logWidth = canvasWidth * .30;
+  let logHeight = drawHeight - 70;
+  let lineHeight = 22;
+
+  // Draw log background
+  fill(255, 255, 255, 230);
+  stroke(200);
+  strokeWeight(1);
+  rect(logX, logY, logWidth, logHeight, 8);
+
+  // Draw log title
+  fill(0);
+  noStroke();
+  textAlign(CENTER, TOP);
+  textSize(16);
+  text('Step Log', logX + logWidth / 2, logY + 10);
+
+  // Draw log entries
+  textAlign(LEFT, TOP);
+  textSize(14);
+
+  let maxVisibleEntries = floor((logHeight - 50) / lineHeight);
+  let startIndex = max(0, stepLog.length - maxVisibleEntries);
+
+  for (let i = startIndex; i < stepLog.length; i++) {
+    let entry = stepLog[i];
+    let yPos = logY + 40 + (i - startIndex) * lineHeight;
+
+    // Color based on type
+    if (entry.type === 'accepted') {
+      fill(34, 139, 34); // Forest green
+    } else if (entry.type === 'complete') {
+      fill(184, 134, 11); // Dark goldenrod
+    } else {
+      fill(178, 34, 34); // Firebrick red
+    }
+
+    text(`${i + 1}. ${entry.text}`, logX + 15, yPos);
+  }
+
+  // Show "empty" message if no entries
+  if (stepLog.length === 0) {
+    fill(128);
+    textAlign(CENTER, CENTER);
+    text('No steps yet', logX + logWidth / 2, logY + logHeight / 2);
+  }
 }
 
 function windowResized() {
   updateCanvasSize();
   resizeCanvas(canvasWidth, canvasHeight);
 
-  // Reposition nodes proportionally
+  // Reposition nodes proportionally (centered at 30% from left)
+  let graphCenterX = canvasWidth * 0.3;
   for (let node of nodes) {
     let angle = (TWO_PI / nodeCount) * node.id - HALF_PI;
-    let radius = min(canvasWidth, drawHeight - 100) * 0.35;
-    node.x = canvasWidth / 2 + cos(angle) * radius;
+    let radius = min(canvasWidth * 0.5, drawHeight - 100) * 0.35;
+    node.x = graphCenterX + cos(angle) * radius;
     node.y = drawHeight / 2 + sin(angle) * radius;
   }
 }
