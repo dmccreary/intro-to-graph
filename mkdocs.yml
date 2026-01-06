@@ -46,9 +46,12 @@ nav:
     - Ch 11 - Financial and Healthcare:
       - Content: chapters/11-financial-healthcare-regulatory/index.md
       - Quiz: chapters/11-financial-healthcare-regulatory/quiz.md
-    - Ch 12 - Advanced Topics:
-      - Content: chapters/12-advanced-topics-distributed-systems/index.md
-      - Quiz: chapters/12-advanced-topics-distributed-systems/quiz.md
+    - Ch 12 - Graph Rule Engines:
+      - Content: chapters/12-graph-rule-engines/index.md
+      - Quiz: chapters/12-graph-rule-engines/quiz.md
+    - Ch 14 - Advanced Topics:
+      - Content: chapters/14-advanced-topics-distributed-systems/index.md
+      - Quiz: chapters/14-advanced-topics-distributed-systems/quiz.md
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
