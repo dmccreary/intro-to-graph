@@ -12,24 +12,24 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/requirements/">
+        <link rel="canonical" href="https://dmccreary.github.io/intro-to-graph/chapters/13-graph-rule-engines/">
       
       
       
       
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>Requirements for the Knowledge Triangle MicroSim - Introduction to Graph Databases</title>
+        <title>Why Graph Databases Can Use Much Less Power Than Distributed Rule Engines - Introduction to Graph Databases</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,11 +59,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Requirements for the Knowledge Triangle MicroSim - Introduction to Graph Databases" >
+        <meta  property="og:title"  content="Why Graph Databases Can Use Much Less Power Than Distributed Rule Engines - Introduction to Graph Databases" >
       
         <meta  property="og:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/sims/knowledge-triangle/requirements.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/chapters/13-graph-rule-engines/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,15 +71,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/sims/knowledge-triangle/requirements/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/intro-to-graph/chapters/13-graph-rule-engines/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Requirements for the Knowledge Triangle MicroSim - Introduction to Graph Databases" >
+        <meta  name="twitter:title"  content="Why Graph Databases Can Use Much Less Power Than Distributed Rule Engines - Introduction to Graph Databases" >
       
         <meta  name="twitter:description"  content="An interactive intelligent textbook covering an introduction to graph databases.  This textbook includes extensive MicroSims" >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/sims/knowledge-triangle/requirements.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intro-to-graph/assets/images/social/chapters/13-graph-rule-engines/index.png" >
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements-for-the-knowledge-triangle-microsim" class="md-skip">
+        <a href="#why-graph-databases-can-use-much-less-power-than-distributed-rule-engines" class="md-skip">
           Skip to content
         </a>
       
@@ -116,9 +116,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+    <a href="../.." title="Introduction to Graph Databases" class="md-header__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Requirements for the Knowledge Triangle MicroSim
+              Why Graph Databases Can Use Much Less Power Than Distributed Rule Engines
             
           </span>
         </div>
@@ -222,9 +222,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
+    <a href="../.." title="Introduction to Graph Databases" class="md-nav__button md-logo" aria-label="Introduction to Graph Databases" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     Introduction to Graph Databases
@@ -251,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -271,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../course-description/" class="md-nav__link">
+      <a href="../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +356,7 @@
         
   
   
-    <a href="../../../chapters/" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -425,7 +425,7 @@
         
   
   
-    <a href="../../graph-viewer/" class="md-nav__link">
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -496,7 +496,7 @@
         
   
   
-    <a href="../../../learning-graph/" class="md-nav__link">
+    <a href="../../learning-graph/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -565,7 +565,7 @@
         
   
   
-    <a href="../../../stories/" class="md-nav__link">
+    <a href="../../stories/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -614,7 +614,7 @@
         
   
   
-    <a href="../../../prompts/" class="md-nav__link">
+    <a href="../../prompts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -661,7 +661,7 @@
         
   
   
-    <a href="../../../instructors-guide/" class="md-nav__link">
+    <a href="../../instructors-guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -687,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-we-built-this-site/" class="md-nav__link">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feedback/" class="md-nav__link">
+      <a href="../../feedback/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -827,28 +827,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-data-layer" class="md-nav__link">
+  <a href="#a-motivating-question" class="md-nav__link">
     <span class="md-ellipsis">
-      The Data Layer
+      A motivating question
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Data Layer">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-ways-to-make-a-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two ways to make a decision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two ways to make a decision">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#non-hover-presentation" class="md-nav__link">
+  <a href="#system-a-in-memory-graph-with-built-in-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Hover Presentation
+      System A: In-memory graph with built-in rules
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#infobox-text-for-data-layer" class="md-nav__link">
+  <a href="#system-b-distributed-rdbms-with-external-rule-engines" class="md-nav__link">
     <span class="md-ellipsis">
-      Infobox Text for Data Layer
+      System B: Distributed RDBMS with external rule engines
     </span>
   </a>
   
@@ -860,28 +869,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-information-layer" class="md-nav__link">
+  <a href="#where-does-the-energy-go" class="md-nav__link">
     <span class="md-ellipsis">
-      The Information Layer
+      Where does the energy go?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Information Layer">
+    <nav class="md-nav" aria-label="Where does the energy go?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#non-hover-presentation_1" class="md-nav__link">
+  <a href="#key-idea" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Hover Presentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#infobox-text-for-information-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Infobox Text for Information Layer
+      Key idea
     </span>
   </a>
   
@@ -893,28 +893,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-knowledge-layer" class="md-nav__link">
+  <a href="#a-simple-mental-model" class="md-nav__link">
     <span class="md-ellipsis">
-      The Knowledge Layer
+      A simple mental model
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Knowledge Layer">
+    <nav class="md-nav" aria-label="A simple mental model">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#knowledge-layer-presentation" class="md-nav__link">
+  <a href="#system-a-graph-based" class="md-nav__link">
     <span class="md-ellipsis">
-      Knowledge Layer Presentation
+      System A (graph-based)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#infobox-text-for-the-knowledge-layer" class="md-nav__link">
+  <a href="#system-b-distributed-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Infobox Text for the Knowledge Layer
+      System B (distributed rules)
     </span>
   </a>
   
@@ -922,6 +922,75 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-waiting-costs-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why waiting costs power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-ballpark-energy-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      A ballpark energy comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A ballpark energy comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-power-efficiency-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected power-efficiency gap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-graphs-help-intuitively" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why graphs help (intuitively)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters-beyond-electricity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why this matters beyond electricity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key takeaway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection question
+    </span>
+  </a>
   
 </li>
       
@@ -940,7 +1009,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/sims/knowledge-triangle/requirements.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/intro-to-graph/blob/master/docs/chapters/13-graph-rule-engines/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -948,43 +1017,173 @@
   
 
 
-<h1 id="requirements-for-the-knowledge-triangle-microsim">Requirements for the Knowledge Triangle MicroSim</h1>
-<p>Use the microsim-p5 skill to create a new p5.js MicroSim at @docs/sims/knowledge-triangle.</p>
-<p>This is an drawing of a triangle with three layers.</p>
-<ol>
-<li>Bottom Data Layer</li>
-<li>Middle Information Layer</li>
-<li>Top Knowledge Layer</li>
-</ol>
-<p>When the user hovers over any area, an infobox appears in a tool tip explaining what that area is.</p>
-<h2 id="the-data-layer">The Data Layer</h2>
-<h3 id="non-hover-presentation">Non-Hover Presentation</h3>
-<p>The base layer has a label of "Data Layer" in white text.
-It has a black background and has bright green 1 and 0 like on an old green screen terminal.
-When the user hovers over any part of the data layer it displays the following text.</p>
-<h3 id="infobox-text-for-data-layer">Infobox Text for Data Layer</h3>
-<p>The <strong>Data Layer</strong> contains raw binary data in the form of 1s and 0s.  It is the information
-you might see by creating a raw dump of the data on a hard drive.  Finding meaning out
-of the data layer takes a lot of work.</p>
-<h2 id="the-information-layer">The Information Layer</h2>
-<h3 id="non-hover-presentation_1">Non-Hover Presentation</h3>
-<p>The Information Layer is the middle layer of the triangle.
-It has the text "Information Layer" in black text.
-full of small circles with the word "Fact" in them using a 10-point
-font with different color backgrounds for each circle and a narrow 1pt black border.</p>
-<h3 id="infobox-text-for-information-layer">Infobox Text for Information Layer</h3>
-<p><strong>Information Layer:</strong> This layer contains isolated facts extracted from the raw data.
-These facts are each disconnected from other facts.</p>
-<h2 id="the-knowledge-layer">The Knowledge Layer</h2>
-<h3 id="knowledge-layer-presentation">Knowledge Layer Presentation</h3>
-<p>The Text "Knowledge Layer" appears as black text over a background of
-a graph of connected nodes.  Nodes are different colors and the edges
-between the nodes are also of different colors.</p>
-<h3 id="infobox-text-for-the-knowledge-layer">Infobox Text for the Knowledge Layer</h3>
-<p><strong>Knowledge Layer:</strong> this layer contains connected facts.  It is
-a graph where facts are all connected together.  Each fact must
-connect to other facts to be valuable.  Insight occurs by
-traversing the network of facts.</p>
+<h1 id="why-graph-databases-can-use-much-less-power-than-distributed-rule-engines">Why Graph Databases Can Use Much Less Power Than Distributed Rule Engines</h1>
+<h2 id="a-motivating-question">A motivating question</h2>
+<p>Imagine two computer systems that both answer the same question:</p>
+<blockquote>
+<p>“Given this data, what decision should the system make?”</p>
+</blockquote>
+<p>Both systems are correct. Both meet the same functional requirements.<br />
+But one of them uses <strong>far less electricity</strong> to do the same work.</p>
+<p>Why?</p>
+<p>To understand this, we will compare two real architectural patterns and look at where energy is actually spent.</p>
+<hr />
+<h2 id="two-ways-to-make-a-decision">Two ways to make a decision</h2>
+<h3 id="system-a-in-memory-graph-with-built-in-rules">System A: In-memory graph with built-in rules</h3>
+<p>In this system:</p>
+<ul>
+<li>All data lives in a <strong>single in-memory graph</strong></li>
+<li>Rules are encoded directly as <strong>graph traversals</strong> (often as decision trees)</li>
+<li>A decision is made by <strong>walking the graph in memory</strong></li>
+<li>There are <strong>no network calls</strong> on the critical path</li>
+</ul>
+<p>You can think of this as:</p>
+<blockquote>
+<p>“The data and the rules live in the same place, and the system just follows links.”</p>
+</blockquote>
+<hr />
+<h3 id="system-b-distributed-rdbms-with-external-rule-engines">System B: Distributed RDBMS with external rule engines</h3>
+<p>In this system:</p>
+<ul>
+<li>Data is stored in <strong>relational databases</strong></li>
+<li>Rules are implemented in <strong>separate services</strong></li>
+<li>A single decision requires <strong>many network calls</strong></li>
+<li>On average, one decision makes about <strong>10 network calls</strong></li>
+<li>Some decisions make 4–5 calls</li>
+<li>Some make 10–20 calls</li>
+<li>These services may be spread across <strong>multiple data centers</strong></li>
+<li>Networks are not perfectly reliable, so <strong>timeouts and retries happen</strong></li>
+</ul>
+<p>You can think of this as:</p>
+<blockquote>
+<p>“To make one decision, the system has to ask many other systems for help.”</p>
+</blockquote>
+<hr />
+<h2 id="where-does-the-energy-go">Where does the energy go?</h2>
+<p>A common misconception is that computers mostly use energy to “do math.”<br />
+In modern systems, this is <strong>not true</strong>.</p>
+<h3 id="key-idea">Key idea</h3>
+<blockquote>
+<p><strong>Moving data costs much more energy than computing on data.</strong></p>
+</blockquote>
+<p>Every time data moves:
+- It must be serialized
+- Sent over a network
+- Wait in queues
+- Be processed remotely
+- Sent back
+- Possibly retried if something fails</p>
+<p>All of that uses energy — and eventually becomes heat.</p>
+<hr />
+<h2 id="a-simple-mental-model">A simple mental model</h2>
+<p>Let’s compare how much <em>work</em> each system does to make one decision.</p>
+<h3 id="system-a-graph-based">System A (graph-based)</h3>
+<ul>
+<li>One request enters the system</li>
+<li>The CPU follows pointers in memory</li>
+<li>The decision is made locally</li>
+<li>The result is returned</li>
+</ul>
+<p>This is mostly:
+- Memory access
+- Local computation</p>
+<hr />
+<h3 id="system-b-distributed-rules">System B (distributed rules)</h3>
+<ul>
+<li>One request enters the system</li>
+<li>The system makes ~10 network calls</li>
+<li>Each call involves:</li>
+<li>Packaging data</li>
+<li>Sending it across the network</li>
+<li>Waiting for another system</li>
+<li>Receiving and unpacking a response</li>
+<li>Some calls are slower than others</li>
+<li>Some calls may fail and be retried</li>
+</ul>
+<p>This is mostly:
+- Waiting
+- Coordination
+- Data movement</p>
+<hr />
+<h2 id="why-waiting-costs-power">Why waiting costs power</h2>
+<p>Servers do not turn off while waiting.</p>
+<p>To meet performance goals (for example, “95% of decisions must finish in under 100 ms”), distributed systems must:</p>
+<ul>
+<li>Keep <strong>extra servers powered on</strong></li>
+<li>Maintain <strong>headroom</strong> for slow or failed requests</li>
+<li>Handle retries and timeouts</li>
+</ul>
+<p>This means:
+- More machines running
+- More idle power being consumed
+- More heat being generated</p>
+<hr />
+<h2 id="a-ballpark-energy-comparison">A ballpark energy comparison</h2>
+<p>We can compare the two systems using a practical metric:</p>
+<blockquote>
+<p><strong>Energy per decision</strong></p>
+</blockquote>
+<p>Using simple, conservative assumptions:</p>
+<ul>
+<li>System B averages <strong>10 network calls per decision</strong></li>
+<li>Each call adds several milliseconds of delay</li>
+<li>Calls are often <strong>sequential</strong>, not perfectly parallel</li>
+<li>Some retries and tail-latency buffering are required</li>
+</ul>
+<p>When engineers model this realistically, they usually find:</p>
+<h3 id="expected-power-efficiency-gap">Expected power-efficiency gap</h3>
+<ul>
+<li><strong>Conservative estimate:</strong> 3× less energy per decision</li>
+<li><strong>Reasonable midline estimate:</strong> 5× less energy per decision</li>
+<li><strong>Aggressive but plausible estimate:</strong> 10× less energy per decision</li>
+</ul>
+<p>In other words:</p>
+<blockquote>
+<p>A single-node in-memory graph system can often make the same decision using <strong>one-fifth (or less)</strong> of the energy of a distributed rule-engine system.</p>
+</blockquote>
+<hr />
+<h2 id="why-graphs-help-intuitively">Why graphs help (intuitively)</h2>
+<p>Graphs help not because they are “faster at math,” but because they:</p>
+<ul>
+<li><strong>Co-locate data and rules</strong></li>
+<li><strong>Reduce communication</strong></li>
+<li><strong>Preserve locality</strong></li>
+<li><strong>Avoid distributed coordination</strong></li>
+</ul>
+<p>A decision becomes:</p>
+<blockquote>
+<p>“Walk the graph”</p>
+</blockquote>
+<p>Instead of:</p>
+<blockquote>
+<p>“Ask ten different systems, wait for replies, and hope none fail.”</p>
+</blockquote>
+<hr />
+<h2 id="why-this-matters-beyond-electricity">Why this matters beyond electricity</h2>
+<p>Lower energy per decision usually means:</p>
+<ul>
+<li>Lower power and cooling costs</li>
+<li>Fewer servers required</li>
+<li>More predictable latency</li>
+<li>Less operational complexity</li>
+<li>Better scalability under load</li>
+</ul>
+<p>Energy efficiency is often a <strong>proxy</strong> for good system design.</p>
+<hr />
+<h2 id="key-takeaway">Key takeaway</h2>
+<blockquote>
+<p>In modern systems, power is not mostly spent on thinking — it is spent on moving information and waiting for it.</p>
+</blockquote>
+<p>By keeping both data and rules inside a single in-memory graph, graph databases can dramatically reduce data movement, coordination, and waste. For decision-heavy workloads, this often leads to <strong>3×–10× better power efficiency</strong>, with <strong>about 5×</strong> being a reasonable planning estimate.</p>
+<hr />
+<h2 id="reflection-question">Reflection question</h2>
+<p>If moving data is so expensive, what kinds of applications benefit most from graph-based designs?</p>
+<p>Think about:
+- Recommendation systems
+- Fraud detection
+- Process monitoring
+- Knowledge graphs
+- AI decision pipelines</p>
 
 
 
@@ -1041,12 +1240,12 @@ traversing the network of facts.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

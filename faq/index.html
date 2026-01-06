@@ -345,6 +345,8 @@
       
         
       
+        
+      
     
     
     
@@ -2435,7 +2437,7 @@
 <h3 id="what-is-the-cap-theorem-and-how-does-it-relate-to-graphs">What is the CAP theorem and how does it relate to graphs?</h3>
 <p>The CAP theorem states that distributed systems can guarantee at most two of three properties: <strong>Consistency</strong> (all nodes see the same data), <strong>Availability</strong> (every request gets a response), and <strong>Partition tolerance</strong> (system continues despite network failures). Distributed graph databases must choose: strong consistency with potential unavailability during partitions, or eventual consistency with guaranteed availability. Most distributed graphs prioritize availability and partition tolerance, using eventual consistency.</p>
 <p><strong>Example:</strong> TigerGraph distributes graphs across multiple servers, accepting temporary inconsistencies during network partitions to maintain availability.</p>
-<p><strong>See:</strong> <a href="../glossary/#cap-theorem">Glossary: CAP Theorem</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Distributed Systems</a></p>
+<p><strong>See:</strong> <a href="../glossary/#cap-theorem">Glossary: CAP Theorem</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Distributed Systems</a></p>
 <h3 id="what-is-hop-count">What is hop count?</h3>
 <p>Hop count is the number of edges traversed in a path between two nodes, measuring distance in the graph. In social networks, "friends within 2 hops" means friends and friends-of-friends. Graph query performance often depends on hop count—traversing 5 hops across millions of nodes is computationally intensive, so optimized queries minimize unnecessary hops.</p>
 <p><strong>Example:</strong> Finding products related to current purchases within 3 hops explores: (Customer)-[:PURCHASED]→(Product)-[:SIMILAR_TO]→(Product)-[:PURCHASED_BY]→(Customer), revealing recommendation opportunities.</p>
@@ -2508,7 +2510,7 @@
 <h3 id="what-are-graph-embeddings">What are graph embeddings?</h3>
 <p>Graph embeddings are techniques mapping nodes or substructures to vectors in continuous space, enabling machine learning on graph data. Similar nodes (by structure or properties) map to nearby vectors, allowing algorithms to measure similarity, cluster nodes, or predict links. Graph embeddings bridge graph databases and machine learning.</p>
 <p><strong>Example:</strong> Node2Vec creates 128-dimensional vectors for users where similar users (by network position and behavior) have nearby vectors, powering recommendation systems that find "users like you."</p>
-<p><strong>See:</strong> <a href="../glossary/#graph-embeddings">Glossary: Graph Embeddings</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Advanced Topics</a></p>
+<p><strong>See:</strong> <a href="../glossary/#graph-embeddings">Glossary: Graph Embeddings</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Advanced Topics</a></p>
 <h3 id="what-is-ldbc-snb-benchmark">What is LDBC SNB benchmark?</h3>
 <p>The Linked Data Benchmark Council's Social Network Benchmark (LDBC SNB) is a standard for evaluating graph database performance on social network workloads. It includes realistic queries like finding recent posts by friends, complex aggregations over social connections, and update operations. LDBC SNB enables fair comparison across different graph databases.</p>
 <p><strong>Example:</strong> LDBC SNB tests query performance for operations like "find friends who posted about a topic in the last month," measuring latency and throughput under realistic social network loads.</p>
@@ -2570,7 +2572,7 @@
 <h3 id="how-do-i-design-for-scalability">How do I design for scalability?</h3>
 <p>For <strong>vertical scaling</strong> (single server): optimize schema, add indexes, minimize traversal depth, and cache hot paths. For <strong>horizontal scaling</strong> (distributed): partition graphs strategically (keep related nodes together), minimize cross-partition queries, use eventual consistency, and leverage distributed algorithms. Benchmark early to understand scaling needs.</p>
 <p><strong>Example:</strong> Partition social network by geography or community detection results, keeping friend groups on the same partition to minimize distributed traversals.</p>
-<p><strong>See:</strong> <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Distributed Systems</a> | <a href="../glossary/#scalability">Glossary: Scalability</a></p>
+<p><strong>See:</strong> <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Distributed Systems</a> | <a href="../glossary/#scalability">Glossary: Scalability</a></p>
 <h3 id="when-should-i-use-graph-algorithms-vs-graph-queries">When should I use graph algorithms vs graph queries?</h3>
 <p>Use <strong>graph queries</strong> for operational tasks (find specific paths, retrieve connected data, filter by properties, application queries). Use <strong>graph algorithms</strong> for analytical tasks (identify influencers with PageRank, detect communities, compute centrality measures, find optimal paths). Queries are for "what is connected," algorithms are for "what is important."</p>
 <p><strong>Example:</strong> Query: "What products did Alice purchase?" Algorithm: "Which products are most central in the purchase network?" (indicates popular or influential items).</p>
@@ -2591,27 +2593,27 @@
 <h3 id="what-are-graph-neural-networks-gnns">What are graph neural networks (GNNs)?</h3>
 <p>Graph Neural Networks are deep learning architectures that operate on graph-structured data, learning node representations by aggregating information from neighborhoods. GNNs generalize convolutional neural networks to graphs, enabling tasks like node classification, link prediction, and graph classification. They're used in drug discovery (molecular graphs), social network analysis, and recommendation systems.</p>
 <p><strong>Example:</strong> A GNN predicts whether molecules are toxic by learning from molecular graphs where atoms are nodes and bonds are edges, aggregating chemical properties from neighboring atoms.</p>
-<p><strong>See:</strong> <a href="../glossary/#graph-neural-networks">Glossary: Graph Neural Networks</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Advanced Topics</a></p>
+<p><strong>See:</strong> <a href="../glossary/#graph-neural-networks">Glossary: Graph Neural Networks</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Advanced Topics</a></p>
 <h3 id="how-do-distributed-graph-databases-work">How do distributed graph databases work?</h3>
 <p>Distributed graph databases partition large graphs across multiple servers using <strong>graph partitioning</strong> strategies that minimize cross-partition edges. Queries coordinate across partitions, potentially using distributed algorithms and <strong>map-reduce patterns</strong>. Challenges include maintaining consistency (<strong>consistency models</strong>), minimizing network communication, and balancing load. TigerGraph and Neo4j Fabric are examples.</p>
 <p><strong>Example:</strong> A billion-edge social network is partitioned across 50 servers using community detection to keep friend groups together, minimizing distributed queries for friend-of-friend operations.</p>
-<p><strong>See:</strong> <a href="../glossary/#distributed-graph-databases">Glossary: Distributed Graph Databases</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12</a></p>
+<p><strong>See:</strong> <a href="../glossary/#distributed-graph-databases">Glossary: Distributed Graph Databases</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12</a></p>
 <h3 id="what-is-graph-partitioning">What is graph partitioning?</h3>
 <p>Graph partitioning divides large graphs into smaller sections distributed across servers, balancing load while minimizing cross-partition edges (which require expensive network communication). Strategies include hash-based (distribute by node ID), range-based (partition by property values), or graph-aware (use community detection or graph structure). Good partitioning is critical for distributed performance.</p>
 <p><strong>Example:</strong> Partition by user geography: US users on servers 1-20, European users on 21-40, Asian users on 41-60. Most friend relationships stay within regions, minimizing cross-partition traversals.</p>
-<p><strong>See:</strong> <a href="../glossary/#graph-partitioning">Glossary: Graph Partitioning</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Distributed Systems</a></p>
+<p><strong>See:</strong> <a href="../glossary/#graph-partitioning">Glossary: Graph Partitioning</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Distributed Systems</a></p>
 <h3 id="what-is-link-prediction">What is link prediction?</h3>
 <p>Link prediction algorithms predict likely future connections between nodes based on graph structure and node attributes. Applications include friend suggestions (social networks), product recommendations (e-commerce), and collaboration prediction (research networks). Techniques range from graph-based heuristics (common neighbors, preferential attachment) to machine learning with graph embeddings.</p>
 <p><strong>Example:</strong> LinkedIn's "People You May Know" uses link prediction, analyzing mutual connections, shared employers, and profile similarity to suggest connections.</p>
-<p><strong>See:</strong> <a href="../glossary/#link-prediction">Glossary: Link Prediction</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Advanced Topics</a></p>
+<p><strong>See:</strong> <a href="../glossary/#link-prediction">Glossary: Link Prediction</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Advanced Topics</a></p>
 <h3 id="how-does-replication-work-in-graph-databases">How does replication work in graph databases?</h3>
 <p>Replication copies data across multiple database instances for redundancy, availability, and geographic distribution. <strong>Master-slave replication</strong> maintains one writable primary and read-only replicas. <strong>Multi-master replication</strong> allows writes to multiple nodes with conflict resolution. Replication ensures availability during failures and enables local reads in distributed deployments.</p>
 <p><strong>Example:</strong> A graph database replicates across three data centers (US, Europe, Asia) so regional users read from local replicas with low latency, while writes sync across all replicas.</p>
-<p><strong>See:</strong> <a href="../glossary/#replication">Glossary: Replication</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Distributed Systems</a></p>
+<p><strong>See:</strong> <a href="../glossary/#replication">Glossary: Replication</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Distributed Systems</a></p>
 <h3 id="what-are-real-time-analytics-on-graphs">What are real-time analytics on graphs?</h3>
 <p>Real-time analytics deliver query results with minimal delay, enabling immediate insights and responses. Applications include fraud detection (analyze transaction patterns in seconds), recommendation engines (instant personalization), and network monitoring (detect anomalies immediately). Real-time graph analytics require optimized traversal, incremental computation, and efficient indexing.</p>
 <p><strong>Example:</strong> A fraud detection system analyzes transaction graphs in real-time, alerting on suspicious patterns (rapid money movement through account networks) within seconds of occurrence.</p>
-<p><strong>See:</strong> <a href="../glossary/#real-time-analytics">Glossary: Real-Time Analytics</a> | <a href="../chapters/12-advanced-topics-distributed-systems/">Chapter 12: Advanced Topics</a></p>
+<p><strong>See:</strong> <a href="../glossary/#real-time-analytics">Glossary: Real-Time Analytics</a> | <a href="chapters/12-advanced-topics-distributed-systems/index.md">Chapter 12: Advanced Topics</a></p>
 <h3 id="what-is-the-difference-between-oltp-and-olap-for-graphs">What is the difference between OLTP and OLAP for graphs?</h3>
 <p><strong>OLTP</strong> (Online Transaction Processing) handles individual queries with low latency—operational tasks like "find Alice's friends" or "add new purchase." <strong>OLAP</strong> (Online Analytical Processing) performs complex aggregations and analyses across large datasets—analytical tasks like "find all communities in the graph" or "calculate centrality for all nodes." Some graph databases optimize for OLTP, others for OLAP, and some hybrid.</p>
 <p><strong>Example:</strong> OLTP: real-time fraud detection queries during transactions. OLAP: batch analysis of entire customer network to identify segments and influence patterns.</p>
