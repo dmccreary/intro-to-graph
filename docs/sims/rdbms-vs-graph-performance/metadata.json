@@ -1,0 +1,45 @@
+{
+  "title": "RDBMS vs Graph Database Performance Comparison",
+  "description": "Interactive chart demonstrating the exponential performance degradation of RDBMS JOIN queries compared to constant-time graph database traversals for multi-hop relationship queries.",
+  "subject": "Mathematics",
+  "topic": "RDBMS vs Graph Database Performance Comparison",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "chart.js",
+  "url": "https://dmccreary.github.io/intro-to-graph/sims/rdbms-vs-graph-performance/",
+  "identifier": "https://dmccreary.github.io/intro-to-graph/sims/rdbms-vs-graph-performance/",
+  "_source": {
+    "repo": "intro-to-graph",
+    "sim": "rdbms-vs-graph-performance",
+    "github_url": "https://github.com/dmccreary/intro-to-graph/tree/main/docs/sims/rdbms-vs-graph-performance",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "simulation",
+    "chart",
+    "graph",
+    "interactive-demo",
+    "network",
+    "map"
+  ]
+}
