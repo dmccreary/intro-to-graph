@@ -2,7 +2,12 @@
   "dublinCore": {
     "title": "Knowledge Triangle",
     "creator": "Dan McCreary",
-    "subject": ["Graph Databases", "Information Science", "Knowledge Representation", "Data Hierarchy"],
+    "subject": [
+      "Graph Databases",
+      "Information Science",
+      "Knowledge Representation",
+      "Data Hierarchy"
+    ],
     "description": "An interactive visualization demonstrating the three layers of data transformation: Data Layer (raw binary), Information Layer (isolated facts), and Knowledge Layer (connected graph). Hover over each layer to learn about its characteristics.",
     "date": "2025-11-19",
     "type": "Interactive Simulation",
@@ -20,17 +25,32 @@
       "Explain why connected information (knowledge graphs) provides more value than isolated facts",
       "Relate the knowledge triangle concept to graph database architectures"
     ],
-    "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+    "bloomsTaxonomyLevels": [
+      "Understand",
+      "Apply",
+      "Analyze"
+    ],
     "duration": "30-40 minutes",
-    "prerequisites": ["Basic understanding of databases", "Familiarity with data structures", "Introduction to graph concepts"]
+    "prerequisites": [
+      "Basic understanding of databases",
+      "Familiarity with data structures",
+      "Introduction to graph concepts"
+    ]
   },
   "technical": {
     "framework": "p5.js",
     "version": "1.11.10",
-    "canvasDimensions": "600×550",
+    "canvasDimensions": "600\u00d7550",
     "responsive": "Width-responsive",
-    "dependencies": ["p5.js CDN"],
-    "accessibility": ["ARIA labels", "Semantic HTML", "Hover tooltips", "High-contrast visuals"]
+    "dependencies": [
+      "p5.js CDN"
+    ],
+    "accessibility": [
+      "ARIA labels",
+      "Semantic HTML",
+      "Hover tooltips",
+      "High-contrast visuals"
+    ]
   },
   "userInterface": {
     "controls": [],
@@ -61,7 +81,10 @@
   "simulationModel": {
     "modelType": "Conceptual Visualization",
     "concept": "Data-Information-Knowledge Hierarchy",
-    "variables": ["Layer position", "Mouse hover state"],
+    "variables": [
+      "Layer position",
+      "Mouse hover state"
+    ],
     "assumptions": [
       "Data volume decreases as semantic value increases moving up the triangle",
       "Knowledge emerges from connections between information, not from isolated facts",
@@ -84,5 +107,31 @@
     "Index-Free Adjacency",
     "Relationship-First Design"
   ],
-  "tags": ["knowledge-triangle", "data-hierarchy", "knowledge-graph", "information-architecture", "graph-fundamentals", "conceptual-model"]
+  "tags": [
+    "knowledge-triangle",
+    "data-hierarchy",
+    "knowledge-graph",
+    "information-architecture",
+    "graph-fundamentals",
+    "conceptual-model"
+  ],
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Create"
+  ]
 }

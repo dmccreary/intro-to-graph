@@ -41,5 +41,11 @@
     "interactive-demo",
     "network",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of rdbms vs graph database performance comparison",
+    "Apply rdbms vs graph database performance comparison to solve problems",
+    "Visualize and interpret rdbms vs graph database performance comparison relationships",
+    "Experiment with parameters to observe their effects on rdbms vs graph database performance comparison"
   ]
 }

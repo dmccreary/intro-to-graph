@@ -18,7 +18,10 @@
   "rights": "CC BY 4.0",
   "audience": "Undergraduate and Graduate Students",
   "educationalLevel": "Intermediate",
-  "bloomsLevel": ["Understanding", "Applying"],
+  "bloomsLevel": [
+    "Understanding",
+    "Applying"
+  ],
   "prerequisites": [
     "Basic understanding of organizational hierarchies",
     "Familiarity with graph concepts"
@@ -30,5 +33,27 @@
     "graph visualization",
     "organizational modeling"
   ],
-  "library": "vis-network.js"
+  "library": "vis-network.js",
+  "visualizationType": [
+    "chart",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of organization chart visualization",
+    "Explore organization chart visualization through interactive visualization",
+    "Apply knowledge of organization chart visualization to solve problems",
+    "Experiment with parameters to observe their effects on organization chart visualization"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

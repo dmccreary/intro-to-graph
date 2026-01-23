@@ -1,7 +1,12 @@
 {
   "title": "Minimum Spanning Tree Algorithm Visualizer",
   "creator": "Claude Code AI Assistant",
-  "subject": ["Computer Science", "Graph Theory", "Algorithms", "Data Structures"],
+  "subject": [
+    "Computer Science",
+    "Graph Theory",
+    "Algorithms",
+    "Data Structures"
+  ],
   "description": "Interactive visualization demonstrating Kruskal's and Prim's algorithms for finding minimum spanning trees in weighted graphs. Students can step through algorithm execution, compare approaches, and understand cycle detection in network optimization.",
   "date": "2025-01-18",
   "type": "Interactive Simulation",
@@ -18,7 +23,12 @@
     "Observe cycle detection mechanisms using union-find data structures",
     "Apply graph theory concepts to real-world network optimization problems"
   ],
-  "bloomsTaxonomy": ["Understand", "Apply", "Analyze", "Evaluate"],
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate"
+  ],
   "duration": "45-60 minutes",
   "prerequisites": [
     "Understanding of graphs (nodes and edges)",
@@ -26,9 +36,11 @@
     "Familiarity with greedy algorithms (helpful but not required)"
   ],
   "framework": "p5.js",
-  "canvasDimensions": "responsive × 650",
+  "canvasDimensions": "responsive \u00d7 650",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10 CDN"],
+  "dependencies": [
+    "p5.js 1.11.10 CDN"
+  ],
   "accessibility": {
     "screenReader": "ARIA labels provided via p5 describe() function",
     "keyboardNav": "Mouse-based controls (buttons, sliders, dropdown)",
@@ -98,5 +110,14 @@
     "Transportation planning (roads, railways, airlines)",
     "Supply chain and distribution network design",
     "Manufacturing facility layout optimization"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }
