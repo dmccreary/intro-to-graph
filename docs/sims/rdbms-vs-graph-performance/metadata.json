@@ -47,5 +47,28 @@
     "Apply rdbms vs graph database performance comparison to solve problems",
     "Visualize and interpret rdbms vs graph database performance comparison relationships",
     "Experiment with parameters to observe their effects on rdbms vs graph database performance comparison"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "explain",
+      "summarize",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }
