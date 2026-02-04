@@ -55,6 +55,7 @@ nav:
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
+    - Simple Graph: sims/simple-graph/index.md
     - Graph Tutorial Layout: sims/graph-tutorial-layout/index.md
     - Knowledge Triangle: sims/knowledge-triangle/index.md
     - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
@@ -144,7 +145,6 @@ extra:
   textbook_name: Introduction to Graph Databases
   textbook_version: "1.0"
   generator: false
-#  analytics:
-#    provider: google
-    # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
-#    property: G-XXXX
+  analytics:
+    provider: google
+    property: G-TQMCGBJLX4
