@@ -56,6 +56,7 @@ nav:
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
     - Simple Graph: sims/simple-graph/index.md
+    - Array Search Performance: sims/array-search-performance/index.md
     - Graph Tutorial Layout: sims/graph-tutorial-layout/index.md
     - Knowledge Triangle: sims/knowledge-triangle/index.md
     - Minimum Spanning Tree: sims/minimum-spanning-tree/index.md
