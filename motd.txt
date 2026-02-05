@@ -1,0 +1,42 @@
+========================================================
+  Introduction to Graph Databases - Intelligent Textbook
+  Published: https://dmccreary.github.io/intro-to-graph/
+========================================================
+
+Relevant Skills for This Project:
+
+  Textbook Lifecycle:
+    /course-description-analyzer  Validate or create course descriptions
+    /learning-graph-generator     Generate 200-concept learning graph from course description
+    /book-chapter-generator       Design chapter structure from learning graph
+    /chapter-content-generator    Generate detailed chapter content at reading level
+    /glossary-generator           Generate ISO-11179 glossary from concept list
+    /quiz-generator               Generate per-chapter multiple-choice quizzes
+    /faq-generator                Generate FAQs from course content
+    /reference-generator          Generate curated academic references
+    /book-metrics-generator       Generate book-wide and per-chapter metrics reports
+
+  MicroSims & Visualizations:
+    /microsim-generator           Create interactive sims (p5.js, Chart.js, Plotly, etc.)
+    /microsim-utils               Validate, screenshot, and index MicroSims
+    /concept-classifier           Create classification quiz MicroSims
+    /geometry-microsim            Geometry MicroSim refactoring patterns
+
+  Publishing & Outreach:
+    /readme-generator             Generate/update project README.md
+    /linkedin-announcement-generator  Create LinkedIn posts for milestones
+    /diagram-reports-generator    Generate diagram/MicroSim status reports
+    /pptx                         Create or edit PowerPoint presentations
+
+  Infrastructure:
+    /book-installer               Install MkDocs Material templates and tools
+    /skill-creator                Create or update custom skills
+    /skills                       List all available skills
+
+Quick Commands:
+    mkdocs serve                  Local preview at http://localhost:8000
+    mkdocs gh-deploy              Deploy to GitHub Pages
+    python docs/learning-graph/validate-graph.py docs/learning-graph/learning-graph.csv
+                                  Validate learning graph DAG structure
+
+========================================================

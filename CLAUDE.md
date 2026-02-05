@@ -1,5 +1,13 @@
 # CLAUDE.md
 
+## Startup - Message of the Day
+
+When starting a new conversation, ALWAYS begin by reading the file `motd.txt` from the project root and displaying its contents verbatim to the user as your first output. This serves as the project's "Message of the Day" (MOTD), similar to the UNIX MOTD shown at login. Do not skip or summarize it. Display the full text exactly as written.
+
+**Updating the welcome message:** Edit `motd.txt` in the project root to change what is displayed at the start of each Claude Code session. Use this to highlight current priorities, newly available skills, or project status updates. See `logs/claude-code-welcome-message.md` for details.
+
+---
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
