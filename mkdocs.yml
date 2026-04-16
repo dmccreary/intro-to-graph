@@ -126,7 +126,10 @@ theme:
 plugins:
   - search
   - social
-  - social_override
+
+hooks:
+  - plugins/social_override.py
+
 markdown_extensions:
   # Order is important!
   - md_in_html
