@@ -57,6 +57,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-TQMCGBJLX4"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-TQMCGBJLX4",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-TQMCGBJLX4",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -1093,6 +1103,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1550,6 +1568,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="The Labeled Property Graph: The Whole Enchilada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-simple-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Simple Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1897,20 +1930,38 @@
 <li><strong>Labels</strong> - The categories that organize nodes and edges (Person, Product, PURCHASED)</li>
 </ol>
 <p>Here's the simplest possible graph to illustrate:</p>
+<h4 id="diagram-simple-graph">Diagram: Simple Graph</h4>
+<iframe src="../../sims/simple-graph/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><diagram markdown="1"></p>
+<p>Run the vis-network-generator skill on the following specification to create an iframe friendly graph drawing with a node and edge inspector panel to the right:</p>
+<p><strong>Type:</strong> graph network
+<strong>MicroSim Name</strong> simple-graph</p>
+<p>Create a simple fixed-position graph with physics off with two nodes.
+Place the nodes 1/2 way down the drawing area.
+Place the "Dan" node position of x=.25 times the canvass width.
+Place the "Ann" node position of x=.5 times the canvass width.
+Have the node/edge property inspector in the right 25% of the drawing area.
+Allow the user to click on either node or the edge and see the properties in the properties inspector on the right.</p>
+<p>Make the tile at the top of the drawing be "Simple Graph"
+Make the node size be 1/10th of the width of the drawing area.
+Have 0 margin and padding around the drawing.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>(Alice:Person {age: 28})
-    -[:FRIEND_OF {since: 2020}]-&gt;
-(Bob:Person {age: 35})
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>(Dan:Person {age: 65})
+    -[:FRIEND_OF {since: 2002}]-&gt;
+(Ann:Person {age: 69})
 </code></pre></div></td></tr></table></div>
+<p>Skill: vis-network-generator
+</diagram></p>
 <p>Let's break this down piece by piece:
-- <code>Alice</code> is a <strong>node</strong> (a thing that exists)
-- <code>:Person</code> is a <strong>label</strong> (Alice belongs to the "Person" category)
-- <code>{age: 28}</code> is a <strong>property</strong> (a detail about Alice)
-- <code>-[:FRIEND_OF {since: 2020}]-&gt;</code> is an <strong>edge</strong> (a connection from Alice to Bob)
+- <code>Dan</code> is a <strong>node</strong> (a thing that exists)
+- <code>:Person</code> is a <strong>label</strong> (Dan belongs to the "Person" category)
+- <code>{age: 65}</code> is a <strong>property</strong> (a detail about Dan)
+- <code>-[:FRIEND_OF {since: 2002}]-&gt;</code> is an <strong>edge</strong> (a connection from Dan to Ann)
 - <code>:FRIEND_OF</code> is the <strong>edge's label</strong> (the type of relationship)
-- <code>{since: 2020}</code> is the <strong>edge's property</strong> (when they became friends)
-- The arrow <code>-&gt;</code> shows direction (Alice is friends with Bob)</p>
+- <code>{since: 2002}</code> is the <strong>edge's property</strong> (when they became friends)
+- The arrow <code>-&gt;</code> shows direction (Dan is friends with Ann)</p>
 <p>If that feels like a lot, don't stress. We're going to explore each piece in detail, and you'll see the same concepts repeated in different examples. By the tenth example, this notation will feel completely natural.</p>
 <h2 id="nodes-the-stars-of-the-show">Nodes: The Stars of the Show</h2>
 <p><strong>Nodes</strong> (also called vertices if you want to sound fancy) represent the entities in your graph—the people, places, things, concepts, or events that you care about. If your graph is a social network, nodes are users. If it's a supply chain, nodes are products, warehouses, and vendors. If it's a knowledge graph, nodes are concepts and facts.</p>
@@ -2739,6 +2790,8 @@ Think about Facebook: your profile is a node, your friendship with someone is an
   
 
 
+
+  
 
 
 
