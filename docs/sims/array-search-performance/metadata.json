@@ -1,0 +1,57 @@
+{
+  "title": "Array Search Performance (Linear)",
+  "description": "[Run the Array Search Performance MicroSim](main.html){ .md-button .md-button--primary }",
+  "subject": "Computer Science",
+  "topic": "Linear Search",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-02-04",
+  "dateModified": "2026-02-04",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Diagram",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/intro-to-graph/sims/array-search-performance/",
+  "identifier": "https://dmccreary.github.io/intro-to-graph/sims/array-search-performance/",
+  "_source": {
+    "repo": "intro-to-graph",
+    "sim": "array-search-performance",
+    "github_url": "https://github.com/dmccreary/intro-to-graph/tree/main/docs/sims/array-search-performance",
+    "auto_generated": true,
+    "generation_date": "2026-02-04"
+  },
+  "subjects": [
+    "Computer Science",
+    "Mathematics"
+  ],
+  "visualizationType": [
+    "diagram",
+    "illustration",
+    "interactive-demo"
+  ],
+  "pedagogical": {
+    "pattern": "conceptual",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "compare",
+      "estimate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
+}

@@ -64,20 +64,45 @@ Don't worry about memorizing that definition. What matters is understanding the 
 
 Here's the simplest possible graph to illustrate:
 
+#### Diagram: Simple Graph
+
+<iframe src="../../sims/simple-graph/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<diagram markdown="1">
+
+Run the vis-network-generator skill on the following specification to create an iframe friendly graph drawing with a node and edge inspector panel to the right:
+
+**Type:** graph network
+**MicroSim Name** simple-graph
+
+Create a simple fixed-position graph with physics off with two nodes.
+Place the nodes 1/2 way down the drawing area.
+Place the "Dan" node position of x=.25 times the canvass width.
+Place the "Ann" node position of x=.5 times the canvass width.
+Have the node/edge property inspector in the right 25% of the drawing area.
+Allow the user to click on either node or the edge and see the properties in the properties inspector on the right.
+
+Make the tile at the top of the drawing be "Simple Graph"
+Make the node size be 1/10th of the width of the drawing area.
+Have 0 margin and padding around the drawing.
+
 ```
-(Alice:Person {age: 28})
-    -[:FRIEND_OF {since: 2020}]->
-(Bob:Person {age: 35})
+(Dan:Person {age: 65})
+    -[:FRIEND_OF {since: 2002}]->
+(Ann:Person {age: 69})
 ```
 
+Skill: vis-network-generator
+</diagram>
+
 Let's break this down piece by piece:
-- `Alice` is a **node** (a thing that exists)
-- `:Person` is a **label** (Alice belongs to the "Person" category)
-- `{age: 28}` is a **property** (a detail about Alice)
-- `-[:FRIEND_OF {since: 2020}]->` is an **edge** (a connection from Alice to Bob)
+- `Dan` is a **node** (a thing that exists)
+- `:Person` is a **label** (Dan belongs to the "Person" category)
+- `{age: 65}` is a **property** (a detail about Dan)
+- `-[:FRIEND_OF {since: 2002}]->` is an **edge** (a connection from Dan to Ann)
 - `:FRIEND_OF` is the **edge's label** (the type of relationship)
-- `{since: 2020}` is the **edge's property** (when they became friends)
-- The arrow `->` shows direction (Alice is friends with Bob)
+- `{since: 2002}` is the **edge's property** (when they became friends)
+- The arrow `->` shows direction (Dan is friends with Ann)
 
 If that feels like a lot, don't stress. We're going to explore each piece in detail, and you'll see the same concepts repeated in different examples. By the tenth example, this notation will feel completely natural.
 

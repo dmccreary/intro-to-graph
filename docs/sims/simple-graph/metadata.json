@@ -1,0 +1,98 @@
+{
+  "microsim_name": "simple-graph",
+  "title": "Simple Graph MicroSim",
+  "description": "An interactive visualization demonstrating basic graph structure with two nodes (Dan and Ann) connected by a friendship relationship. Features a property inspector panel for exploring node and edge attributes.",
+  "subject": "Graph Theory, Data Structures, Network Visualization",
+  "grade_level": "High School (9-12), Undergraduate",
+  "duration": "5-10 minutes",
+  "learning_objectives": [
+    "Understand the basic components of a graph data structure (nodes and edges)",
+    "Identify properties associated with nodes and edges",
+    "Recognize how relationships connect entities in a graph",
+    "Analyze the information stored in graph elements"
+  ],
+  "bloom_taxonomy_level": "Understand, Analyze",
+  "technology": "vis-network.js",
+  "library_version": "9.1.9",
+  "library_cdn": "https://unpkg.com/vis-network/standalone/umd/vis-network.min.js",
+  "author": "Dan McCreary",
+  "creator": "Claude Code with vis-network-generator skill",
+  "date_created": "2025-11-20",
+  "language": "en-US",
+  "format": "text/html",
+  "type": "Interactive Educational Simulation",
+  "license": "CC BY-NC-SA 4.0",
+  "graph_structure": {
+    "nodes": [
+      {
+        "id": 1,
+        "label": "Dan",
+        "type": "Person",
+        "age": 65,
+        "position": "x=25%, y=50%"
+      },
+      {
+        "id": 2,
+        "label": "Ann",
+        "type": "Person",
+        "age": 69,
+        "position": "x=50%, y=50%"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Dan",
+        "to": "Ann",
+        "type": "FRIEND_OF",
+        "since": 2002
+      }
+    ]
+  },
+  "controls": {
+    "interaction": [
+      {
+        "control": "Click Node",
+        "action": "Display node properties in inspector panel"
+      },
+      {
+        "control": "Click Edge",
+        "action": "Display edge properties in inspector panel"
+      },
+      {
+        "control": "Drag Canvas",
+        "action": "Pan the view"
+      },
+      {
+        "control": "Mouse Wheel",
+        "action": "Zoom in/out"
+      }
+    ]
+  },
+  "features": {
+    "physics_enabled": false,
+    "fixed_positions": true,
+    "property_inspector": true,
+    "responsive_design": true,
+    "node_size": "1/10 of canvas width",
+    "layout": "75% graph, 25% inspector"
+  },
+  "prerequisites": [
+    "Basic understanding of data representation",
+    "Familiarity with the concept of relationships"
+  ],
+  "related_microsims": [
+    "learning-graph"
+  ],
+  "keywords": [
+    "graph",
+    "network",
+    "nodes",
+    "edges",
+    "relationships",
+    "property graph",
+    "visualization",
+    "data structure",
+    "vis-network"
+  ]
+}
