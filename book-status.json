@@ -1,0 +1,221 @@
+{
+  "project": {
+    "title": "Introduction to Graph Databases",
+    "subtitle": "Auto-scanned intelligent textbook",
+    "author": "Dan McCreary",
+    "costPerMTokens": 15,
+    "sessionBudget": {
+      "pro": 900000,
+      "max": 3500000
+    }
+  },
+  "sections": {
+    "scaffold": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "course-description": {
+      "status": "published",
+      "tokensTarget": 4000,
+      "tokensDone": 1939
+    },
+    "learning-graph": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 20000
+    },
+    "chapter-structure": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 15000
+    },
+    "chapter-content": {
+      "countLabel": "13 chapters",
+      "children": [
+        {
+          "n": 1,
+          "title": "Introduction to Graph Thinking and Data Modeling",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 2,
+          "title": "Database Systems and NoSQL",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 3,
+          "title": "Labeled Property Graph Information Model",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 4,
+          "title": "Query Languages for Graph Databases",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 5,
+          "title": "Performance, Metrics, and Benchmarking",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 6,
+          "title": "Graph Algorithms",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 7,
+          "title": "Social Network Modeling",
+          "status": "reviewed",
+          "tokens": 15719
+        },
+        {
+          "n": 8,
+          "title": "Knowledge Representation and Management",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 9,
+          "title": "Graph Modeling Patterns and Data Loading",
+          "status": "reviewed",
+          "tokens": 11963
+        },
+        {
+          "n": 10,
+          "title": "Commerce, Supply Chain, and IT Infrastructure",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 11,
+          "title": "Financial, Healthcare, and Regulatory Applications",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 13,
+          "title": "Why Graph Databases Can Use Much Less Power Than Distributed Rule Engines",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 14,
+          "title": "Advanced Topics and Distributed Systems",
+          "status": "reviewed",
+          "tokens": 10233
+        }
+      ]
+    },
+    "chapter-images": {
+      "status": "not-started",
+      "tokensTarget": 8000,
+      "tokensDone": 0
+    },
+    "microsims": {
+      "countLabel": "9 simulations",
+      "children": [
+        {
+          "n": 1,
+          "title": "Array Search Performance (Linear)",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 2,
+          "title": "Graph Tutorial Layout",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 3,
+          "title": "Learning Graph Viewer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 4,
+          "title": "Knowledge Triangle",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 5,
+          "title": "Minimum Spanning Tree Algorithm Visualizer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 6,
+          "title": "Query Performance Comparison: RDBMS vs Graph Database",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 7,
+          "title": "Organization Chart Visualization",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 8,
+          "title": "RDBMS vs Graph Database Performance Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 9,
+          "title": "Simple Graph MicroSim",
+          "status": "published",
+          "tokens": 5000
+        }
+      ]
+    },
+    "glossary": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 9697
+    },
+    "faq": {
+      "status": "published",
+      "tokensTarget": 12000,
+      "tokensDone": 8484
+    },
+    "quiz": {
+      "status": "published",
+      "tokensTarget": 30000,
+      "tokensDone": 20723
+    },
+    "reference": {
+      "status": "not-started",
+      "tokensTarget": 20000,
+      "tokensDone": 0
+    },
+    "teachers-guide": {
+      "status": "drafted",
+      "tokensTarget": 15000,
+      "tokensDone": 4
+    },
+    "book-metrics": {
+      "status": "drafted",
+      "tokensTarget": 2000,
+      "tokensDone": 900
+    },
+    "publish": {
+      "status": "published",
+      "tokensTarget": 10000,
+      "tokensDone": 10000
+    },
+    "stories": {
+      "status": "not-started",
+      "tokensTarget": 30000,
+      "tokensDone": 0
+    }
+  }
+}
